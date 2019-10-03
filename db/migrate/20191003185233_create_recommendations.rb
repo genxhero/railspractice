@@ -4,7 +4,7 @@ class CreateRecommendations < ActiveRecord::Migration[6.0]
       t.integer :user_id, null: false
       t.integer :place_id, null: false
       t.string :place_type, null: false
-      t.string :message, , null: true
+      t.text :message, null: true
       t.timestamps
     end
     add_index :recommendations, :user_id
