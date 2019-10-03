@@ -9,7 +9,7 @@ class TravelCenter < ApplicationRecord
     foreign_key: :location_id,
     class_name: "Location"
 
-    has_many :recommendations as :place,
+    has_many :recommendations as: :place, dependent: :destroy,
     primary_key: :id,
     foreign_key: :place_id,
     class_name: "Recommendation"
