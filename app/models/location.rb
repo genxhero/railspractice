@@ -6,7 +6,7 @@ class Location < ApplicationRecord
     message: "only one town exists by that name within #{zip}" }
 
     has_many :travel_centers, dependent: :destroy,
-    primary_key :id,
-    foreign_key :location_id,
-    class_name "TravelCenter"
+    primary_key: :id,
+    foreign_key: :location_id,
+    class_name: "TravelCenter"
 end
