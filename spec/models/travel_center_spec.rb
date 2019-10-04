@@ -14,7 +14,11 @@ describe TravelCenter do
     it "will not save if the same name has been used for the same location" do 
         dupe = TravelCenter.new(name: "Love's Travel Stop", location_id: 1, description: "this is a dupe")
         expect(dupe).to_not be_valid
-        expect(dupe.errors).to_not be_empty
+    end
+
+    it "will raise an error if one tries to save a duplicate travel center" do
+        dupe = TravelCenter.new(name: "Love's Travel Stop", location_id: 1, description: "this is a dupe")
+       expect(dupe.errors.full_messages).to_not be_empty
     end
 
 end
