@@ -16,6 +16,10 @@ class User < ApplicationRecord
     foreign_key: :user_id,
     class_name: "Location"
 
+    has_many :places, polymorphic: true,
+    primary_key: :id,
+    foreign_key: :user_id
+
     def password=(password)
         @password = password
         self.password_digest = BCrypt::Password.create(password)
