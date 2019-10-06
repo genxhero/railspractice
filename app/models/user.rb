@@ -1,7 +1,7 @@
 class User < ApplicationRecord
+    attr_reader :password
     after_initialize :ensure_token
-
-    validates :username, :email, presence: true
+    validates :username, :email, :password_digest, :session_token, presence: true, uniqueness: true
     has_many :recommendations,
     primary_key: :id,
     foreign_key: :user_id,
