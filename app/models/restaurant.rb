@@ -8,7 +8,7 @@
 
 
 class Restaurant < ApplicationRecord
-    validates :name, presence: true
+    validates :name, :cuisine, :type, presence: true
     validates :location_id, presence: true
     validates :name, uniqueness: { scope: :location_id,
     message: "record already exists " }
