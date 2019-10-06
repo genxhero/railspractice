@@ -12,4 +12,10 @@ class Api::SessionsController < ApplicationController
           render json: ["Invalid Credentials"], status: 422
         end
     end
+
+    def destroy
+        logout
+        render json: {}
+      end
+      
 end
