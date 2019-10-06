@@ -8,6 +8,7 @@
 # t.boolean :wifi, null: false
 # t.timestamps
 class CoffeeShop < ApplicationRecord
+    after_initialize :defaults
     validates :name, presence: true
     validates :location_id, presence: true
     validates :name, uniqueness: { scope: :location_id,
