@@ -23,4 +23,11 @@ class CoffeeShop < ApplicationRecord
     primary_key: :id,
     foreign_key: :place_id,
     class_name: "Recommendation"
+
+    def defaults 
+        @couches ||= "Unspecified"
+        @armchairs ||= false
+        @restrooms ||= false
+        @wifi ||= false
+    end
 end
