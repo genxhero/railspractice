@@ -1,3 +1,6 @@
+# Users can recommend a place.  If a place doesn't already exist, a new one can be created
+# Users can give a short message why they recommend the restaraunt, gas station, or coffee shop
+
 class Recommendation < ApplicationRecord
     validates :user_id, presence: true
     validates :place_id, presence: true
