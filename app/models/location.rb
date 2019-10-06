@@ -1,3 +1,6 @@
+# Location refers to a town, hamlet, or outpost somewhere close to a major highway.
+
+
 class Location < ApplicationRecord
     validates :name, presence: true
     validates :state, presence: true
