@@ -1,3 +1,12 @@
+# t.string :name, null: false
+# t.integer :location_id, null: false
+# t.string :cuisine, null: false
+# t.text :description, null: true
+# t.string :type, null: false
+# t.timestamps
+
+
+
 class Restaurant < ApplicationRecord
     validates :name, presence: true
     validates :location_id, presence: true
