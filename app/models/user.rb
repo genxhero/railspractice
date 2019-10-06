@@ -20,4 +20,8 @@ class User < ApplicationRecord
         user = User.find_by(email: email)
         user && user.correct_password?(password) ? user: nil
     end
+
+    def correct_password?(password)
+        BCrypt::Password.new(self.password_digest).is_password?(password)
+    end
 end
