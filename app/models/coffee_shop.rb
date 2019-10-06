@@ -9,6 +9,7 @@
 # t.timestamps
 class CoffeeShop < ApplicationRecord
     after_initialize :defaults
+
     validates :name, presence: true
     validates :location_id, presence: true
     validates :name, uniqueness: { scope: :location_id,
@@ -24,10 +25,11 @@ class CoffeeShop < ApplicationRecord
     foreign_key: :place_id,
     class_name: "Recommendation"
 
-    def defaults 
-        @couches ||= "Unspecified"
-        @armchairs ||= false
-        @restrooms ||= false
-        @wifi ||= false
+    def defaults
+        self.couches ||= false
+        self.armchairs ||= false
+        self.restrooms ||= false
+        self.wifi ||= false
+        self.type ||= "Unspecified"
     end
 end
