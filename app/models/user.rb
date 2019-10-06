@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+    validates :username, :email, presence: true
     has_many :recommendations,
     primary_key: :id,
     foreign_key: :user_id,
