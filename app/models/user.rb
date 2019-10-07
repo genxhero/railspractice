@@ -16,10 +16,7 @@ class User < ApplicationRecord
     foreign_key: :user_id,
     class_name: "Location"
 
-    # has_many :places, polymorphic: true,
-    # primary_key: :id,
-    # foreign_key: :user_id
-    #has many places through recs?
+    has_many :places, through: :recommendations
 
     def password=(password)
         @password = password
