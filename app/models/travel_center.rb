@@ -14,4 +14,6 @@ class TravelCenter < ApplicationRecord
     foreign_key: :place_id,
     class_name: "Recommendation"
 
+    has_many :users, through: :recommendations
+
 end

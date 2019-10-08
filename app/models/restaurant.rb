@@ -22,4 +22,7 @@ class Restaurant < ApplicationRecord
     primary_key: :id,
     foreign_key: :place_id,
     class_name: "Recommendation"
+
+    has_many :users, through: :recommendations
+
 end

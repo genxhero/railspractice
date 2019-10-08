@@ -25,6 +25,8 @@ class CoffeeShop < ApplicationRecord
     foreign_key: :place_id,
     class_name: "Recommendation"
 
+    has_many :users, through: :recommendations
+
     def defaults
         self.couches ||= false
         self.armchairs ||= false
