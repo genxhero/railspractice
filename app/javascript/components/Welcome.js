@@ -3,9 +3,9 @@ import PropTypes from "prop-types"
 class Welcome extends React.Component {
   render () {
     return (
-      <React.Fragment>
-        <h1>buttsecks</h1>
-      </React.Fragment>
+      <div className="welcome-splash">
+        <h1 className="welcome-title">Wanderer - Redux</h1>
+      </div>
     )
   }
 }
