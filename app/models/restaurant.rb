@@ -5,6 +5,8 @@
 # t.string :type, null: false
 # t.timestamps
 
+#A restaurant is what you would expect, an establishment meant primarily for eating at.
+# A subset of restaurant is the diner, which I may implement later.
 
 
 class Restaurant < ApplicationRecord
