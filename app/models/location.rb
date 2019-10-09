@@ -2,6 +2,8 @@
 
 
 class Location < ApplicationRecord
+    after_validation set_url_key
+
     validates :name, presence: true
     validates :state, presence: true
     validates :zip, presence: true
@@ -17,4 +19,8 @@ class Location < ApplicationRecord
     primary_key: :id,
     foreign_key: :user_id,
     class_name: "User"
+
+    def set_url_key
+        self.url_key = "#{self.name}#{self.state}".downcase.gsub(" ", "")
+    end
 end
