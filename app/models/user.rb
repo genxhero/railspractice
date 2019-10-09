@@ -1,3 +1,5 @@
+#This is a User. It uses things.
+
 class User < ApplicationRecord
     attr_reader :password
     
