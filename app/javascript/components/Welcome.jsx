@@ -1,3 +1,8 @@
+
+/**
+ * The first thing a user will see, this splash page will be the main portal.
+ * Should contain links to the map or search feature.
+ */
 import React from "react"
 import PropTypes from "prop-types"
 class Welcome extends React.Component {
