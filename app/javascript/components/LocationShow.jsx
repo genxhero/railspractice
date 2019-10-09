@@ -7,7 +7,9 @@ import React from "react"
 import PropTypes from "prop-types"
 
 const Location = (props) => {
+    const buffer = "this";
     debugger;
+    const ass = "butt";
     return (
         <div>
             <h1>this is  location</h1>

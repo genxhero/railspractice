@@ -15,7 +15,7 @@ class Restaurant < ApplicationRecord
     validates :name, uniqueness: { scope: :location_id,
     message: "record already exists " }
 
-    belongs_to :location,
+    belongs_to :location, as: :place
     primary_key: :id, 
     foreign_key: :location_id,
     class_name: "Location"

@@ -15,6 +15,10 @@ class Location < ApplicationRecord
     foreign_key: :location_id,
     class_name: "TravelCenter"
 
+    has_many :places, polymorphic: true,
+    primary_key: :id,
+    foreign_key: :location_id
+    
     belongs_to :user, 
     primary_key: :id,
     foreign_key: :user_id,
