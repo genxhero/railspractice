@@ -2,7 +2,7 @@
 
 
 class Location < ApplicationRecord
-    after_validation set_url_key
+    before_validation :set_url_key
 
     validates :name, presence: true
     validates :state, presence: true
