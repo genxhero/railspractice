@@ -1,3 +1,7 @@
+#A travel center is a big store attached to a gasoline station, such as a Love's,
+#a Pilot, or a Flying J. Usually will have a wide variety of adveturing gear, coffee,
+#and souvenirs. 
+
 class TravelCenter < ApplicationRecord
     validates :name, presence: true
     validates :location_id, presence: true
