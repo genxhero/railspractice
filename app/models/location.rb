@@ -23,4 +23,10 @@ class Location < ApplicationRecord
     def set_url_key
         self.url_key = "#{self.name}#{self.state}".downcase.gsub(" ", "")
     end
+
+    def places
+        {
+            "travelCenters": self.travel_centers
+        }
+    end
 end
