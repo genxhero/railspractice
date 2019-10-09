@@ -8,6 +8,21 @@
     height: 100%;
 }
 
+.welcome-message {
+    width: 20rem;
+    height: 20rem;
+    padding: 2rem;
+    text-align: center;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-subtitle {
+
+}
 .welcome-title {
     color: blue
 }
