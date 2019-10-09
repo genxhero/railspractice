@@ -7,6 +7,9 @@
 # t.boolean :restrooms, null: false
 # t.boolean :wifi, null: false
 # t.timestamps
+
+#A Coffee shop is defined as an establishment that largely serves coffee and pastries and not enough 
+# Food options to qualify as a diner
 class CoffeeShop < ApplicationRecord
     after_initialize :defaults
 
