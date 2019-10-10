@@ -38,7 +38,9 @@ class Location < ApplicationRecord
 
     def places
         {
-            "travelCenters": self.travel_centers
+            "travelCenters": self.travel_centers,
+            "restaurants": self.restaurants,
+            "coffeeShops": self.coffee_shops
         }
     end
 end
