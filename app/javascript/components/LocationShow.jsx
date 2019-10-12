@@ -10,13 +10,10 @@ import CoffeeShop from './CoffeeShop';
 import Restaurant from './Restaurant';
 
 const Location = (props) => {
-    const butt = "butt"
-    debugger;
-    const ass = "ass"
 
     return (
         <div className="location-show-page">
-            <div className="location-show columns">
+            <div className="location-show columns" style={{"display":"flex", "flexDirection":"row"}}>
                 <div>
                     {props.places.coffeeShops.length === 0 && <h4>No Coffee Shops Recommended</h4>}
                 {props.places.coffeeShops.map( coffeeShop => {
