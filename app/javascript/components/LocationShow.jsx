@@ -13,6 +13,8 @@ const Location = (props) => {
 
     return (
         <div className="location-show-page">
+            <h1>{props.location.name}, {props.location.state}</h1>
+            <img src="" alt={location.name}/>
             <div className="location-show columns" style={{"display":"flex", "flexDirection":"row"}}>
                 <div>
                     {props.places.coffeeShops.length === 0 && <h4>No Coffee Shops Recommended</h4>}
