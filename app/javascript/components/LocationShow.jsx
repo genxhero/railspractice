@@ -6,6 +6,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import TravelCenter from './TravelCenter';
+import CoffeeShop from './CoffeeShop';
 
 const Location = (props) => {
 
@@ -13,7 +14,9 @@ const Location = (props) => {
         <div className="location-show-page">
             <div className="location-show columns">
                 <div>
-                    Insert coffee shops here
+                {props.places.coffeeShops.map( coffeeShop => {
+                        return <CoffeeShop coffeeShop={coffeeShop} />
+                    })}
                 </div>
 
                 <div>Insert Restaurants here</div>
