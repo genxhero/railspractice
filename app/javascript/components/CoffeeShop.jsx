@@ -1,9 +1,9 @@
 import React from 'react'
 
-const CoffeeShop = () => {
+const CoffeeShop = (props) => {
     return (
         <div>
-            this is a coffee shop
+            {props.coffeeShop.name}
         </div>
     )
 }

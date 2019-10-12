@@ -6,7 +6,7 @@ const TravelCenter = (props) => {
     const ass = "ass"
     return (
         <div>
-            Travel center {props.travelCenter.name} 
+            {props.travelCenter.name} 
         </div>
     )
 }

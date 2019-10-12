@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Restaurant = () => {
+const Restaurant = (props) => {
     return (
         <div>
-            this is a restaurant
+            {props.restaurant.name}
         </div>
     )
 }
