@@ -35,6 +35,5 @@ class CoffeeShop < ApplicationRecord
         self.armchairs ||= false
         self.restrooms ||= false
         self.wifi ||= false
-        self.type ||= "Unspecified"
     end
 end
