@@ -8,7 +8,7 @@ import PropTypes from "prop-types"
 import TravelCenter from './TravelCenter';
 
 const Location = (props) => {
-    debugger;
+
     return (
         <div className="location-show-page">
             <div className="location-show columns">
@@ -19,7 +19,7 @@ const Location = (props) => {
                 <div>Insert Restaurants here</div>
 
                 <div>
-                    {props.locations.travelCenters.map( travelCenter => {
+                    {props.places.travelCenters.map( travelCenter => {
                         return <TravelCenter travelCenter={travelCenter} />
                     })}
                 </div>
