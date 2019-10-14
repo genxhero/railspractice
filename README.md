@@ -11,3 +11,7 @@ A Location is a town, a thorp, a city, or hamlet along one of the major intersta
 **Travel Centers
 
 A travel center is a large gasoline station with an attached store carrying a wide variety of adventuring supplies.  Often have hot food and coffee as well.
+
+**Coffee Shops
+
+Coffee shops are classified by type; walk in, kisok, or drive thru. The database also keeps track of whether a given coffee shop has comfortable seating, restrooms, and wireless internet.
