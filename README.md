@@ -1,24 +1,4 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
+This is the new Wanderer.  It relies on intrepid American adventurers to fill it with information about the best road stops along our great highway system.  The goal here is a comprehensive database that every road tripper can use to create epic memories.
 * ...
