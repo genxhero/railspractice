@@ -16,14 +16,14 @@ const Location = (props) => {
             <h1>{props.location.name}, {props.location.state}</h1>
             <img className="location-show-image"src={props.location.image_url} alt={props.location.name}/>
             <div className="location-show columns" style={{"display":"flex", "flexDirection":"row"}}>
-                <div>
+                <div className="location-show-column">
                     {props.places.coffeeShops.length === 0 && <h4>No Coffee Shops Recommended</h4>}
                 {props.places.coffeeShops.map( coffeeShop => {
                         return <CoffeeShop coffeeShop={coffeeShop} />
                     })}
                 </div>
 
-                <div>
+                <div className="location-show-column">
                 {props.places.restaurants.length === 0 && <h4>No Restaurants Recommended</h4>}
 
                 {props.places.restaurants.map( restaurant => {
@@ -31,7 +31,7 @@ const Location = (props) => {
                     })}
                 </div>
 
-                <div>
+                <div className="location-show-column">
                 {props.places.travelCenters.length === 0 && <h4>No Travel Centers Recommended</h4>}
                     {props.places.travelCenters.map( travelCenter => {
                         return <TravelCenter travelCenter={travelCenter} />
