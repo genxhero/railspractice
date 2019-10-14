@@ -1,0 +1,13 @@
+.place-form-modal {
+    position:absolute;
+    overflow:hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0,0,0,.5);
+}
+
+.place-form {
+    padding: 2rem;
+    border-radius: 4px;
+}

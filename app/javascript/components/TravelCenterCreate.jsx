@@ -10,7 +10,7 @@ const TravelCenterCreate = (props) => {
     const [values, setValues] = useState({name: '', description: '', unleaded: 0, diesel: 0})
     console.log(values);
     return (
-        <div className="place-form-page">
+        <div className="place-form-modal">
             <div className="place-form">
                <input 
                  name='name'
