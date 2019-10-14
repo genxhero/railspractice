@@ -1,9 +1,12 @@
 .location-show-image {
-    height: 20rem;
+    width: 20rem;
     margin: 1rem;
 }
 
 .location-show-page {
     background: orange;
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
