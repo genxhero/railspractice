@@ -1,9 +1,10 @@
 
 /**
  * Page for displaying a specific town
+ * TODO:  Use the useState hook to check whether we are currently creating something, display a modal with the form
  */
 
-import React from "react"
+import React, {useState} from "react"
 import PropTypes from "prop-types"
 import TravelCenter from './TravelCenter';
 import CoffeeShop from './CoffeeShop';
@@ -11,6 +12,7 @@ import Restaurant from './Restaurant';
 import TravelCenterCreate from './TravelCenterCreate';
 
 const Location = (props) => {
+
 
     return (
         <div className="location-show-page">
