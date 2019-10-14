@@ -9,3 +9,5 @@ Uses the Ruby On Rails Active Record to create associations between...
 A Location is a town, a thorp, a city, or hamlet along one of the major interstate highways.  Locations have many Coffee Shops, Travel Centers, and Restaurants.
 
 **Travel Centers
+
+A travel center is a large gasoline station with an attached store carrying a wide variety of adventuring supplies.  Often have hot food and coffee as well.
