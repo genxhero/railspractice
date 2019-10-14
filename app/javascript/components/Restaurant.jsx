@@ -7,7 +7,7 @@ import React from 'react'
 
 const Restaurant = (props) => {
     return (
-        <div>
+        <div className="place-card">
             {props.restaurant.name}
         </div>
     )
