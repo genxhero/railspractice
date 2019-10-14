@@ -1,13 +1,19 @@
 .place-form-modal {
     position:absolute;
-    overflow:hidden;
+    top: -1rem;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(0,0,0,.5);
+    background-color: rgba(0, 0, 0, 0.4);    
+    height: 100%;
+    width: 100%;
 }
 
 .place-form {
     padding: 2rem;
     border-radius: 4px;
+    background: white;
+    height: 20rem;
+    width: 15rem;
 }
