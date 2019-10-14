@@ -13,11 +13,13 @@ const TravelCenterCreate = (props) => {
         <div className="place-form-modal">
             <div className="place-form">
                <input 
+                 className="place-form-text"
                  name='name'
                  type="text"
                  onChange={handleInputChange}
                  value={values.name}/>
                <input 
+                 className="place-form-text"
                  type='text' 
                  name='description'
                  onChange={handleInputChange}
