@@ -13,7 +13,8 @@ import TravelCenterCreate from './TravelCenterCreate';
 
 const Location = (props) => {
 
-
+    const [open, openForm] = useState({open: false})
+    console.log(open)
     return (
         <div className="location-show-page">
             <h1>{props.location.name}, {props.location.state}</h1>
@@ -41,7 +42,8 @@ const Location = (props) => {
                     })}
                 </div>
             </div>
-            <TravelCenterCreate location_id={5} />
+            {open && <TravelCenterCreate location_id={5} />}
+            <button onCick={ () => openForm({open: true})}>Click Me</button>
         </div>
     )
 }
