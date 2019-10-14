@@ -21,7 +21,7 @@ const TravelCenterCreate = (props) => {
                  type='text' 
                  name='description'
                  onChange={handleInputChange}
-                 value={values.name}/>
+                 value={values.description}/>
             </div>
         </div>
     )

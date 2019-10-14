@@ -8,6 +8,7 @@ import PropTypes from "prop-types"
 import TravelCenter from './TravelCenter';
 import CoffeeShop from './CoffeeShop';
 import Restaurant from './Restaurant';
+import TravelCenterCreate from './TravelCenterCreate';
 
 const Location = (props) => {
 
@@ -38,6 +39,7 @@ const Location = (props) => {
                     })}
                 </div>
             </div>
+            <TravelCenterCreate location_id={5} />
         </div>
     )
 }
