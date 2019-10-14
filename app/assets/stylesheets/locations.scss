@@ -26,7 +26,8 @@
     text-align: center;
 }
 
+//TODO: place-card-open and place-card-closed, depending on state. Gonna use a hook for this 
 .place-card {
-    border-bottom: 2px solid-gray;
-    padding: .5rem;
+    border-bottom: 2px solid gray;
+    padding: 1rem;
 }
