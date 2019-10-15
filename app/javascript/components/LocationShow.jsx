@@ -15,19 +15,21 @@ import $ from 'jquery';
 
 const LocationShow = (props) => {
 
-    const [open, openForm] = useState(false)
+    // const [open, openForm] = useState(false)
+    const [state, openForm] = useState({open: false, placeType: ''})
 
-    const openModal = () => {
+
+    const openModal = (placeType) => {
         $("html, body").animate({ scrollTop: 0 });
         $('body').css('overflow', 'hidden');
-        openForm(true)
+        openForm({place: true, placeType})
     }
 
     const closeModal = () => {
         $('body').css('overflow', 'auto');
-        openForm(false)
+        openForm({open: false, placeType: ""})
     }
-
+    console.log(state);
     return (
         <div className="location-show-page">
             <h1>{props.location.name}, {props.location.state}</h1>
@@ -53,10 +55,10 @@ const LocationShow = (props) => {
                     {props.places.travelCenters.map( travelCenter => {
                         return <TravelCenter travelCenter={travelCenter} />
                     })}
+                    {(state.open && state.placeType === "travelCenter") && <TravelCenterCreate location_id={5} close={closeModal}/>}
+                    <button onClick={ () => openModal('travelCenter')}>Click Me</button>
                 </div>
             </div>
-            {open && <TravelCenterCreate location_id={5} close={closeModal}/>}
-            <button onClick={ () => openModal()}>Click Me</button>
         </div>
     )
 }
