@@ -10,11 +10,17 @@ import TravelCenter from './TravelCenter';
 import CoffeeShop from './CoffeeShop';
 import Restaurant from './Restaurant';
 import TravelCenterCreate from './TravelCenterCreate';
+import $ from 'jquery';
 
 const Location = (props) => {
 
     const [open, openForm] = useState(false)
-    console.log(open)
+
+    const openModal = () => {
+        $('body').css('overflow', 'hidden');
+        openForm(true)}
+    }
+
     return (
         <div className="location-show-page">
             <h1>{props.location.name}, {props.location.state}</h1>
@@ -43,7 +49,7 @@ const Location = (props) => {
                 </div>
             </div>
             {open && <TravelCenterCreate location_id={5} />}
-            <button onClick={ () => openForm(true)}>Click Me</button>
+            <button onClick={ () => openModal()>}Click Me</button>
         </div>
     )
 }
