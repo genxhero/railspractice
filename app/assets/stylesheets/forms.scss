@@ -14,13 +14,16 @@
 .place-form {
     padding: 2rem;
     border-radius: 4px;
-    background: white;
+    background: darkorange;
     height: 10rem;
     width: 20rem;
 }
 
 .place-form-text {
     padding: .5rem;
+    margin: .2rem;
+    background: orange;
+    border: none;
 }
 
 .place-form-text:focus {
