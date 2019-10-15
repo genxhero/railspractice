@@ -23,6 +23,11 @@ const LocationShow = (props) => {
         openForm(true)
     }
 
+    const closeModal = () => {
+        $('body').css('overflow', 'auto');
+        openForm(false)
+    }
+
     return (
         <div className="location-show-page">
             <h1>{props.location.name}, {props.location.state}</h1>
@@ -50,7 +55,7 @@ const LocationShow = (props) => {
                     })}
                 </div>
             </div>
-            {open && <TravelCenterCreate location_id={5} />}
+            {open && <TravelCenterCreate location_id={5} close={closeModal}/>}
             <button onClick={ () => openModal()}>Click Me</button>
         </div>
     )
