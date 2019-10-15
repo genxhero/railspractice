@@ -40,6 +40,9 @@ const TravelCenterCreate = (props) => {
                     onChange={handleInputChange}
                     value={values.diesel} />
             </div>
+            <div>
+                <button onClick={props.close} >Cancel</button>
+            </div>
         </div>
     )
 }
