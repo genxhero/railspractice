@@ -38,12 +38,20 @@
 }
 
 .place-form-btn {
-    padding: 2rem;
+    padding-top: .2rem;
+    padding-bottom: .2rem;
+    padding-left: .8rem;
+    padding-right: .8rem;
     color: orange;
     background: orangered;
     border: none;
     border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    margin:.5rem;
 }
 
 .place-form-btn:hover {
+    background-color: rgb(201, 47, 36);
+    cursor: pointer;
 }

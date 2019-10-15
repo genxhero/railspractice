@@ -39,10 +39,11 @@ const TravelCenterCreate = (props) => {
                     placeholder="Diesel Price"
                     onChange={handleInputChange}
                     value={values.diesel} />
+                <div>
+                    <button className="place-form-btn"onClick={props.close} >Cancel</button>
+                </div>
             </div>
-            <div>
-                <button onClick={props.close} >Cancel</button>
-            </div>
+          
         </div>
     )
 }
