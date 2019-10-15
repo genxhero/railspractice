@@ -7,7 +7,7 @@ const TravelCenterCreate = (props) => {
         setValues({...values, [name]: value})
     }
 
-    const [values, setValues] = useState({name: '', description: '', unleaded: 0, diesel: 0})
+    const [values, setValues] = useState({name: '', description: '', unleaded: null, diesel: null})
     console.log(values);
     return (
         <div className="place-form-modal">
@@ -28,13 +28,15 @@ const TravelCenterCreate = (props) => {
                  onChange={handleInputChange}
                  value={values.description}/>
                  <input
-                    className="place-form-money"
+                    className="place-form-text"
                     name="unleaded"
+                    placeholder="Unleaded Price"
                     onChange={handleInputChange}
                     value={values.unleaded} />
                 <input
-                    className="place-form-money"
+                    className="place-form-text"
                     name="diesel"
+                    placeholder="Diesel Price"
                     onChange={handleInputChange}
                     value={values.diesel} />
             </div>

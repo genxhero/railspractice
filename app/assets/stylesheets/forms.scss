@@ -20,5 +20,9 @@
 }
 
 .place-form-text {
+    padding: .5rem;
+}
 
+.place-form-text:focus {
+    outline:none;
 }
