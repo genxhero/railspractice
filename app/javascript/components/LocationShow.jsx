@@ -22,7 +22,7 @@ const LocationShow = (props) => {
     const openModal = (placeType) => {
         $("html, body").animate({ scrollTop: 0 });
         $('body').css('overflow', 'hidden');
-        openForm({place: true, placeType})
+        openForm({open: true, placeType})
     }
 
     const closeModal = () => {
