@@ -20,7 +20,7 @@ const TravelCenterCreate = (props) => {
                  placeholder="Name"
                  onChange={handleInputChange}
                  value={values.name}/>
-               <input 
+               <textarea 
                  className="place-form-text"
                  type='text' 
                  name='description'
