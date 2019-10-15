@@ -17,6 +17,7 @@ const Location = (props) => {
     const [open, openForm] = useState(false)
 
     const openModal = () => {
+        $("html, body").animate({ scrollTop: 0 }, "slow");
         $('body').css('overflow', 'hidden');
         openForm(true)}
     }
