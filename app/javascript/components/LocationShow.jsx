@@ -12,14 +12,15 @@ import Restaurant from './Restaurant';
 import TravelCenterCreate from './TravelCenterCreate';
 import $ from 'jquery';
 
-const Location = (props) => {
+
+const LocationShow = (props) => {
 
     const [open, openForm] = useState(false)
 
     const openModal = () => {
         $("html, body").animate({ scrollTop: 0 }, "slow");
         $('body').css('overflow', 'hidden');
-        openForm(true)}
+        openForm(true)
     }
 
     return (
@@ -50,9 +51,9 @@ const Location = (props) => {
                 </div>
             </div>
             {open && <TravelCenterCreate location_id={5} />}
-            <button onClick={ () => openModal()>}Click Me</button>
+            <button onClick={ () => openModal()}>Click Me</button>
         </div>
     )
 }
 
-export default Location;
+export default LocationShow;
