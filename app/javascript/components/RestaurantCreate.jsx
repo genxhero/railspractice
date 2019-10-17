@@ -32,6 +32,9 @@ const RestaurantCreate = (props) => {
                  placeholder="Description"
                  onChange={handleInputChange}
                  value={values.description}/>
+                <div>
+                    <button className="place-form-btn"onClick={props.close} >Cancel</button>
+                </div>
         </div>
     </div>
     );
