@@ -1,3 +1,11 @@
+/**
+ * Form for creating a new travel center.
+ * TODO: Make it dry, try to do something dynamic with type of place or something.
+ * Right now the three types of place are too different. Might be better to have three
+ * different form...the ajax action is going to hit a certain part of the api no matter what.
+ * Maybe use a case statment
+ */
+
 import React, {useState}from 'react';
 
 const TravelCenterCreate = (props) => {
