@@ -40,6 +40,7 @@ const LocationShow = (props) => {
                 {props.places.coffeeShops.map( coffeeShop => {
                         return <CoffeeShop coffeeShop={coffeeShop} />
                     })}
+                    <button onClick={ () => openModal('coffeeShop')}>Click Me</button>
                 </div>
 
                 <div className="location-show-column">
@@ -48,6 +49,7 @@ const LocationShow = (props) => {
                 {props.places.restaurants.map( restaurant => {
                         return <Restaurant restaurant={restaurant} />
                     })}
+                    <button onClick={ () => openModal('restaurant')}>Click Me</button>
                 </div>
 
                 <div className="location-show-column">
