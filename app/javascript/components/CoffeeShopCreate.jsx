@@ -1,3 +1,10 @@
+/**
+ * For coffee shops, a few yes or no check boxes will be used for wifi, armchairs, and couches.
+ * Shop Types include Drive Thru, Kiosk, and sit-down.
+ * 
+ * May add "serves breakfast" as a boolean as well.  Might encourage users to describe it verbally instead
+ */
+
 import React, {useState} from 'react';
 
 const CoffeeShopCreate = (props) => {
