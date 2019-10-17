@@ -16,7 +16,6 @@ const TravelCenterCreate = (props) => {
     }
 
     const [values, setValues] = useState({name: '', description: '', unleaded: null, diesel: null})
-    console.log(values);
     return (
         <div className="place-form-modal">
             <div className="place-form">
