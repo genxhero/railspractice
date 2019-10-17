@@ -11,6 +11,7 @@ import CoffeeShop from './CoffeeShop';
 import Restaurant from './Restaurant';
 import TravelCenterCreate from './TravelCenterCreate';
 import RestaurantCreate from './RestaurantCreate';
+import CoffeeShopCreate from './CoffeeShopCreate';
 import $ from 'jquery';
 
 
@@ -41,6 +42,7 @@ const LocationShow = (props) => {
                 {props.places.coffeeShops.map( coffeeShop => {
                         return <CoffeeShop coffeeShop={coffeeShop} />
                     })}
+                    {(state.open && state.placeType === "coffeeShop") && <CoffeeShopCreate location_id={5} close={closeModal}/>}
                     <button onClick={ () => openModal('coffeeShop')}>Click Me</button>
                 </div>
 
@@ -50,7 +52,7 @@ const LocationShow = (props) => {
                 {props.places.restaurants.map( restaurant => {
                         return <Restaurant restaurant={restaurant} />
                     })}
-                                        {(state.open && state.placeType === "restaurant") && <RestaurantCreate location_id={5} close={closeModal}/>}
+                    {(state.open && state.placeType === "restaurant") && <RestaurantCreate location_id={5} close={closeModal}/>}
                     <button onClick={ () => openModal('restaurant')}>Click Me</button>
                 </div>
 
