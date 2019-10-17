@@ -1,3 +1,10 @@
+/**
+ * The following component renders a form for creating a restaurant.
+ * Name and description are much the same as for the travel center.
+ * Cuisine will be derived from a list of potential cuisines, while
+ * Shop type will be a few radio buttons or checkboxes (since there are very few)
+ */
+
 import React, {useState} from 'react';
 
 const RestaurantCreate = (props) => {
