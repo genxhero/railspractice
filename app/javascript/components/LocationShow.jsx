@@ -10,6 +10,7 @@ import TravelCenter from './TravelCenter';
 import CoffeeShop from './CoffeeShop';
 import Restaurant from './Restaurant';
 import TravelCenterCreate from './TravelCenterCreate';
+import RestaurantCreate from './RestaurantCreate';
 import $ from 'jquery';
 
 
@@ -49,6 +50,7 @@ const LocationShow = (props) => {
                 {props.places.restaurants.map( restaurant => {
                         return <Restaurant restaurant={restaurant} />
                     })}
+                                        {(state.open && state.placeType === "restaurant") && <RestaurantCreate location_id={5} close={closeModal}/>}
                     <button onClick={ () => openModal('restaurant')}>Click Me</button>
                 </div>
 
