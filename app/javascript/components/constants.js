@@ -1,0 +1,19 @@
+export const CUISINES = [
+                        "American", 
+                        "Barbeque", 
+                        "British",
+                        "Cajun", 
+                        "Carribean",
+                        "Chinese", 
+                        "Creole",
+                        "Ethiopian",
+                        "French",
+                        "German",
+                        "Italian", 
+                        "Japanese", 
+                        "Mexican", 
+                        "Peruvian",
+                        "Scandinavian",
+                        "Spanish",
+                        "Vietnamese"
+                    ]
