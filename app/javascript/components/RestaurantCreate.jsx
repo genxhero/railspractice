@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 const RestaurantCreate = (props) => {
     const handleInputChange = e => {
@@ -18,6 +18,13 @@ const RestaurantCreate = (props) => {
                  placeholder="Name"
                  onChange={handleInputChange}
                  value={values.name}/>
+                <input 
+                 className="place-form-text"
+                 name='cuisine'
+                 type="text"
+                 placeholder="Cuisine"
+                 onChange={handleInputChange}
+                 value={values.cuisine}/>
                <textarea 
                  className="place-form-text"
                  type='text' 
