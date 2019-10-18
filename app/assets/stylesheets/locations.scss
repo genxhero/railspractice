@@ -20,11 +20,17 @@
     margin-bottom: 0;
 }
 
+.location-show-columns {
+    width: 100%;
+    display: flex;
+    margin-right: 2rem;
+}
+
 .location-show-column {
     background: peachpuff;
     margin: .5rem;
     padding: .5rem;
-    width: 30%;
+    width: 33%;
     text-align: center;
 }
 
@@ -33,4 +39,6 @@
     border-bottom: 2px solid gray;
     padding: 1rem;
     border-top: 2px solid gray;
+    margin:.2rem;
 }
+

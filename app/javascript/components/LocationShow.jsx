@@ -36,7 +36,7 @@ const LocationShow = (props) => {
         <div className="location-show-page">
             <h1>{props.location.name}, {props.location.state}</h1>
             <img className="location-show-image"src={props.location.image_url} alt={props.location.name}/>
-            <div className="location-show columns" style={{"display":"flex", "flexDirection":"row"}}>
+            <div className="location-show-columns">
                 <div className="location-show-column">
                     {props.places.coffeeShops.length === 0 && <h4>No Coffee Shops Recommended</h4>}
                 {props.places.coffeeShops.map( coffeeShop => {
