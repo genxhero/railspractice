@@ -41,11 +41,17 @@ const RestaurantCreate = (props) => {
 
                 <input 
                     name='shopType'
-                    value={values.shopType}
+                    value='Sit Down'
                     onChange={handleInputChange}
                     type="radio"
-                    label="Choose Type:"
                 />
+                <input 
+                    name='shopType'
+                    value='Fast Food'
+                    onChange={handleInputChange}
+                    type="radio"
+                />
+
                <textarea 
                  className="place-form-text"
                  type='text' 
