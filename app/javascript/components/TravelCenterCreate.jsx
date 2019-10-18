@@ -49,7 +49,7 @@ const TravelCenterCreate = (props) => {
                 <div>
                     <button className="place-form-btn"onClick={props.close} >Cancel</button>
                 </div>
-                <span className="cancel-x"> X</span>
+                <span className="cancel-x" onClick={props.close}> X</span>
             </div>
           
         </div>
