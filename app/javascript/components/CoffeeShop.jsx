@@ -10,6 +10,7 @@ const CoffeeShop = (props) => {
         <div className="place-card">
             <div>{props.coffeeShop.name}</div>
             <div>WiFi: {props.coffeeShop.wifi ? "Yes" : "No"}</div>
+            <div>Couches: {props.coffeeShop.couches ? "Yes" : "No"} </div>
         </div>
     )
 }
