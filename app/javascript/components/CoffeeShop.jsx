@@ -8,7 +8,8 @@ import React from 'react'
 const CoffeeShop = (props) => {
     return (
         <div className="place-card">
-            {props.coffeeShop.name}
+            <div>{props.coffeeShop.name}</div>
+            <div>WiFi: {props.coffeeShop.wifi ? "Yes" : "No"}</div>
         </div>
     )
 }
