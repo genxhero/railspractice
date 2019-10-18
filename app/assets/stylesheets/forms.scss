@@ -19,6 +19,7 @@
     width: 20rem;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .place-form-text {
@@ -59,10 +60,4 @@
 
 .place-form-radio {
     display: none;
-}
-
-.cancel-x {
-    color: orangered;
-    font-size: 32px;
-    font-weight: bold;
 }
