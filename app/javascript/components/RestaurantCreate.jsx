@@ -37,7 +37,15 @@ const RestaurantCreate = (props) => {
                 {CUISINES.map( cuisine => {
                     return <option value={cuisine}>{cuisine}</option>
                 })}     
-                </select>>
+                </select>
+
+                <input 
+                    name='shopType'
+                    value={values.shopType}
+                    onChange={handleInputChange}
+                    type="radio"
+                    label="Choose Type:"
+                />
                <textarea 
                  className="place-form-text"
                  type='text' 
