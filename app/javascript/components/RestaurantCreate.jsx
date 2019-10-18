@@ -6,6 +6,8 @@
  */
 
 import React, {useState} from 'react';
+import CUISINES from './constants';
+
 
 const RestaurantCreate = (props) => {
     const handleInputChange = e => {
@@ -25,13 +27,16 @@ const RestaurantCreate = (props) => {
                  placeholder="Name"
                  onChange={handleInputChange}
                  value={values.name}/>
-                <input 
+                <select 
                  className="place-form-text"
                  name='cuisine'
-                 type="text"
                  placeholder="Cuisine"
                  onChange={handleInputChange}
-                 value={values.cuisine}/>
+                 value={values.cuisine}>
+                {CUISINES.map( cuisine => {
+                    return <option value={cuisine}>{cuisine}</option>
+                })}     
+                </select>>
                <textarea 
                  className="place-form-text"
                  type='text' 
