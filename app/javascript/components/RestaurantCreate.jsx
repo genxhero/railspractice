@@ -6,7 +6,7 @@
  */
 
 import React, {useState} from 'react';
-import CUISINES from './constants';
+import {CUISINES} from './constants';
 
 
 const RestaurantCreate = (props) => {
