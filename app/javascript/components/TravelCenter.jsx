@@ -18,8 +18,8 @@ const TravelCenter = (props) => {
         )
     } else {
         return (
-            <div onClick={() => expandOrCollapse(true)}>
-                EXPAND DONG
+            <div className="place-card"onClick={() => expandOrCollapse(true)}>
+                {props.travelCenter.name}
             </div>
         )
     }
