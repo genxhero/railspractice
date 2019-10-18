@@ -13,7 +13,7 @@ const TravelCenter = (props) => {
     return (
             <div className="place-card-expanded">
                 <FaMinus onClick ={() => expandOrCollapse(false)}/>
-                <div>
+                <div className="place-card-data">
                     {props.travelCenter.name} 
                     <div>Unleaded: ${parseFloat(props.travelCenter.unleaded).toFixed(2)}</div>
                     <div>Diesel: ${parseFloat(props.travelCenter.diesel).toFixed(2)}</div>
@@ -24,7 +24,9 @@ const TravelCenter = (props) => {
         return (
             <div className="place-card-collapsed">
                 <FaPlus onClick={() => expandOrCollapse(true)} /> 
-                {props.travelCenter.name}
+                <div className="place-card-data">
+                    {props.travelCenter.name}
+                </div>
             </div>
         )
     }
