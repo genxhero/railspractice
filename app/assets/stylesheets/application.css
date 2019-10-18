@@ -22,6 +22,19 @@
 
  .cancel-x {
     color: orangered;
-    font-size: 32px;
+    font-size: 28px;
     font-weight: bold;
+    position: absolute;
+    right: .2rem;
+    top: .2rem;
+    padding: .5rem;
+    font-family: sans-serif;
+    border-radius: 100%;
 }
+
+.cancel-x:hover {
+    background: orangered;
+    color: orange;
+    transition: all .2s;
+}
+
