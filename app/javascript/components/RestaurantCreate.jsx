@@ -16,6 +16,7 @@ const RestaurantCreate = (props) => {
     }
 
     const [values, setValues] = useState({name: '', description: '', cuisine: '', shopType: ''})
+    console.log(values);
     return (
         <div className="place-form-modal">
             <div className="place-form">
