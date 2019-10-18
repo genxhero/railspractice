@@ -39,18 +39,26 @@ const RestaurantCreate = (props) => {
                 })}     
                 </select>
 
-                <input className="place-form-radio"
+                <label>
+                    <input className="place-form-radio"
                     name='shopType'
                     value='Sit Down'
                     onChange={handleInputChange}
                     type="radio"
                 /> 
+                Sit Down
+                </label>
+              
+              <label>
                 <input className="place-form-radio"
-                    name='shopType'
-                    value='Fast Food'
-                    onChange={handleInputChange}
-                    type="radio"
-                />
+                                    name='shopType'
+                                    value='Fast Food'
+                                    onChange={handleInputChange}
+                                    type="radio"
+                                />
+                  Fast Food
+              </label>
+               
 
                <textarea 
                  className="place-form-text"
