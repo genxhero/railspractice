@@ -8,8 +8,8 @@ const TravelCenter = (props) => {
     return (
         <div className="place-card">
             {props.travelCenter.name} 
-            ${props.travelCenter.unleaded}
-            ${props.travelCenter.diesel}
+            <div> Unleaded: ${props.travelCenter.unleaded}</div>
+            <div>Diesel: ${props.travelCenter.diesel}</div>
         </div>
     )
 }
