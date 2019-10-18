@@ -11,7 +11,7 @@ const TravelCenter = (props) => {
 
     if (isExpanded) {
     return (
-            <div className="place-card">
+            <div className="place-card-expanded">
                 <FaMinus onClick ={() => expandOrCollapse(false)}/>
                 <div>
                     {props.travelCenter.name} 
@@ -22,7 +22,7 @@ const TravelCenter = (props) => {
         )
     } else {
         return (
-            <div className="place-card">
+            <div className="place-card-collapsed">
                 <FaPlus onClick={() => expandOrCollapse(true)} /> 
                 {props.travelCenter.name}
             </div>

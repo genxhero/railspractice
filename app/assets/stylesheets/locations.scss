@@ -35,10 +35,19 @@
 }
 
 //TODO: place-card-open and place-card-closed, depending on state. Gonna use a hook for this 
-.place-card {
+.place-card-collapsed {
     border-bottom: 2px solid gray;
     padding: 1rem;
     border-top: 2px solid gray;
     margin:.2rem;
+    display: flex;
+}
+
+.place-card-expanded {
+    border-bottom: 2px solid gray;
+    padding: 1rem;
+    border-top: 2px solid gray;
+    margin:.2rem;
+    display: flex;
 }
 
