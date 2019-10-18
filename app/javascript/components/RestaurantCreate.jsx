@@ -70,6 +70,7 @@ const RestaurantCreate = (props) => {
                 <div>
                     <button className="place-form-btn"onClick={props.close} >Cancel</button>
                 </div>
+                <span className="cancel-x"> X</span>
         </div>
     </div>
     );
