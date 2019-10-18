@@ -8,8 +8,8 @@ const TravelCenter = (props) => {
     return (
         <div className="place-card">
             {props.travelCenter.name} 
-            <div>Unleaded: ${parseFloat(props.travelCenter.unleaded)}</div>
-            <div>Diesel: ${parseFloat(props.travelCenter.diesel)}</div>
+            <div>Unleaded: ${parseFloat(props.travelCenter.unleaded).toFixed(2)}</div>
+            <div>Diesel: ${parseFloat(props.travelCenter.diesel).toFixed(2)}</div>
         </div>
     )
 }
