@@ -11,6 +11,7 @@ const CoffeeShop = (props) => {
             <div>{props.coffeeShop.name}</div>
             <div>WiFi: {props.coffeeShop.wifi ? "Yes" : "No"}</div>
             <div>Couches: {props.coffeeShop.couches ? "Yes" : "No"} </div>
+            <div>Armchairs: {props.coffeeShop.armchairs ? "Yes" : "No"}</div>
         </div>
     )
 }
