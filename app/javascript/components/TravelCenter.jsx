@@ -12,7 +12,9 @@ const TravelCenter = (props) => {
     if (isExpanded) {
     return (
             <div className="place-card-expanded">
-                <FaChevronUp onClick ={() => expandOrCollapse(false)}/>
+                <div className="chevron-container">
+                    <FaChevronUp onClick ={() => expandOrCollapse(false)}/>
+                </div>
                 <div className="place-card-data">
                     <span>{props.travelCenter.name}</span>
                     <span>{props.travelCenter.description}</span>
@@ -24,7 +26,9 @@ const TravelCenter = (props) => {
     } else {
         return (
             <div className="place-card-collapsed">
-                <FaChevronDown onClick={() => expandOrCollapse(true)} /> 
+                <div className="chevron-container">
+                     <FaChevronDown onClick={() => expandOrCollapse(true)} /> 
+                </div>
                 <div className="place-card-data">
                     {props.travelCenter.name}
                 </div>

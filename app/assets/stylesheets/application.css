@@ -41,3 +41,6 @@
     cursor: pointer;
 }
 
+.chevron-container:hover {
+    cursor: pointer;
+}
