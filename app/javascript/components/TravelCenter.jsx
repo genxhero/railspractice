@@ -3,7 +3,7 @@
  */
 
 import React, {useState} from 'react'
-import { FaPlus, FaMinus } from "react-icons/fa";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 
 const TravelCenter = (props) => {
@@ -12,7 +12,7 @@ const TravelCenter = (props) => {
     if (isExpanded) {
     return (
             <div className="place-card-expanded">
-                <FaMinus onClick ={() => expandOrCollapse(false)}/>
+                <FaChevronUp onClick ={() => expandOrCollapse(false)}/>
                 <div className="place-card-data">
                     <span>{props.travelCenter.name}</span>
                     <span>{props.travelCenter.description}</span>
@@ -24,7 +24,7 @@ const TravelCenter = (props) => {
     } else {
         return (
             <div className="place-card-collapsed">
-                <FaPlus onClick={() => expandOrCollapse(true)} /> 
+                <FaChevronDown onClick={() => expandOrCollapse(true)} /> 
                 <div className="place-card-data">
                     {props.travelCenter.name}
                 </div>
