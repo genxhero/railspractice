@@ -41,6 +41,7 @@
     display: flex;
     align-items: center;
     font-weight: bold;
+    border-radius: 4px;
     background: darkorange;
 }
 
@@ -49,7 +50,7 @@
     margin:.2rem;
     display: flex;
     background: orange;
-    border-radius: 3px;
+    border-radius: 4px;
 }
 
 .place-card-data {
