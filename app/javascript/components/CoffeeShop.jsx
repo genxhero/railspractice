@@ -8,6 +8,7 @@ import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 
 const CoffeeShop = (props) => {
+    const [isExpanded, expandOrCollapse] = useState(false)
     return (
         <div className="place-card">
             <div className="place-card-data">
