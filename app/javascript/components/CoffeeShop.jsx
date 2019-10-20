@@ -12,7 +12,7 @@ const CoffeeShop = (props) => {
 
     if (isExpanded) {
          return (
-        <div className="place-card">
+        <div className="place-card-expanded">
             <div className="chevron-container">
                     <FaChevronUp onClick ={() => expandOrCollapse(false)}/>
                 </div>
@@ -27,8 +27,13 @@ const CoffeeShop = (props) => {
     )
     } else {
         return (
-            <div>
-
+            <div className="place-card-collapsed">
+  <div className="chevron-container">
+                     <FaChevronDown onClick={() => expandOrCollapse(true)} /> 
+                </div>
+                <div className="place-card-data">
+                 Name will go here later.
+                </div>
             </div>
         )
     }
