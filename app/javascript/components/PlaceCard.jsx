@@ -20,18 +20,36 @@ const parseValue = (value) => {
 
 const PlaceCard = (props) => {
     const [isExpanded, expandOrCollapse] = useState(false)
-    debugger;
-    return (
+    if (isExpanded) {
+         return (
         <div className="place-card-expanded">
+            <div className="chevron-container">
+                 <FaChevronUp onClick ={() => expandOrCollapse(false)}/>
+            </div>
             <div className="place-card-data">
             {props.place.fields.map( field => {
-                return <span>{field.name}: {parseValue(field.value)}</span>
+                if (field.name === "Name" || field.name === "Description") {
+                    return  <span>{field.value}</span>
+                } else {
+                    return <span>{field.name}: {parseValue(field.value)}</span>
+                }
             })}
             </div>
-            <div className="chevron-container">
-                    <FaChevronUp onClick ={() => expandOrCollapse(false)}/>
-            </div>
+
         </div>
-    )
+    ) 
+    } else {
+        return (
+            <div className="place-card-collapsed">
+                 <div className="chevron-container">
+                     <FaChevronDown onClick={() => expandOrCollapse(true)} /> 
+                </div>
+                <div className="place-card-data">
+                 {props.place.name}
+                </div>
+            </div>
+        )
+    }
+  
 }
 export default PlaceCard;

@@ -49,7 +49,8 @@ class Location < ApplicationRecord
             {name: "Armchairs", value: shop.armchairs},
             {name: "Variety", value: shop.shop_type},
 
-            ] 
+            ], 
+            name: shop.name
         } 
     }
         
