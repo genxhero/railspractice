@@ -6,9 +6,19 @@
 import React from 'react'
 
 const Restaurant = (props) => {
-    return (
-        <div className="place-card">
-            {props.restaurant.name}
+    const [isExpanded, expandOrCollapse] = useState(false)
+
+    if (isExpanded) {
+         return (
+        <div className="place-card-expanded">
+            <div className="chevron-container">
+                    <FaChevronUp onClick ={() => expandOrCollapse(false)}/>
+                </div>
+            <div className="place-card-data">
+                <div>{props.restaurant.name}</div>
+                <div>Type: {props.restaurant.shopType}</div>
+            </div>
+       
         </div>
     )
 }

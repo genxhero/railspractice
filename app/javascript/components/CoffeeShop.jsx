@@ -28,7 +28,7 @@ const CoffeeShop = (props) => {
     } else {
         return (
             <div className="place-card-collapsed">
-  <div className="chevron-container">
+                 <div className="chevron-container">
                      <FaChevronDown onClick={() => expandOrCollapse(true)} /> 
                 </div>
                 <div className="place-card-data">
