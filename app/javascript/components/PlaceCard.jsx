@@ -8,12 +8,13 @@ import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 const parseValue = (value) => {
     switch (value) {
         case true:
-        return "Yes"
+            return "Yes"
         case false:
-        return "No"
+            return "No"
         case null:
-        return "Unknown"
-        default: return value
+            return "Unknown"
+        default: 
+            return value
     }
 } 
 

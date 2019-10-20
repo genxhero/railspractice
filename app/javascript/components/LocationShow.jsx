@@ -41,7 +41,8 @@ const LocationShow = (props) => {
                 <div className="location-show-column">
                     {props.places.coffeeShops.length === 0 && <h4>No Coffee Shops Recommended</h4>}
                 {props.places.coffeeShops.map( coffeeShop => {
-                        return <CoffeeShop coffeeShop={coffeeShop} />
+                        // return <CoffeeShop coffeeShop={coffeeShop} />
+                        return <PlaceCard place={coffeeShop} />
                     })}
                     {(state.open && state.placeType === "coffeeShop") && <CoffeeShopCreate location_id={5} close={closeModal}/>}
                     <button onClick={ () => openModal('coffeeShop')}>Click Me</button>
@@ -51,8 +52,8 @@ const LocationShow = (props) => {
                 {props.places.restaurants.length === 0 && <h4>No Restaurants Recommended</h4>}
 
                 {props.places.restaurants.map( restaurant => {
-                        // return <Restaurant restaurant={restaurant} />
-                        return <PlaceCard place={restaurant} />
+                        return <Restaurant restaurant={restaurant} />
+                        // return <PlaceCard place={restaurant} />
                     })}
                     {(state.open && state.placeType === "restaurant") && <RestaurantCreate location_id={5} close={closeModal}/>}
                     <button onClick={ () => openModal('restaurant')}>Click Me</button>

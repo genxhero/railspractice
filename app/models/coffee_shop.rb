@@ -1,7 +1,7 @@
 # t.string :name, null: false
 # t.integer :location_id, null: false
 # t.string :description, null: false
-# t.string :type, null: false
+# t.string :shop_type, null: false
 # t.boolean :couches, null: false
 # t.boolean :armchairs, null: false
 # t.boolean :restrooms, null: false

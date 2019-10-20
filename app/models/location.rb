@@ -38,10 +38,34 @@ class Location < ApplicationRecord
 
     #TODO: Deprecate this function, eager load all three at the controller level
     def places
+        coffee_shops = self.coffee_shops.map { |shop| 
+        {
+            fields: [
+            {name: "Name", value: shop.name}, 
+            {name: "Description", value: shop.description}, 
+            {name: "Wifi", value: shop.wifi},
+            {name: "Restrooms", value: shop.restrooms},
+            {name: "Couches", value: shop.couches},
+            {name: "Armchairs", value: shop.armchairs},
+            {name: "Variety", value: shop.shop_type},
+
+            ] 
+        } 
+    }
+        
         {
             "travelCenters": self.travel_centers,
             "restaurants": self.restaurants,
-            "coffeeShops": self.coffee_shops
+            "coffeeShops": coffee_shops
         }
     end
+
+    # #travelCenter {
+    #     props: [
+    #   {
+    #     name: name
+    #     value: value
+    #     }
+    #]
+    # }
 end
