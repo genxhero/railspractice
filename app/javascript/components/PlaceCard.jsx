@@ -18,9 +18,13 @@ const parseValue = (value) => {
 } 
 
 const PlaceCard = (props) => {
+    const [isExpanded, expandOrCollapse] = useState(false)
+    debugger;
     return (
-        <div>
-
+        <div className="place-card-expanded">
+            <div className="chevron-container">
+                    <FaChevronUp onClick ={() => expandOrCollapse(false)}/>
+            </div>
         </div>
     )
 }
