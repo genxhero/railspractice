@@ -23,6 +23,11 @@ const PlaceCard = (props) => {
     debugger;
     return (
         <div className="place-card-expanded">
+            <div className="place-card-data">
+            {props.place.fields.map( field => {
+                return <span>{field.name}: {parseValue(field.value)}</span>
+            })}
+            </div>
             <div className="chevron-container">
                     <FaChevronUp onClick ={() => expandOrCollapse(false)}/>
             </div>
