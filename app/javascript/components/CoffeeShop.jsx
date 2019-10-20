@@ -13,6 +13,9 @@ const CoffeeShop = (props) => {
     if (isExpanded) {
          return (
         <div className="place-card">
+            <div className="chevron-container">
+                    <FaChevronUp onClick ={() => expandOrCollapse(false)}/>
+                </div>
             <div className="place-card-data">
                 <div>{props.coffeeShop.name}</div>
                 <div>WiFi: {props.coffeeShop.wifi ? "Yes" : "No"}</div>
