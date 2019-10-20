@@ -41,8 +41,6 @@ class Location < ApplicationRecord
         coffee_shops = self.coffee_shops.map { |shop| 
         {
             fields: [
-            {name: "Name", value: shop.name}, 
-            {name: "Description", value: shop.description}, 
             {name: "Wifi", value: shop.wifi},
             {name: "Restrooms", value: shop.restrooms},
             {name: "Couches", value: shop.couches},
@@ -50,8 +48,20 @@ class Location < ApplicationRecord
             {name: "Variety", value: shop.shop_type},
 
             ], 
-            name: shop.name
+            name: shop.name,
+            description: shop.description
         } 
+    }
+
+    travel_centers = sel.travel_centers.map {|tc| 
+        {
+            fields: [
+                {name: "Unleaded", value: tc.unleaded},
+                {name: "Diesel", value: tc.diesel}
+            ]
+            name: tc.name,
+            description: tc.description
+        }
     }
         
         {
