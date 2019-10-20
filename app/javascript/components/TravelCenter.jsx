@@ -8,7 +8,6 @@ import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 const TravelCenter = (props) => {
     const [isExpanded, expandOrCollapse] = useState(false)
-
     if (isExpanded) {
     return (
             <div className="place-card-expanded">
@@ -30,7 +29,7 @@ const TravelCenter = (props) => {
                      <FaChevronDown onClick={() => expandOrCollapse(true)} /> 
                 </div>
                 <div className="place-card-data">
-                    {props.travelCenter.name}
+                 Name will go here later.
                 </div>
             </div>
         )

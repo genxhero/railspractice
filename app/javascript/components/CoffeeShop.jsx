@@ -9,7 +9,9 @@ import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 const CoffeeShop = (props) => {
     const [isExpanded, expandOrCollapse] = useState(false)
-    return (
+
+    if (isExpanded) {
+         return (
         <div className="place-card">
             <div className="place-card-data">
                 <div>{props.coffeeShop.name}</div>
@@ -20,6 +22,13 @@ const CoffeeShop = (props) => {
        
         </div>
     )
+    } else {
+        return (
+            <div>
+
+            </div>
+        )
+    }
 }
 
 export default CoffeeShop;
