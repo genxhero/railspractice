@@ -30,7 +30,7 @@ const PlaceCard = (props) => {
                 <div className="place-card-name">{props.place.name}</div> 
                 <div>{props.place.description}</div>
                 {props.place.fields.map( field => {
-                        return <div>{field.name}: {parseValue(field.value)}</div>
+                        return <div><span className="place-card-fieldname">{field.name}:</span> {parseValue(field.value)}</div>
                 })}
             </div>
         </div>
