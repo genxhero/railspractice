@@ -22,7 +22,7 @@ const PlaceCard = (props) => {
     const [isExpanded, expandOrCollapse] = useState(false)
     if (isExpanded) {
          return (
-        <div className="place-card place-card-expanded">
+        <div className="place-card--expanded">
             <div className="chevron-container">
                  <FaChevronUp onClick ={() => expandOrCollapse(false)}/>
             </div>
@@ -42,7 +42,7 @@ const PlaceCard = (props) => {
     ) 
     } else {
         return (
-            <div className="place-card place-card-collapsed">
+            <div className="place-card--collapsed">
                  <div className="chevron-container">
                      <FaChevronDown onClick={() => expandOrCollapse(true)} /> 
                 </div>
