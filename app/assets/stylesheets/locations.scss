@@ -35,38 +35,4 @@
 }
 
 //TODO: place-card-open and place-card-closed, depending on state. Gonna use a hook for this 
-.place-card-collapsed {
-    padding: .2rem;
-    margin:.2rem;
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-    border-radius: 4px;
-    background: darkorange;
-}
 
-.place-card-expanded {
-    padding: .2rem;
-    margin:.2rem;
-    display: flex;
-    background: orange;
-    border-radius: 4px;
-}
-
-.place-card-data {
-    margin: .2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    text-align: left;
-}
-
-.place-card-name {
-    font-weight: bold;
-}
-
-.place-card-fieldname {
-    font-weight: bold;
-}
