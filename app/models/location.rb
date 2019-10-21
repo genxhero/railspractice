@@ -36,7 +36,7 @@ class Location < ApplicationRecord
         self.url_key = "#{self.name}#{self.state}".downcase.gsub(" ", "")
     end
 
-    #TODO: Deprecate this function, eager load all three at the controller level
+    #TODO: Split into subroutines.
     def places
         coffee_shops = self.coffee_shops.map { |shop| 
         {
