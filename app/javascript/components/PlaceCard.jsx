@@ -27,12 +27,10 @@ const PlaceCard = (props) => {
                  <FaChevronUp onClick ={() => expandOrCollapse(false)}/>
             </div>
             <div className="place-card-data">
+            {props.place.name}
+            {props.place.description}
             {props.place.fields.map( field => {
-                if (field.name === "Name" || field.name === "Description") {
-                    return  <span>{field.value}</span>
-                } else {
                     return <span>{field.name}: {parseValue(field.value)}</span>
-                }
             })}
             </div>
 
