@@ -58,7 +58,7 @@ class Location < ApplicationRecord
             fields: [
                 {name: "Unleaded", value: tc.unleaded},
                 {name: "Diesel", value: tc.diesel}
-            ]
+            ],
             name: tc.name,
             description: tc.description
         }
