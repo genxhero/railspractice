@@ -53,7 +53,7 @@ class Location < ApplicationRecord
         } 
     }
 
-    travel_centers = sel.travel_centers.map {|tc| 
+    travel_centers = self.travel_centers.map {|tc| 
         {
             fields: [
                 {name: "Unleaded", value: tc.unleaded},
@@ -63,10 +63,20 @@ class Location < ApplicationRecord
             description: tc.description
         }
     }
+
+    restaurants = self.restaurants.map {|restaurant|
+        fields: [
+            {name: "Cuisines", value: restaurant.cuisine},
+            {name: "Variety", value: restaurant.shop_type},
+      
+        ],
+        name: restaurant.name,
+        description: restaurant.description
+    }
         
         {
-            "travelCenters": self.travel_centers,
-            "restaurants": self.restaurants,
+            "travelCenters": travel_centers,
+            "restaurants": restaurants,
             "coffeeShops": coffee_shops
         }
     end

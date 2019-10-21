@@ -2,7 +2,7 @@
 # t.integer :location_id, null: false
 # t.string :cuisine, null: false
 # t.text :description, null: true
-# t.string :type, null: false
+# t.string :shop_type, null: false
 # t.timestamps
 
 #A restaurant is what you would expect, an establishment meant primarily for eating at.
