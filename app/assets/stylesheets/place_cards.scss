@@ -1,22 +1,16 @@
 .place-card {
     margin: .2rem;
     padding: .2rem;
+    display: flex;
+    border-radius: 4px;
 
     &-collapsed {
-        // padding: .2rem;
-        // margin:.2rem;
-        display: flex;
         align-items: center;
         font-weight: bold;
-        border-radius: 4px;
         background: darkorange;
     }
     &-expanded {
-        // padding: .2rem;
-        // margin:.2rem;
-        display: flex;
         background: orange;
-        border-radius: 4px;
     }
   }
 
