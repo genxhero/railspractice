@@ -1,41 +1,26 @@
 .place-card {
+
+    padding: .2rem;
+    margin:.2rem;
+    border-radius: 4px;
+
     &-collapsed {
-        padding: .2rem;
-        margin:.2rem;
+        // padding: .2rem;
+        // margin:.2rem;
         display: flex;
         align-items: center;
         font-weight: bold;
-        border-radius: 4px;
+        // border-radius: 4px;
         background: darkorange;
     }
     &-expanded {
-        padding: .2rem;
-        margin:.2rem;
+        // padding: .2rem;
+        // margin:.2rem;
         display: flex;
         background: orange;
-        border-radius: 4px;
+        // border-radius: 4px;
     }
   }
-
-
-
-// .place-card-collapsed {
-//     padding: .2rem;
-//     margin:.2rem;
-//     display: flex;
-//     align-items: center;
-//     font-weight: bold;
-//     border-radius: 4px;
-//     background: darkorange;
-// }
-
-// .place-card-expanded {
-//     padding: .2rem;
-//     margin:.2rem;
-//     display: flex;
-//     background: orange;
-//     border-radius: 4px;
-// }
 
 .place-card-data {
     margin: .2rem;
