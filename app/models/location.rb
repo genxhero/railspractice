@@ -52,28 +52,18 @@ class Location < ApplicationRecord
         } 
     }
 
-    travel_centers = self.travel_centers.map {|tc| 
-        {
-            fields: [
-                {name: "Unleaded", value: "$#{tc.unleaded}#{(tc.unleaded * 100) % 10 == 0 ? "0" : ""}"},
-                {name: "Diesel", value: "$#{tc.diesel}#{(tc.diesel * 100) % 10 == 0 ? "0" : ""}"}
-            ],
-            name: tc.name,
-            description: tc.description
-        }
-    }
 
         
         {
-            "travelCenters": travel_centers,
-            "restaurants": restaurants,
+            "travelCenters": self.jsonify_travel_centers,
+            "restaurants": self.jsonify_restaurants,
             "coffeeShops": coffee_shops
         }
     end
 
     private 
     def jsonify_restaurants
-        restaurants = self.restaurants.map {|restaurant|
+       self.restaurants.map {|restaurant|
             {     
                 fields: [
                     {name: "Cuisine", value: restaurant.cuisine},
@@ -90,6 +80,16 @@ class Location < ApplicationRecord
     end
 
     def jsonify_travel_centers
+        self.travel_centers.map {|tc| 
+        {
+            fields: [
+                {name: "Unleaded", value: "$#{tc.unleaded}#{(tc.unleaded * 100) % 10 == 0 ? "0" : ""}"},
+                {name: "Diesel", value: "$#{tc.diesel}#{(tc.diesel * 100) % 10 == 0 ? "0" : ""}"}
+            ],
+            name: tc.name,
+            description: tc.description
+        }
+      }
     end
 
 end
