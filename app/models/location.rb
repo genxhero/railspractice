@@ -37,31 +37,14 @@ class Location < ApplicationRecord
     end
 
     #TODO: Split into subroutines.
-    def places
-        coffee_shops = self.coffee_shops.map { |shop| 
-        {
-            fields: [
-                {name: "Wifi", value: shop.wifi},
-                {name: "Restrooms", value: shop.restrooms},
-                {name: "Couches", value: shop.couches},
-                {name: "Armchairs", value: shop.armchairs},
-                {name: "Variety", value: shop.shop_type},
-            ], 
-            name: shop.name,
-            description: shop.description
-        } 
-    }
-
-
-        
+    def places     
         {
             "travelCenters": self.jsonify_travel_centers,
             "restaurants": self.jsonify_restaurants,
-            "coffeeShops": coffee_shops
+            "coffeeShops": self.jsonify_coffee_shops
         }
     end
-
-    private 
+ 
     def jsonify_restaurants
        self.restaurants.map {|restaurant|
             {     
@@ -77,6 +60,20 @@ class Location < ApplicationRecord
     end
 
     def jsonify_coffee_shops
+         self.coffee_shops.map { |shop| 
+            {
+                fields: [
+                    {name: "Wifi", value: shop.wifi},
+                    {name: "Restrooms", value: shop.restrooms},
+                    {name: "Couches", value: shop.couches},
+                    {name: "Armchairs", value: shop.armchairs},
+                    {name: "Variety", value: shop.shop_type},
+                ], 
+                name: shop.name,
+                description: shop.description
+            } 
+        }
+        coffee_shops
     end
 
     def jsonify_travel_centers
