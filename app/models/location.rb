@@ -63,23 +63,33 @@ class Location < ApplicationRecord
         }
     }
 
-    restaurants = self.restaurants.map {|restaurant|
-        {     
-            fields: [
-                {name: "Cuisine", value: restaurant.cuisine},
-                {name: "Variety", value: restaurant.shop_type},
-        
-            ],
-            name: restaurant.name,
-            description: restaurant.description
-        }
-    }
         
         {
             "travelCenters": travel_centers,
             "restaurants": restaurants,
             "coffeeShops": coffee_shops
         }
+    end
+
+    private 
+    def jsonify_restaurants
+        restaurants = self.restaurants.map {|restaurant|
+            {     
+                fields: [
+                    {name: "Cuisine", value: restaurant.cuisine},
+                    {name: "Variety", value: restaurant.shop_type},
+            
+                ],
+                name: restaurant.name,
+                description: restaurant.description
+            }
+        }
+    end
+
+    def jsonify_coffee_shops
+    end
+
+    def jsonify_travel_centers
     end
 
 end
