@@ -82,12 +82,4 @@ class Location < ApplicationRecord
         }
     end
 
-    # #travelCenter {
-    #     props: [
-    #   {
-    #     name: name
-    #     value: value
-    #     }
-    #]
-    # }
 end
