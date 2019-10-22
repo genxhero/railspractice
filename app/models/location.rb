@@ -36,7 +36,6 @@ class Location < ApplicationRecord
         self.url_key = "#{self.name}#{self.state}".downcase.gsub(" ", "")
     end
 
-    #TODO: Split into subroutines.
     def places     
         {
             "travelCenters": self.jsonify_travel_centers,
@@ -73,7 +72,6 @@ class Location < ApplicationRecord
                 description: shop.description
             } 
         }
-        coffee_shops
     end
 
     def jsonify_travel_centers
