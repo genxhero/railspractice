@@ -55,8 +55,8 @@ class Location < ApplicationRecord
     travel_centers = self.travel_centers.map {|tc| 
         {
             fields: [
-                {name: "Unleaded", value: tc.unleaded},
-                {name: "Diesel", value: tc.diesel}
+                {name: "Unleaded", value: "$#{tc.unleaded}#{(tc.unleaded * 100) % 10 == 0 ? "0" : ""}"},
+                {name: "Diesel", value: "$#{tc.diesel}#{(tc.diesel * 100) % 10 == 0 ? "0" : ""}"}
             ],
             name: tc.name,
             description: tc.description
