@@ -97,7 +97,7 @@
 
 /* On mouse-over, add a grey background color */
 .place-form-radio-container:hover input ~ .checkmark {
-    background-color: gray;
+    transition: all .2s;
   }
   
   /* When the radio button is checked, add a blue background */
