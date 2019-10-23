@@ -63,7 +63,7 @@
     cursor: pointer;
 }
 
-.place-form-radio-container > input {
+.place-form-radio-container input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -97,7 +97,7 @@
 
 /* On mouse-over, add a grey background color */
 .container:hover input ~ .checkmark {
-    background-color: black;
+    background-color: gray;
   }
   
   /* When the radio button is checked, add a blue background */
@@ -122,5 +122,5 @@
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: white;
+    background: black;
   }
