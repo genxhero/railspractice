@@ -39,7 +39,7 @@ const RestaurantCreate = (props) => {
                 })}     
                 </select>
 
-                <label>
+                <label className="place-form-radio-container">
                     <input className="place-form-radio"
                     name='shopType'
                     value='Sit Down'
@@ -47,19 +47,18 @@ const RestaurantCreate = (props) => {
                     type="radio"
                 /> 
                 Sit Down
+                <span className="checkmark"></span>
                 </label>
               
-              <label>
-                <div className="place-form-radio-container">
+              <label className="place-form-radio-container">
                     <input className="place-form-radio"
                         name='shopType'
                         value='Fast Food'
                         onChange={handleInputChange}
                         type="radio"
                         />
-                </div>
-              
                   Fast Food
+                  <span className="checkmark"></span>
               </label>
                
 
