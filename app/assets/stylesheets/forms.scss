@@ -96,12 +96,12 @@
 
 
 /* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
+.place-form-radio-container:hover input ~ .checkmark {
     background-color: gray;
   }
   
   /* When the radio button is checked, add a blue background */
-  .container input:checked ~ .checkmark {
+  .place-form-radio-container input:checked ~ .checkmark {
     background-color: orangered;
   }
   
@@ -112,7 +112,7 @@
     display: none;
   }
   
-  .container input:checked ~ .checkmark:after {
+  .place-form-radio-container input:checked ~ .checkmark:after {
     display: block;
   }
   
