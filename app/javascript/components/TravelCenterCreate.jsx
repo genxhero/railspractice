@@ -58,7 +58,7 @@ const TravelCenterCreate = (props) => {
                     <button className="place-form-btn"onClick={props.close} >Cancel</button>
                 </div>
                 <span className="cancel-x" onClick={props.close}> X</span>
-                <button className="place-form-btn" onClick={ () => handleSubmit()}></button>
+                <button className="place-form-btn" onClick={ handleSubmit}></button>
             </div>
           
         </div>
