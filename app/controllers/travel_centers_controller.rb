@@ -1,4 +1,4 @@
-class TravelCentersController > ApplicationController
+class TravelCentersController < ApplicationController
     def new
         @travel_center = TravelCenter.new
         render :new 
