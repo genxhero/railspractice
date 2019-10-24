@@ -1,4 +1,6 @@
 class TravelCentersController < ApplicationController
+  skip_before_filter :verify_authenticity_token
+
     def new
         @travel_center = TravelCenter.new
         render :new 
