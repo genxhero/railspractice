@@ -5,6 +5,8 @@ class TravelCentersController > ApplicationController
     end
 
     def create
+      buffer = "bugger"
+      debugger
         @travel_center = TravelCenter.new(travel_center_params)
         if @travel_center.save
           @location = Location.find(travel_center_params[:location_id])

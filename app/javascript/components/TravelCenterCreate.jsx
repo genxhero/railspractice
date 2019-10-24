@@ -17,7 +17,7 @@ const TravelCenterCreate = (props) => {
     }
 
     const handleSubmit = () => {
-        axios.post('/locations/new', {
+        axios.post('/locations/create', {
            values
           }
         )
