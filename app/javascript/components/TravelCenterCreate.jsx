@@ -16,6 +16,13 @@ const TravelCenterCreate = (props) => {
         setValues({...values, [name]: value})
     }
 
+    const handleSubmit = () => {
+        axios.post('/locations/new', {
+           values
+          }
+        )
+    }
+
     const [values, setValues] = useState({name: '', description: '', unleaded: null, diesel: null})
     return (
         <div className="place-form-modal">
@@ -51,6 +58,7 @@ const TravelCenterCreate = (props) => {
                     <button className="place-form-btn"onClick={props.close} >Cancel</button>
                 </div>
                 <span className="cancel-x" onClick={props.close}> X</span>
+                <button className="place-form-btn" onClick={ () => handleSubmit()}></button>
             </div>
           
         </div>
