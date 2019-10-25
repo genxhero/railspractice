@@ -1,3 +1,6 @@
+#Controller for the travel center, when a tc is created it re renders the parent location
+
+
 class TravelCentersController < ApplicationController
   skip_before_filter :verify_authenticity_token
 
