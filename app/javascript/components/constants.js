@@ -17,3 +17,14 @@ export const CUISINES = [
                         "Spanish",
                         "Vietnamese"
                     ]
+export const HIGHWAYS = [
+    {
+        number: 5,
+        states: ["CA", "OR"]
+    },
+
+    {
+        number: 80,
+        states:["CA", "UT", "NV"]
+    }
+]
