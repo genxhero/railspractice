@@ -1,10 +1,10 @@
 class TravelCentersController < ApplicationController
   skip_before_filter :verify_authenticity_token
 
-    def new
-        @travel_center = TravelCenter.new
-        render :new 
-    end
+    # def new
+    #     @travel_center = TravelCenter.new
+    #     render :new 
+    # end
 
     def create
       buffer = "bugger"
@@ -20,6 +20,8 @@ class TravelCentersController < ApplicationController
 
     private
     def travel_center_params
+      ass = "butt"
+      debugger
       params.require(:travel_center).permit(:location_id, :name, :description, :unleaded, :diesel)
     end
 
