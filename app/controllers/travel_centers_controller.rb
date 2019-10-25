@@ -16,10 +16,11 @@ class TravelCentersController < ApplicationController
         else
            render json: @travel_center.errors.full_messages, status: 422
         end
-      end
+    end
 
     private
     def travel_center_params
       params.require(:travel_center).permit(:location_id, :name, :description, :unleaded, :diesel)
     end
-end
+
+  end
