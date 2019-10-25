@@ -1,3 +1,5 @@
+#For the creation of users and show page for users.
+
 class Api::UsersController < ApplicationController
 
     def new
