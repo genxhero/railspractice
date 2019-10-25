@@ -1,5 +1,8 @@
 /**
- * Component to display a Travel center
+ * Component to display a Travel center.
+ * Diesel and Unleaded prices are displayed in USD format
+ * Name and description 
+ * DEPRECATED.
  */
 
 import React, {useState} from 'react'
