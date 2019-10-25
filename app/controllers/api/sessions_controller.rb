@@ -1,3 +1,5 @@
+#Controls the session, used for logging in and out.
+
 class Api::SessionsController < ApplicationController
 
     def create
