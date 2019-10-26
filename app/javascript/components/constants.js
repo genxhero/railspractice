@@ -23,6 +23,11 @@ export const CUISINES = [
                         "Spanish",
                         "Vietnamese"
                     ]
+
+// Highways run through various states, this is useful for finding Locations by highway and by states.
+// The SQL will be something to the effect of WHERE state IN or where highway IN
+// I might be overthinking this
+
 export const HIGHWAYS = [
     {
         number: 5,
