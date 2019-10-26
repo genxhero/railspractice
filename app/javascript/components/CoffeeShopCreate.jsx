@@ -13,6 +13,12 @@ const CoffeeShopCreate = (props) => {
         setValues({...values, [name]: value})
     }
 
+    const handleSubmit = () => {
+        axios.post('/coffee_shops', {
+           values
+          }
+        )
+    }
     const [values, setValues] = useState({name: '', description: '', shopType: '', couches: false, armchairs: false, wifi: false})
     return (
         <div className="place-form-modal">
