@@ -1,3 +1,9 @@
+/**
+ * The following constants are pretty much only going to be change by administrative action, not user action,
+ * so they can just be static variables.
+ */
+
+
 export const CUISINES = [
                         "American", 
                         "Barbeque", 
