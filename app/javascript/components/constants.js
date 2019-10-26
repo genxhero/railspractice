@@ -26,5 +26,13 @@ export const HIGHWAYS = [
     {
         number: 80,
         states:["CA", "UT", "NV"]
+    },
+
+    {number: 10,
+        states:["CA", "AZ", "TX", "NM"]
+    },
+
+    {number: 90, 
+        states: ["MA"]
     }
 ]
