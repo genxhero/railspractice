@@ -16,9 +16,14 @@ const TravelCenterCreate = (props) => {
         setValues({...values, [name]: value})
     }
 
+    /**
+     * Makes an Axios request to the Rails server and attempts to save to the database.
+     * Because the Location show page renders server side, there isn't a need to set state.
+     * Theoretically speaking.
+     */
     const handleSubmit = () => {
         axios.post('/travel_centers', {
-           travel_center: values
+           values
           }
         )
     }
