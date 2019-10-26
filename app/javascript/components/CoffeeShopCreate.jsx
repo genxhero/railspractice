@@ -13,6 +13,9 @@ const CoffeeShopCreate = (props) => {
         setValues({...values, [name]: value})
     }
 
+    /**
+     * Makes a POST request to the coffee_shops_controller, found in app/controllers/
+     */
     const handleSubmit = () => {
         axios.post('/coffee_shops', {
            values
