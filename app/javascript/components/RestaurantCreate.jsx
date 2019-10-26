@@ -14,6 +14,12 @@ const RestaurantCreate = (props) => {
         const {name, value} = e.target
         setValues({...values, [name]: value})
     }
+    const handleSubmit = () => {
+        axios.post('/restaurants', {
+           values
+          }
+        )
+    }
 
     const [values, setValues] = useState({name: '', description: '', cuisine: '', shopType: ''})
     console.log(values);
