@@ -3,7 +3,7 @@
 
 class TravelCentersController < ApplicationController
   # Temporary until i figure out the rack cors problem
-  skip_before_filter :verify_authenticity_token
+  skip_before_action :verify_authenticity_token
 
     # def new
     #     @travel_center = TravelCenter.new
