@@ -43,7 +43,7 @@ const LocationShow = (props) => {
                         // return <CoffeeShop coffeeShop={coffeeShop} />
                         return <PlaceCard place={coffeeShop} />
                     })}
-                    {(state.open && state.placeType === "coffeeShop") && <CoffeeShopCreate location_id={5} close={closeModal}/>}
+                    {(state.open && state.placeType === "coffeeShop") && <CoffeeShopCreate location_id={props.location.id} close={closeModal}/>}
                     <button onClick={ () => openModal('coffeeShop')}>Click Me</button>
                 </div>
 
@@ -53,7 +53,7 @@ const LocationShow = (props) => {
                 {props.places.restaurants.map( restaurant => {
                          return <PlaceCard place={restaurant} />
                     })}
-                    {(state.open && state.placeType === "restaurant") && <RestaurantCreate location_id={5} close={closeModal}/>}
+                    {(state.open && state.placeType === "restaurant") && <RestaurantCreate location_id={props.location.id} close={closeModal}/>}
                     <button onClick={ () => openModal('restaurant')}>Click Me</button>
                 </div>
 
@@ -62,7 +62,7 @@ const LocationShow = (props) => {
                     {props.places.travelCenters.map( travelCenter => {
                         return <PlaceCard place={travelCenter} />
                     })}
-                    {(state.open && state.placeType === "travelCenter") && <TravelCenterCreate location_id={5} close={closeModal}/>}
+                    {(state.open && state.placeType === "travelCenter") && <TravelCenterCreate location_id={props.location.id} close={closeModal}/>}
                     <button onClick={ () => openModal('travelCenter')}>Click Me</button>
                 </div>
             </div>

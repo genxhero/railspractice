@@ -21,9 +21,9 @@ const TravelCenterCreate = (props) => {
      * Because the Location show page renders server side, there isn't a need to set state.
      * Theoretically speaking.
      */
-    const handleSubmit = () => {
+    const handleSubmit = (props) => {
         axios.post('/travel_centers', {
-           travel_center: values
+           travel_center: {...values, location_id: props.location_id}
           }
         ).then( res => {
             debugger
