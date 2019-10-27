@@ -22,17 +22,18 @@ const TravelCenterCreate = (props) => {
      * Theoretically speaking.
      */
     const handleSubmit = (props) => {
+        
         axios.post('/travel_centers', {
-           travel_center: {...values, location_id: props.location_id}
+           travel_center: values
           }
         ).then( res => {
-            debugger
+            
         }).catch( res => {
-            debugger
+            
         })
     }
 
-    const [values, setValues] = useState({name: '', description: '', unleaded: null, diesel: null})
+    const [values, setValues] = useState({name: '', description: '', unleaded: null, diesel: null, location_id: props.location_id})
     return (
         <div className="place-form-modal">
             <div className="place-form">
