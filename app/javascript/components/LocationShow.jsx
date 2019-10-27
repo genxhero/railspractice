@@ -32,7 +32,6 @@ const LocationShow = (props) => {
         $('body').css('overflow', 'auto');
         openForm({open: false, placeType: ""})
     }
-    console.log(state);
     return (
         <div className="location-show-page">
             <h1>{props.location.name}, {props.location.state}</h1>
