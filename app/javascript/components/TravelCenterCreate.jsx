@@ -23,9 +23,11 @@ const TravelCenterCreate = (props) => {
      */
     const handleSubmit = () => {
         axios.post('/travel_centers', {
-           values
+           travel_center: values
           }
-        )
+        ).then( res => {
+            debugger
+        })
     }
 
     const [values, setValues] = useState({name: '', description: '', unleaded: null, diesel: null})
