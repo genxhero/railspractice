@@ -27,6 +27,8 @@ const TravelCenterCreate = (props) => {
           }
         ).then( res => {
             debugger;
+            props.update(res.data, "travelCenter")
+        }).then(res => {
             props.close();
         }).catch( res => {
                 console.log(res);
