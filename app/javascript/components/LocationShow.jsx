@@ -4,7 +4,7 @@
  * TODO:  Use the useState hook to check whether we are currently creating something, display a modal with the form
  */
 
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 import PropTypes from "prop-types"
 import TravelCenter from './TravelCenter';
 import CoffeeShop from './CoffeeShop';
@@ -20,8 +20,10 @@ const LocationShow = (props) => {
 
     // const [open, openForm] = useState(false)
     const [state, openForm] = useState({open: false, placeType: ''})
+    const [places, updatePlaces] = useState(props.places)
+    console.log(props.places)
 
-
+    
     const openModal = (placeType) => {
         $("html, body").animate({ scrollTop: 0 });
         $('body').css('overflow', 'hidden');

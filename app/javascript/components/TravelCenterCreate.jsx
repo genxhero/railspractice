@@ -21,19 +21,19 @@ const TravelCenterCreate = (props) => {
      * Because the Location show page renders server side, there isn't a need to set state.
      * Theoretically speaking.
      */
-    const handleSubmit = (props) => {
-        
+    const handleSubmit = () => {
         axios.post('/travel_centers', {
            travel_center: values
           }
         ).then( res => {
+            debugger;
             props.close();
         }).catch( res => {
-
+                console.log(res);
         })
     }
 
-    const [values, setValues] = useState({name: '', description: '', unleaded: null, diesel: null, location_id: props.location_id})
+    const [values, setValues] = useState({name: '', description: '', unleaded: 0, diesel: 0, location_id: props.location_id})
     return (
         <div className="place-form-modal">
             <div className="place-form">
