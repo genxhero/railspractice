@@ -18,7 +18,6 @@ import $ from 'jquery';
 
 const LocationShow = (props) => {
 
-    // const [open, openForm] = useState(false)
     const [state, openForm] = useState({open: false, placeType: ''})
     const [places, updatePlaces] = useState(props.places)
     
@@ -36,11 +35,16 @@ const LocationShow = (props) => {
     const update = (newPlace, placeType) => {
         switch (placeType){
             case "travelCenter":
-                let newPlaces = places.travelCenters.push(newPlace)
-                updatePlaces({ places: newPlaces})
+                debugger;
+                updatePlaces({ places: { travelCenters: [...places.travelCenters, newPlace], 
+                                        restaurants: places.restaurants,
+                                        coffeeShops: places.coffeeShops
+                }})
             break;
         }
     }
+
+    debugger
 
     return (
         <div className="location-show-page">
