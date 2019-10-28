@@ -34,14 +34,19 @@ const LocationShow = (props) => {
         $('body').css('overflow', 'auto');
         openForm({open: false, placeType: ""})
     }
+
+    useEffect((newProps) => {
+        debugger; 
+    });
+
     return (
         <div className="location-show-page">
             <h1>{props.location.name}, {props.location.state}</h1>
             <img className="location-show-image"src={props.location.image_url} alt={props.location.name}/>
             <div className="location-show-columns">
                 <div className="location-show-column">
-                    {props.places.coffeeShops.length === 0 && <h4>No Coffee Shops Recommended</h4>}
-                {props.places.coffeeShops.map( coffeeShop => {
+                    {places.coffeeShops.length === 0 && <h4>No Coffee Shops Recommended</h4>}
+                {places.coffeeShops.map( coffeeShop => {
                         // return <CoffeeShop coffeeShop={coffeeShop} />
                         return <PlaceCard place={coffeeShop} />
                     })}
@@ -50,9 +55,9 @@ const LocationShow = (props) => {
                 </div>
 
                 <div className="location-show-column">
-                {props.places.restaurants.length === 0 && <h4>No Restaurants Recommended</h4>}
+                {places.restaurants.length === 0 && <h4>No Restaurants Recommended</h4>}
 
-                {props.places.restaurants.map( restaurant => {
+                {places.restaurants.map( restaurant => {
                          return <PlaceCard place={restaurant} />
                     })}
                     {(state.open && state.placeType === "restaurant") && <RestaurantCreate location_id={props.location.id} close={closeModal}/>}
@@ -60,8 +65,8 @@ const LocationShow = (props) => {
                 </div>
 
                 <div className="location-show-column">
-                {props.places.travelCenters.length === 0 && <h4>No Travel Centers Recommended</h4>}
-                    {props.places.travelCenters.map( travelCenter => {
+                {places.travelCenters.length === 0 && <h4>No Travel Centers Recommended</h4>}
+                    {places.travelCenters.map( travelCenter => {
                         return <PlaceCard place={travelCenter} />
                     })}
                     {(state.open && state.placeType === "travelCenter") && <TravelCenterCreate location_id={props.location.id} close={closeModal}/>}

@@ -14,7 +14,8 @@ class TravelCentersController < ApplicationController
         @travel_center = TravelCenter.new(travel_center_params)
         if @travel_center.save
           @location = Location.find(travel_center_params[:location_id])
-          render 'locations/show' 
+          render json: @travel_center
+          # render 'locations/show' 
         else
            render json: @travel_center.errors.full_messages, status: 422
         end
