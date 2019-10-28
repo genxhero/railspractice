@@ -7,6 +7,7 @@
  */
 
 import React, {useState}from 'react';
+import ErrorModal from './ErrorModal';
 import axios from 'axios'
 
 const TravelCenterCreate = (props) => {
@@ -79,7 +80,7 @@ const TravelCenterCreate = (props) => {
                 </div>
               
             </div>
-          
+          {errors && <Errormodal errors={errors}/>}
         </div>
     )
 }
