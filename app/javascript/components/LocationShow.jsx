@@ -36,7 +36,7 @@ const LocationShow = (props) => {
     const update = (newPlace, placeType) => {
         switch (placeType){
             case "travelCenter":
-                newPlaces = places.travelCenters.push(newPlace)
+                let newPlaces = places.travelCenters.push(newPlace)
                 updatePlaces({ places: newPlaces})
             break;
         }
