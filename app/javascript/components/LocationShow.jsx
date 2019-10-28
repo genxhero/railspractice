@@ -21,8 +21,6 @@ const LocationShow = (props) => {
     // const [open, openForm] = useState(false)
     const [state, openForm] = useState({open: false, placeType: ''})
     const [places, updatePlaces] = useState(props.places)
-    console.log(props.places)
-
     
     const openModal = (placeType) => {
         $("html, body").animate({ scrollTop: 0 });
@@ -35,9 +33,14 @@ const LocationShow = (props) => {
         openForm({open: false, placeType: ""})
     }
 
-    useEffect((newProps) => {
-        debugger; 
-    });
+    const update = (newPlace, placeType) => {
+        switch (placeType){
+            case "travelCenter":
+                newPlaces = places.travelCenters.push(newPlace)
+                updatePlaces({ places: newPlaces})
+            break;
+        }
+    }
 
     return (
         <div className="location-show-page">
@@ -69,7 +72,7 @@ const LocationShow = (props) => {
                     {places.travelCenters.map( travelCenter => {
                         return <PlaceCard place={travelCenter} />
                     })}
-                    {(state.open && state.placeType === "travelCenter") && <TravelCenterCreate location_id={props.location.id} close={closeModal}/>}
+                    {(state.open && state.placeType === "travelCenter") && <TravelCenterCreate location_id={props.location.id} close={closeModal} update={update}/>}
                     <button onClick={ () => openModal('travelCenter')}>Click Me</button>
                 </div>
             </div>
