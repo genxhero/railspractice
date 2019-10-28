@@ -27,9 +27,9 @@ const TravelCenterCreate = (props) => {
            travel_center: values
           }
         ).then( res => {
-            
+            props.close();
         }).catch( res => {
-            
+
         })
     }
 

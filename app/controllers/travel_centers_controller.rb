@@ -11,8 +11,6 @@ class TravelCentersController < ApplicationController
     # end
 
     def create
-      buffer = "bugger"
-      debugger
         @travel_center = TravelCenter.new(travel_center_params)
         if @travel_center.save
           @location = Location.find(travel_center_params[:location_id])
@@ -24,8 +22,6 @@ class TravelCentersController < ApplicationController
 
     private
     def travel_center_params
-      ass = "butt"
-      debugger
       params.require(:travel_center).permit(:location_id, :name, :description, :unleaded, :diesel)
     end
 
