@@ -80,7 +80,7 @@ const TravelCenterCreate = (props) => {
                 </div>
               
             </div>
-          {errors && <Errormodal errors={errors}/>}
+          {errors && <Errormodal errors={errors} clear={clearErrors}/>}
         </div>
     )
 }
