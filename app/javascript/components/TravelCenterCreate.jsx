@@ -26,16 +26,20 @@ const TravelCenterCreate = (props) => {
            travel_center: values
           }
         ).then( res => {
-            debugger;
             props.update(res.data, "travelCenter")
         }).then(res => {
             props.close();
         }).catch( res => {
-                console.log(res);
+            setErrors(res)
         })
     }
 
+    const clearErrors = () => {
+        setErrors(null)
+    }
+
     const [values, setValues] = useState({name: '', description: '', unleaded: 0, diesel: 0, location_id: props.location_id})
+    const [errors, setErrors] = useState(null)
     return (
         <div className="place-form-modal">
             <div className="place-form">
