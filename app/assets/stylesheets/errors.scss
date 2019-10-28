@@ -2,6 +2,9 @@
     width: -webkit-fill-available;
     position: absolute;
     height: -webkit-fill-available;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .error-message-area {
@@ -9,4 +12,10 @@
     background: white;
     color: black;
     border-radius: 4px;
+}
+
+.error-clear-btn {
+    padding: .4rem;
+    color: black;
+    background: white;
 }

@@ -1,12 +1,12 @@
 import React from 'react';
 
 const ErrorModal = (props) => {
-debugger;
+    console.log(props.errors)
     return (
         <div className="error-modal">
             <div className="error-message-area">
                 
-                <button onClick={props.clear}Clear></button>
+                <button className="error-clear-btn" onClick={props.clear}>Clear></button>
             </div>  
         </div>
     )

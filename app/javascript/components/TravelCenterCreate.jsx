@@ -31,7 +31,7 @@ const TravelCenterCreate = (props) => {
         }).then(res => {
             props.close();
         }).catch( res => {
-            setErrors(res)
+            setErrors(res.response.data)
         })
     }
 
