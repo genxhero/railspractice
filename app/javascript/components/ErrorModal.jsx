@@ -4,7 +4,9 @@ const ErrorModal = (props) => {
 debugger;
     return (
         <div className="error-modal">
-            {props.errors}
+            <div className="error-message-area">
+                {props.errors}
+            </div>  
         </div>
     )
 
