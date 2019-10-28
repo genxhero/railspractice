@@ -48,7 +48,7 @@ const LocationShow = (props) => {
                 <div className="location-show-column">
                     {places.coffeeShops.length === 0 && <h4>No Coffee Shops Recommended</h4>}
                 {places.coffeeShops.map( coffeeShop => {
-                        return <PlaceCard place={coffeeShop} />
+                        return <PlaceCard place={coffeeShop} key={coffeeShop.name}/>
                     })}
                     {(state.open && state.placeType === "coffeeShop") && <CoffeeShopCreate location_id={props.location.id} close={closeModal}/>}
                     <button onClick={ () => openModal('coffeeShop')}>Click Me</button>
@@ -58,7 +58,7 @@ const LocationShow = (props) => {
                 {places.restaurants.length === 0 && <h4>No Restaurants Recommended</h4>}
 
                 {places.restaurants.map( restaurant => {
-                         return <PlaceCard place={restaurant} />
+                         return <PlaceCard place={restaurant} key={restaurant.name}/>
                     })}
                     {(state.open && state.placeType === "restaurant") && <RestaurantCreate location_id={props.location.id} close={closeModal}/>}
                     <button onClick={ () => openModal('restaurant')}>Click Me</button>
@@ -67,7 +67,7 @@ const LocationShow = (props) => {
                 <div className="location-show-column">
                 {places.travelCenters.length === 0 && <h4>No Travel Centers Recommended</h4>}
                     {places.travelCenters.map( travelCenter => {
-                        return <PlaceCard place={travelCenter} />
+                        return <PlaceCard place={travelCenter} key={travelCenter.name}/>
                     })}
                     {(state.open && state.placeType === "travelCenter") && <TravelCenterCreate location_id={props.location.id} close={closeModal} update={update}/>}
                     <button onClick={ () => openModal('travelCenter')}>Click Me</button>
