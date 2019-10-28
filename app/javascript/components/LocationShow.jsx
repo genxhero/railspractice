@@ -35,16 +35,14 @@ const LocationShow = (props) => {
     const update = (newPlace, placeType) => {
         switch (placeType){
             case "travelCenter":
-                debugger;
                 updatePlaces({ places: { travelCenters: [...places.travelCenters, newPlace], 
-                                        restaurants: places.restaurants,
-                                        coffeeShops: places.coffeeShops
-                }})
+                                        restaurants: [...places.restaurants],
+                                        coffeeShops: [...places.coffeeShops] }})
             break;
         }
     }
 
-    debugger
+    debugger; 
 
     return (
         <div className="location-show-page">
@@ -54,7 +52,6 @@ const LocationShow = (props) => {
                 <div className="location-show-column">
                     {places.coffeeShops.length === 0 && <h4>No Coffee Shops Recommended</h4>}
                 {places.coffeeShops.map( coffeeShop => {
-                        // return <CoffeeShop coffeeShop={coffeeShop} />
                         return <PlaceCard place={coffeeShop} />
                     })}
                     {(state.open && state.placeType === "coffeeShop") && <CoffeeShopCreate location_id={props.location.id} close={closeModal}/>}
