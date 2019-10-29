@@ -30,3 +30,11 @@
     margin: .2rem;
     font-size: 24px;
 }
+
+.error-clear-btn:hover {
+    cursor: pointer;
+}
+
+.error-clear-btn:focus {
+    outline:none;
+}
