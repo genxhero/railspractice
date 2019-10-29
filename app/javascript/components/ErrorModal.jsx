@@ -11,7 +11,7 @@ const ErrorModal = (props) => {
                     )
                 })
             }
-                <button className="error-clear-btn" onClick={props.clear}>CLEAR</button>
+                <button className="error-clear-btn" onClick={props.clear}>OK</button>
             </div>  
         </div>
     )
