@@ -3,7 +3,9 @@
 #and souvenirs. 
 
 class TravelCenter < ApplicationRecord
-    validates :name, presence: true
+    validates :name, :description, presence: true
+    validates :unleaded, presence:true, numericality: {only_float: true}
+    validates :diesel, presence:true, numericality: {only_float: true}
     validates :location_id, presence: true
     validates :name, uniqueness: { scope: :location_id,
     message: "record already exists " }
