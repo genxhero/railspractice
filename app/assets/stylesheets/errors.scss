@@ -15,8 +15,15 @@
     border-radius: 4px;
 }
 
+.error-message {
+    font-weight: bold;
+    font-family: sans-serif;
+    margin: .2rem;
+}
+
 .error-clear-btn {
     padding: .4rem;
     color: black;
     background: white;
+    margin: .2rem;
 }
