@@ -10,21 +10,21 @@
 
 .error-message-area {
     padding: 2rem;
-    background: pink;
+    background:#FFCCCC;
     color: black;
     border-radius: 4px;
     position:relative;
 }
 
 .error-message-area > h3 {
-    color: red;
+    color: #cc0000;
 }
 
 .error-message {
     font-weight: bold;
     font-family: sans-serif;
     margin: .2rem;
-    color: red;
+    color: #cc0000;
 }
 
 .error-clear-btn {
