@@ -5,12 +5,15 @@ const ErrorModal = (props) => {
         <div className="error-modal">
             <div className="error-message-area">
                 <h3>The Following Errors Occured</h3>
-                {props.errors.map( error => {
+                <ul>
+                     {props.errors.map( error => {
                     return (
-                        <div key={error}className="error-message">{error}</div>
+                        <li key={error}className="error-message">{error}</li>
                     )
                 })
-            }
+            } 
+                </ul>
+              
                 <button className="error-clear-btn" onClick={props.clear}>OK</button>
             </div>  
         </div>
