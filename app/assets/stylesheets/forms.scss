@@ -20,11 +20,14 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    box-shadow: 1px 1px 1px black;
 }
 
 .place-form > h2 {
     color: orangered;
     font-family: 'Luckiest Guy', cursive;
+    font-weight: 200;
+    // text-shadow:1px 1px 1px black;
 }
 
 .place-form-text {

@@ -1,4 +1,5 @@
 import React from 'react';
+import {FaTimes} from 'react-icons/fa';
 
 const ErrorModal = (props) => {
     return (
@@ -14,7 +15,7 @@ const ErrorModal = (props) => {
             } 
                 </ul>
               
-                <button className="error-clear-btn" onClick={props.clear}>OK</button>
+                <span className="error-dismiss-x" onClick={props.clear}><FaTimes /></span>
             </div>  
         </div>
     )
