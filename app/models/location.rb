@@ -45,7 +45,26 @@ class Location < ApplicationRecord
         {
             "travelCenters": self.jsonify_travel_centers,
             "restaurants": self.jsonify_restaurants,
-            "coffeeShops": self.jsonify_coffee_shops
+            "coffeeShops": self.jsonify_coffee_shops,
+            "lodgings": self.jsonify_lodgings
+        }
+    end
+
+    def jsonify_lodgings 
+        self.lodgings.map {|lodging|
+            {
+                fields: [
+                    {name: "Breakfast", value: lodging.breakfast},
+                    {name: "Pool", value: lodging.pool},
+                    {name: "Gym", value: lodging.gym},
+                    {name: "Wifi", value: lodging.wifi},
+                    {name: "Type", value: lodging.lodging_type},
+                    {name: "Cable Channels", value: lodging.channels.join(', ')},
+
+                ],
+                name: lodging.name,
+                description: lodging.description
+            }
         }
     end
  
