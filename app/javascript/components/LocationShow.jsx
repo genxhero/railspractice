@@ -72,6 +72,16 @@ const LocationShow = (props) => {
                     {(state.open && state.placeType === "travelCenter") && <TravelCenterCreate location_id={props.location.id} close={closeModal} update={update}/>}
                     <button onClick={ () => openModal('travelCenter')}>Click Me</button>
                 </div>
+
+
+                <div className="location-show-column">
+                {places.lodgings.length === 0 && <h4>No Travel Centers Recommended</h4>}
+                    {places.lodgings.map( travelCenter => {
+                        return <PlaceCard place={lodging} key={lodging.name}/>
+                    })}
+                    {(state.open && state.placeType === "lodging") && <TravelCenterCreate location_id={props.location.id} close={closeModal} update={update}/>}
+                    <button onClick={ () => openModal('lodging')}>Click Me</button>
+                </div>
             </div>
         </div>
     )
