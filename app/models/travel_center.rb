@@ -8,7 +8,7 @@ class TravelCenter < ApplicationRecord
     validates :diesel, presence:true, numericality: {only_float: true}
     validates :location_id, presence: true
     validates :name, uniqueness: { scope: :location_id,
-    message: "record already exists " }
+    message: " already exists for this location" }
 
     belongs_to :location,
     primary_key: :id, 
