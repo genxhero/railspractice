@@ -8,7 +8,7 @@ class Createlodgingtable < ActiveRecord::Migration[6.0]
       t.string :breakfast, null: false
       t.boolean :pool, null: false
       t.boolean :gym, null: false
-      t.string :cable_channels, array: true, default: []
+      t.string :channels, array: true, default: []
       t.string :wifi, null: false
       t.timestamps
     end
