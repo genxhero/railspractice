@@ -26,6 +26,11 @@ class Location < ApplicationRecord
     foreign_key: :location_id,
     class_name: "Restaurant"
 
+    has_many :lodgings, dependent: :destroy,
+    primary_key: :id,
+    foreign_key: :location_id,
+    class_name: "Lodging"
+
     
     belongs_to :user, 
     primary_key: :id,
