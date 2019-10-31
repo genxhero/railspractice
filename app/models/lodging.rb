@@ -7,3 +7,6 @@
 # t.boolean :gym, null: false
 # t.string :channels, array: true, default: []
 # t.string :wifi, null: false
+
+class Lodging < ApplicationRecord
+end
