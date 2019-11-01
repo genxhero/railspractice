@@ -72,12 +72,10 @@ const TravelCenterCreate = (props) => {
                     onChange={handleInputChange}
                     value={values.diesel} />
                 <div>
+                    <button className="place-form-btn" onClick={ handleSubmit}>Create</button>
                     <button className="place-form-btn"onClick={props.close} >Cancel</button>
                 </div>
                 <span className="cancel-x" onClick={props.close}> X</span>
-                <div>
-                      <button className="place-form-btn" onClick={ handleSubmit}>Create</button>
-                </div>
               
             </div>
           {errors && <ErrorModal errors={errors} clear={clearErrors}/>}
