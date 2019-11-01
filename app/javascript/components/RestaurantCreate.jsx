@@ -16,9 +16,15 @@ const RestaurantCreate = (props) => {
     }
     const handleSubmit = () => {
         axios.post('/restaurants', {
-           values
+           restaurant: values
           }
-        )
+        ).then( res => {
+            props.update(res.data, "restaurant")
+        }).then(res => {
+            props.close();
+        }).catch( res => {
+            setErrors(res.response.data)
+        })
     }
 
     const [values, setValues] = useState({name: '', description: '', cuisine: '', shopType: ''})

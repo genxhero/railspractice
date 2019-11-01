@@ -75,7 +75,7 @@ const LocationShow = (props) => {
 
 
                 <div className="location-show-column">
-                {places.lodgings.length === 0 && <h4>No Travel Centers Recommended</h4>}
+                {places.lodgings.length === 0 && <h4>No Lodgings Recommended</h4>}
                     {places.lodgings.map( travelCenter => {
                         return <PlaceCard place={lodging} key={lodging.name}/>
                     })}
