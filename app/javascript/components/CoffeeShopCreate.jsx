@@ -28,7 +28,7 @@ const CoffeeShopCreate = (props) => {
         setErrors(null)
     }
 
-    const [values, setValues] = useState({name: '', description: '', shopType: '', couches: false, armchairs: false, wifi: false})
+    const [values, setValues] = useState({name: '', description: '', shop_type: '', couches: false, armchairs: false, wifi: false})
     const [errors, setErrors] = useState(null)
 
     return (
