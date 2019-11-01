@@ -50,7 +50,7 @@ const LocationShow = (props) => {
                 {places.coffeeShops.map( coffeeShop => {
                         return <PlaceCard place={coffeeShop} key={coffeeShop.name}/>
                     })}
-                    {(state.open && state.placeType === "coffeeShop") && <CoffeeShopCreate location_id={props.location.id} close={closeModal}/>}
+                    {(state.open && state.placeType === "coffeeShop") && <CoffeeShopCreate location_id={props.location.id} close={closeModal} update={update}/>}
                     <button onClick={ () => openModal('coffeeShop')}>Click Me</button>
                 </div>
 
@@ -60,7 +60,7 @@ const LocationShow = (props) => {
                 {places.restaurants.map( restaurant => {
                          return <PlaceCard place={restaurant} key={restaurant.name}/>
                     })}
-                    {(state.open && state.placeType === "restaurant") && <RestaurantCreate location_id={props.location.id} close={closeModal}/>}
+                    {(state.open && state.placeType === "restaurant") && <RestaurantCreate location_id={props.location.id} close={closeModal} update={update}/>}
                     <button onClick={ () => openModal('restaurant')}>Click Me</button>
                 </div>
 

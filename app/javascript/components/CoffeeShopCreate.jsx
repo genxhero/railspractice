@@ -6,6 +6,7 @@
  */
 
 import React, {useState} from 'react';
+import axios from 'axios'
 
 const CoffeeShopCreate = (props) => {
     const handleInputChange = e => {
@@ -22,7 +23,14 @@ const CoffeeShopCreate = (props) => {
           }
         )
     }
+
+    const clearErrors = () => {
+        setErrors(null)
+    }
+
     const [values, setValues] = useState({name: '', description: '', shopType: '', couches: false, armchairs: false, wifi: false})
+    const [errors, setErrors] = useState(null)
+
     return (
         <div className="place-form-modal">
             <div className="place-form">
@@ -46,6 +54,7 @@ const CoffeeShopCreate = (props) => {
                 </div>
                 <span className="cancel-x" onClick={props.close}> X</span>
         </div>
+        {errors && <ErrorModal errors={errors} clear={clearErrors}/>}
     </div>
     );
 }
