@@ -8,6 +8,7 @@
 import React, {useState} from 'react';
 import {CUISINES} from './constants';
 import axios from 'axios'
+import ErrorModal from './ErrorModal';
 
 const RestaurantCreate = (props) => {
     const handleInputChange = e => {
