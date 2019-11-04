@@ -20,12 +20,10 @@ const RestaurantCreate = (props) => {
            restaurant: values
           }
         ).then( res => {
-            debugger;
             props.update(res.data, "restaurant")
         }).then(res => {
             props.close();
         }).catch( res => {
-            debugger;
             setErrors(res.response.data)
         })
     }
