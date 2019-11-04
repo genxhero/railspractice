@@ -35,10 +35,10 @@ const LocationShow = (props) => {
     const update = (newPlace, placeType) => {
         switch (placeType){
             case "travelCenter":
-                updatePlaces({travelCenters: [...places.travelCenters, newPlace], restaurants: [...places.restaurants], coffeeShops: [...places.coffeeShops] })
+                updatePlaces({travelCenters: [...places.travelCenters, newPlace], restaurants: [...places.restaurants], coffeeShops: [...places.coffeeShops], lodgings: [...places.lodgings]})
             break;
             case "restaurant":
-                updatePlaces({restaurants: [...places.restaurants, newPlace], travelCenters: [...places.travelCenters], coffeeShops: [...places.coffeeShops]})
+                updatePlaces({restaurants: [...places.restaurants, newPlace], travelCenters: [...places.travelCenters], coffeeShops: [...places.coffeeShops], lodgings: [...places.lodgings]})
             //NO, THAT'S WRONG!
             break;
         }
