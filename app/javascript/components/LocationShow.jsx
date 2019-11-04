@@ -41,6 +41,9 @@ const LocationShow = (props) => {
                 updatePlaces({restaurants: [...places.restaurants, newPlace], travelCenters: [...places.travelCenters], coffeeShops: [...places.coffeeShops], lodgings: [...places.lodgings]})
             //NO, THAT'S WRONG!
             break;
+            case "coffeeShop":
+                updatePlaces({restaurants: [...places.restaurants], travelCenters: [...places.travelCenters], coffeeShops: [...places.coffeeShops, newPlace], lodgings: [...places.lodgings]})
+            break;
         }
     }
 
