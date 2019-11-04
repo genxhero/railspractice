@@ -57,6 +57,40 @@ const CoffeeShopCreate = (props) => {
                  placeholder="Description"
                  onChange={handleInputChange}
                  value={values.description}/>
+                 
+                 <label className="place-form-radio-container">
+                    <input className="place-form-radio"
+                    name='shop_type'
+                    value='Sit Down'
+                    onChange={handleInputChange}
+                    type="radio"
+                /> 
+                Sit Down
+                <span className="checkmark"></span>
+                </label>
+
+                <label className="place-form-radio-container">
+                    <input className="place-form-radio"
+                    name='shop_type'
+                    value='Drive Thru'
+                    onChange={handleInputChange}
+                    type="radio"
+                /> 
+                Drive Thru
+                <span className="checkmark"></span>
+                </label>
+
+                <label className="place-form-radio-container">
+                    <input className="place-form-radio"
+                    name='shop_type'
+                    value='Kiosk'
+                    onChange={handleInputChange}
+                    type="radio"
+                /> 
+                Kiosk
+                <span className="checkmark"></span>
+                </label>
+
                 <div>
                     <button className="place-form-btn"onClick={props.close} >Cancel</button>
                 </div>
