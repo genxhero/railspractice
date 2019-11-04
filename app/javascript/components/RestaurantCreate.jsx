@@ -24,7 +24,6 @@ const RestaurantCreate = (props) => {
         }).then(res => {
             props.close();
         }).catch( res => {
-            debugger;
             setErrors(res.response.data)
         })
     }
