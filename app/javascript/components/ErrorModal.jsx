@@ -2,7 +2,6 @@ import React from 'react';
 import {FaTimes} from 'react-icons/fa';
 
 const ErrorModal = (props) => {
-    debugger;
     return (
         <div className="error-modal">
             <div className="error-message-area">
