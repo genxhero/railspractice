@@ -4,7 +4,7 @@ class RestaurantsController < ApplicationController
   
   
       def create
-          @restaurant = TravelCenter.new(restaurant_params)
+          @restaurant = Restaurant.new(restaurant_params)
           if @restaurant.save
             @location = Location.find(restaurant_params[:location_id])
             render json: @restaurant
