@@ -24,6 +24,7 @@ const RestaurantCreate = (props) => {
         }).then(res => {
             props.close();
         }).catch( res => {
+            debugger;
             setErrors(res.response.data)
         })
     }
@@ -60,7 +61,7 @@ const RestaurantCreate = (props) => {
 
                 <label className="place-form-radio-container">
                     <input className="place-form-radio"
-                    name='shopType'
+                    name='shop_type'
                     value='Sit Down'
                     onChange={handleInputChange}
                     type="radio"
@@ -71,7 +72,7 @@ const RestaurantCreate = (props) => {
               
               <label className="place-form-radio-container">
                     <input className="place-form-radio"
-                        name='shopType'
+                        name='shop_type'
                         value='Fast Food'
                         onChange={handleInputChange}
                         type="radio"
