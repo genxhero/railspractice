@@ -35,7 +35,6 @@ const RestaurantCreate = (props) => {
     const [values, setValues] = useState({name: '', description: '', cuisine: '', shop_type: '', location_id: props.location_id})
     const [errors, setErrors] = useState(null)
 
-    console.log(values);
     return (
         <div className="place-form-modal">
             <div className="place-form">
