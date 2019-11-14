@@ -35,11 +35,17 @@ const LocationShow = (props) => {
     const update = (newPlace, placeType) => {
         switch (placeType){
             case "travelCenter":
-                updatePlaces({travelCenters: [...places.travelCenters, newPlace], restaurants: [...places.restaurants], coffeeShops: [...places.coffeeShops] })
+                updatePlaces({travelCenters: [...places.travelCenters, newPlace], restaurants: [...places.restaurants], coffeeShops: [...places.coffeeShops], lodgings: [...places.lodgings]})
+            break;
+            case "restaurant":
+                updatePlaces({restaurants: [...places.restaurants, newPlace], travelCenters: [...places.travelCenters], coffeeShops: [...places.coffeeShops], lodgings: [...places.lodgings]})
+            //NO, THAT'S WRONG!
+            break;
+            case "coffeeShop":
+                updatePlaces({restaurants: [...places.restaurants], travelCenters: [...places.travelCenters], coffeeShops: [...places.coffeeShops, newPlace], lodgings: [...places.lodgings]})
             break;
         }
     }
-
 
     return (
         <div className="location-show-page">
@@ -49,9 +55,9 @@ const LocationShow = (props) => {
                 <div className="location-show-column">
                     {places.coffeeShops.length === 0 && <h4>No Coffee Shops Recommended</h4>}
                 {places.coffeeShops.map( coffeeShop => {
-                        return <PlaceCard place={coffeeShop} />
+                        return <PlaceCard place={coffeeShop} key={coffeeShop.name}/>
                     })}
-                    {(state.open && state.placeType === "coffeeShop") && <CoffeeShopCreate location_id={props.location.id} close={closeModal}/>}
+                    {(state.open && state.placeType === "coffeeShop") && <CoffeeShopCreate location_id={props.location.id} close={closeModal} update={update}/>}
                     <button onClick={ () => openModal('coffeeShop')}>Click Me</button>
                 </div>
 
@@ -59,19 +65,29 @@ const LocationShow = (props) => {
                 {places.restaurants.length === 0 && <h4>No Restaurants Recommended</h4>}
 
                 {places.restaurants.map( restaurant => {
-                         return <PlaceCard place={restaurant} />
+                         return <PlaceCard place={restaurant} key={restaurant.name}/>
                     })}
-                    {(state.open && state.placeType === "restaurant") && <RestaurantCreate location_id={props.location.id} close={closeModal}/>}
+                    {(state.open && state.placeType === "restaurant") && <RestaurantCreate location_id={props.location.id} close={closeModal} update={update}/>}
                     <button onClick={ () => openModal('restaurant')}>Click Me</button>
                 </div>
 
                 <div className="location-show-column">
                 {places.travelCenters.length === 0 && <h4>No Travel Centers Recommended</h4>}
                     {places.travelCenters.map( travelCenter => {
-                        return <PlaceCard place={travelCenter} />
+                        return <PlaceCard place={travelCenter} key={travelCenter.name}/>
                     })}
                     {(state.open && state.placeType === "travelCenter") && <TravelCenterCreate location_id={props.location.id} close={closeModal} update={update}/>}
                     <button onClick={ () => openModal('travelCenter')}>Click Me</button>
+                </div>
+
+
+                <div className="location-show-column">
+                {places.lodgings.length === 0 && <h4>No Lodgings Recommended</h4>}
+                    {places.lodgings.map( travelCenter => {
+                        return <PlaceCard place={lodging} key={lodging.name}/>
+                    })}
+                    {(state.open && state.placeType === "lodging") && <TravelCenterCreate location_id={props.location.id} close={closeModal} update={update}/>}
+                    <button onClick={ () => openModal('lodging')}>Click Me</button>
                 </div>
             </div>
         </div>

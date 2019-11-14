@@ -7,7 +7,8 @@
 
 import React, {useState} from 'react';
 import {CUISINES} from './constants';
-
+import axios from 'axios'
+import ErrorModal from './ErrorModal';
 
 const RestaurantCreate = (props) => {
     const handleInputChange = e => {
@@ -16,13 +17,24 @@ const RestaurantCreate = (props) => {
     }
     const handleSubmit = () => {
         axios.post('/restaurants', {
-           values
+           restaurant: values
           }
-        )
+        ).then( res => {
+            props.update(res.data, "restaurant")
+        }).then(res => {
+            props.close();
+        }).catch( res => {
+            setErrors(res.response.data)
+        })
     }
 
-    const [values, setValues] = useState({name: '', description: '', cuisine: '', shopType: ''})
-    console.log(values);
+    const clearErrors = () => {
+        setErrors(null)
+    }
+
+    const [values, setValues] = useState({name: '', description: '', cuisine: CUISINES[0], shop_type: '', location_id: props.location_id})
+    const [errors, setErrors] = useState(null)
+
     return (
         <div className="place-form-modal">
             <div className="place-form">
@@ -47,7 +59,7 @@ const RestaurantCreate = (props) => {
 
                 <label className="place-form-radio-container">
                     <input className="place-form-radio"
-                    name='shopType'
+                    name='shop_type'
                     value='Sit Down'
                     onChange={handleInputChange}
                     type="radio"
@@ -58,7 +70,7 @@ const RestaurantCreate = (props) => {
               
               <label className="place-form-radio-container">
                     <input className="place-form-radio"
-                        name='shopType'
+                        name='shop_type'
                         value='Fast Food'
                         onChange={handleInputChange}
                         type="radio"
@@ -76,10 +88,12 @@ const RestaurantCreate = (props) => {
                  onChange={handleInputChange}
                  value={values.description}/>
                 <div>
+                    <button className="place-form-btn" onClick={ handleSubmit}>Create</button>
                     <button className="place-form-btn"onClick={props.close} >Cancel</button>
                 </div>
                 <span className="cancel-x" onClick={props.close}> X</span>
         </div>
+        {errors && <ErrorModal errors={errors} clear={clearErrors}/>}
     </div>
     );
 }

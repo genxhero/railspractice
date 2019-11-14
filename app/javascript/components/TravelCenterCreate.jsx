@@ -7,6 +7,7 @@
  */
 
 import React, {useState}from 'react';
+import ErrorModal from './ErrorModal';
 import axios from 'axios'
 
 const TravelCenterCreate = (props) => {
@@ -30,11 +31,20 @@ const TravelCenterCreate = (props) => {
         }).then(res => {
             props.close();
         }).catch( res => {
+<<<<<<< HEAD
             console.log(res);
+=======
+            setErrors(res.response.data)
+>>>>>>> 49b5f98f8dc71b0de1c3ad2ef19e5cecca77b94f
         })
     }
 
+    const clearErrors = () => {
+        setErrors(null)
+    }
+
     const [values, setValues] = useState({name: '', description: '', unleaded: 0, diesel: 0, location_id: props.location_id})
+    const [errors, setErrors] = useState(null)
     return (
         <div className="place-form-modal">
             <div className="place-form">
@@ -66,15 +76,13 @@ const TravelCenterCreate = (props) => {
                     onChange={handleInputChange}
                     value={values.diesel} />
                 <div>
+                    <button className="place-form-btn" onClick={ handleSubmit}>Create</button>
                     <button className="place-form-btn"onClick={props.close} >Cancel</button>
                 </div>
                 <span className="cancel-x" onClick={props.close}> X</span>
-                <div>
-                      <button className="place-form-btn" onClick={ handleSubmit}>Create</button>
-                </div>
               
             </div>
-          
+          {errors && <ErrorModal errors={errors} clear={clearErrors}/>}
         </div>
     )
 }

@@ -6,6 +6,9 @@
  */
 
 import React, {useState} from 'react';
+import axios from 'axios';
+import ErrorModal from './ErrorModal';
+
 
 const CoffeeShopCreate = (props) => {
     const handleInputChange = e => {
@@ -18,11 +21,24 @@ const CoffeeShopCreate = (props) => {
      */
     const handleSubmit = () => {
         axios.post('/coffee_shops', {
-           values
+           restaurant: values
           }
-        )
+        ).then( res => {
+            props.update(res.data, "coffeeShop")
+        }).then(res => {
+            props.close();
+        }).catch( res => {
+            setErrors(res.response.data)
+        })
     }
-    const [values, setValues] = useState({name: '', description: '', shopType: '', couches: false, armchairs: false, wifi: false})
+
+    const clearErrors = () => {
+        setErrors(null)
+    }
+
+    const [values, setValues] = useState({name: '', description: '', shop_type: '', couches: false, armchairs: false, wifi: false})
+    const [errors, setErrors] = useState(null)
+
     return (
         <div className="place-form-modal">
             <div className="place-form">
@@ -41,11 +57,46 @@ const CoffeeShopCreate = (props) => {
                  placeholder="Description"
                  onChange={handleInputChange}
                  value={values.description}/>
+                 
+                 <label className="place-form-radio-container">
+                    <input className="place-form-radio"
+                    name='shop_type'
+                    value='Sit Down'
+                    onChange={handleInputChange}
+                    type="radio"
+                /> 
+                Sit Down
+                <span className="checkmark"></span>
+                </label>
+
+                <label className="place-form-radio-container">
+                    <input className="place-form-radio"
+                    name='shop_type'
+                    value='Drive Thru'
+                    onChange={handleInputChange}
+                    type="radio"
+                /> 
+                Drive Thru
+                <span className="checkmark"></span>
+                </label>
+
+                <label className="place-form-radio-container">
+                    <input className="place-form-radio"
+                    name='shop_type'
+                    value='Kiosk'
+                    onChange={handleInputChange}
+                    type="radio"
+                /> 
+                Kiosk
+                <span className="checkmark"></span>
+                </label>
+
                 <div>
                     <button className="place-form-btn"onClick={props.close} >Cancel</button>
                 </div>
                 <span className="cancel-x" onClick={props.close}> X</span>
         </div>
+        {errors && <ErrorModal errors={errors} clear={clearErrors}/>}
     </div>
     );
 }
