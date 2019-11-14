@@ -6,7 +6,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const SessionForm = (props) => {
+const Signup = (props) => {
     console.log("Pointing")
     const [values, setValues] = useState({email: "", password: "", confirm: ""})
     return (
@@ -17,3 +17,5 @@ const SessionForm = (props) => {
         </div>
     )
 }
+
+export default Signup;
