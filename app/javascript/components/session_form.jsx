@@ -8,7 +8,7 @@ import axios from 'axios';
 
 const SessionForm = (props) => {
     console.log("Pointing")
-    const [values, setValues] = useState({})
+    const [values, setValues] = useState({email: "", password: "", confirm: ""})
     return (
         <div className="session-modal">
             <div className="session-form">
