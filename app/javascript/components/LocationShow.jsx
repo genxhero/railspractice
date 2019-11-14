@@ -40,7 +40,6 @@ const LocationShow = (props) => {
         }
     }
 
-    debugger; 
 
     return (
         <div className="location-show-page">
