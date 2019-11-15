@@ -11,6 +11,7 @@ const register = (values) => {
 
 const Signup = (props) => {
     const [values, setValues] = useState({  email: "", password: ""})
+    const [errors, setErrors] = useState(null)
     return (
         <div className="session-modal">
             <div className="session-form">
