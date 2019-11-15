@@ -31,11 +31,7 @@ const TravelCenterCreate = (props) => {
         }).then(res => {
             props.close();
         }).catch( res => {
-<<<<<<< HEAD
-            console.log(res);
-=======
             setErrors(res.response.data)
->>>>>>> 49b5f98f8dc71b0de1c3ad2ef19e5cecca77b94f
         })
     }
 
