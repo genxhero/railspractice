@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :welcome, only: [:index]
-  resources :locations
+  resources :locations, only: [:index, :show]
   resources :travel_centers
   resources :restaurants
   resources :lodgings
