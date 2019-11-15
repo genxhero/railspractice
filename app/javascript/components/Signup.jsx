@@ -10,8 +10,8 @@ const register = (values) => {
 }
 
 const Signup = (props) => {
-    console.log("Pointing")
     const [values, setValues] = useState({username: "", email: "", password: "", confirm: ""})
+    const [errors, setErrors] = useState(null)
     return (
         <div className="session-modal">
             <div className="session-form">
