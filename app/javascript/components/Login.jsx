@@ -1,6 +1,5 @@
 /**
- * Props
- *  formType: String; one of "Login" or "Register"
+ Form for logging in a user
  */
 
 import React, { useState } from 'react';
