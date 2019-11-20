@@ -87,7 +87,7 @@ const LocationShow = (props) => {
 
                 <div className="location-show-column">
                 {places.lodgings.length === 0 && <h4>No Lodgings Recommended</h4>}
-                    {places.lodgings.map( travelCenter => {
+                    {places.lodgings.map( lodging => {
                         return <PlaceCard place={lodging} key={lodging.name}/>
                     })}
                     {(state.open && state.placeType === "lodging") && <LodgingCreate location_id={props.location.id} close={closeModal} update={update}/>}
