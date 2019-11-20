@@ -15,13 +15,22 @@ const RestaurantCreate = (props) => {
     }
 
     const handleCheckboxClick = (e) => {
+        debugger;
         const {name, value } = e.target
 
+        if (e.target.checked ) {
+            const newArray = [...values[name], value]
+            debugger;
+            setValues({...values, [name]: newArray})
+        } else {
+            const index = values[name].indexOf(value);
+            const newArray = values[name].splice(index, 1);
+            debugger;
+            setValues({...values, [name]: newArray})
+        }
+       
     }
 
-    const handleCheckboxUnclick = (e) => {
-
-    }
 
     const handleSubmit = () => {
         axios.post('/lodgings', {
@@ -43,6 +52,7 @@ const RestaurantCreate = (props) => {
     const [values, setValues] = useState({name: '', description: '', lodging_type: LODGING_TYPES[0], location_id: props.location_id, breakfast: null, wifi: null, channels: [], pool: null})
     const [errors, setErrors] = useState(null)
 
+    console.log(values.channels);
     return (
         <div className="place-form-modal">
             <div className="place-form">
@@ -139,7 +149,7 @@ const RestaurantCreate = (props) => {
                      </div>
                     </div>
                     <div className="place-form-checkbox-area">
-
+                     <input type="checkbox" name="channels" value="HBO" onChange={handleCheckboxClick}/>
                     </div>
                <textarea 
                  className="place-form-text"
