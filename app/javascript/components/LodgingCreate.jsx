@@ -50,8 +50,30 @@ const RestaurantCreate = (props) => {
                  name='lodging_type'
                  placeholder="Lodging Type"
                  onChange={handleInputChange}
-                 value={values.loding_type}>
+                 value={values.lodging_type}>
                 {LODGING_TYPES.map( type => {
+                    return <option value={type}>{type}</option>
+                })}     
+                </select>
+
+                <select 
+                 className="place-form-text"
+                 name='breakfast'
+                 placeholder="Breakfast"
+                 onChange={handleInputChange}
+                 value={values.breakfast}>
+                {BREAKFAST.map( type => {
+                    return <option value={type}>{type}</option>
+                })}     
+                </select>
+
+                <select 
+                 className="place-form-text"
+                 name='wifi'
+                 placeholder="Wifi"
+                 onChange={handleInputChange}
+                 value={values.breakfast}>
+                {WIFI.map( type => {
                     return <option value={type}>{type}</option>
                 })}     
                 </select>
