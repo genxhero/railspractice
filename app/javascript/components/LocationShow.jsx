@@ -46,7 +46,7 @@ const LocationShow = (props) => {
                 updatePlaces({restaurants: [...places.restaurants], travelCenters: [...places.travelCenters], coffeeShops: [...places.coffeeShops, newPlace], lodgings: [...places.lodgings]})
             break;
             case "lodging": 
-            updatePlaces({restaurants: [...places.restaurants], travelCenters: [...places.travelCenters], coffeeShops: [...places.coffeeShops], lodgings: [...places.lodgings, newPlace]})
+                updatePlaces({restaurants: [...places.restaurants], travelCenters: [...places.travelCenters], coffeeShops: [...places.coffeeShops], lodgings: [...places.lodgings, newPlace]})
             break;
         }
     }
@@ -90,7 +90,7 @@ const LocationShow = (props) => {
                     {places.lodgings.map( travelCenter => {
                         return <PlaceCard place={lodging} key={lodging.name}/>
                     })}
-                    {(state.open && state.placeType === "lodging") && <TravelCenterCreate location_id={props.location.id} close={closeModal} update={update}/>}
+                    {(state.open && state.placeType === "lodging") && <LodgingCreate location_id={props.location.id} close={closeModal} update={update}/>}
                     <button onClick={ () => openModal('lodging')}>Click Me</button>
                 </div>
             </div>
