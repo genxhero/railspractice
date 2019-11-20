@@ -30,7 +30,7 @@ const RestaurantCreate = (props) => {
         setErrors(null)
     }
 
-    const [values, setValues] = useState({name: '', description: '', type: LODGING_TYPES[0], location_id: props.location_id})
+    const [values, setValues] = useState({name: '', description: '', lodging_type: LODGING_TYPES[0], location_id: props.location_id, breakfast: null, wifi: null, channels: [], pool: null})
     const [errors, setErrors] = useState(null)
 
     return (
