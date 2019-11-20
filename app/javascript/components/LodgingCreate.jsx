@@ -4,7 +4,7 @@
  */
 
 import React, {useState} from 'react';
-import {LODGING_TYPES} from './constants';
+import {LODGING_TYPES, BREAKFAST, WIFI} from './constants';
 import axios from 'axios'
 import ErrorModal from './ErrorModal';
 

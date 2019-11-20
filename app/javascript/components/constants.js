@@ -54,3 +54,18 @@ export const LODGING_TYPES = [
     "RV Park",
     "Tent Camping"
 ]
+
+export const BREAKFAST = [
+    "None",
+    "Free - Hot",
+    "Free - Continental",
+    "Extra Charge",
+    "In-House Restaurant"
+]
+
+export const WIFI = [
+    "None",
+    "Free For All",
+    "Free For Guests",
+    "Extra Charge"
+]
