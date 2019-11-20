@@ -36,7 +36,7 @@ const RestaurantCreate = (props) => {
     return (
         <div className="place-form-modal">
             <div className="place-form">
-                <h2>New Restaurant</h2>
+                <h2>New Lodging</h2>
                <input 
                  className="place-form-text"
                  name='name'
@@ -44,21 +44,22 @@ const RestaurantCreate = (props) => {
                  placeholder="Name"
                  onChange={handleInputChange}
                  value={values.name}/>
+                 
                 <select 
                  className="place-form-text"
-                 name='cuisine'
-                 placeholder="Cuisine"
+                 name='lodging_type'
+                 placeholder="Lodging Type"
                  onChange={handleInputChange}
-                 value={values.cuisine}>
-                {CUISINES.map( cuisine => {
-                    return <option value={cuisine}>{cuisine}</option>
+                 value={values.loding_type}>
+                {LODGING_TYPES.map( type => {
+                    return <option value={type}>{type}</option>
                 })}     
                 </select>
 
                 <label className="place-form-radio-container">
                     <input className="place-form-radio"
-                    name='shop_type'
-                    value='Sit Down'
+                    name='gym'
+                    value='Yes'
                     onChange={handleInputChange}
                     type="radio"
                 /> 
@@ -68,8 +69,8 @@ const RestaurantCreate = (props) => {
               
               <label className="place-form-radio-container">
                     <input className="place-form-radio"
-                        name='shop_type'
-                        value='Fast Food'
+                        name='gym'
+                        value='No'
                         onChange={handleInputChange}
                         type="radio"
                         />
