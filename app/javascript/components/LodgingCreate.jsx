@@ -78,7 +78,8 @@ const RestaurantCreate = (props) => {
                 })}     
                 </select>
 
-                <label className="place-form-radio-container">
+               <div style={{"display":"flex"}}>
+               <label className="place-form-radio-container">
                     <input className="place-form-radio"
                     name='gym'
                     value={true}
@@ -122,6 +123,8 @@ const RestaurantCreate = (props) => {
                   No
                   <span className="checkmark"></span>
               </label>
+               </div>
+                
                
 
                <textarea 
