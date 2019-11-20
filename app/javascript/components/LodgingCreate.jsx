@@ -14,11 +14,11 @@ const RestaurantCreate = (props) => {
         setValues({...values, [name]: value})
     }
     const handleSubmit = () => {
-        axios.post('/restaurants', {
+        axios.post('/lodgings', {
            restaurant: values
           }
         ).then( res => {
-            props.update(res.data, "restaurant")
+            props.update(res.data, "lodging")
         }).then(res => {
             props.close();
         }).catch( res => {
