@@ -79,51 +79,59 @@ const RestaurantCreate = (props) => {
                 </select>
 
                <div style={{"display":"flex"}}>
-               <label className="place-form-radio-container">
-                    <input className="place-form-radio"
-                    name='gym'
-                    value={true}
-                    onChange={handleInputChange}
-                    type="radio"
-                /> 
-                Yes
-                <span className="checkmark"></span>
-                </label>
+                   <span>Gym</span>
+                   <div style={{"display":"flex", "flexDirection":"column"}}>
+                    <label className="place-form-radio-container">
+                                        <input className="place-form-radio"
+                                        name='gym'
+                                        value={true}
+                                        onChange={handleInputChange}
+                                        type="radio"
+                                    /> 
+                                    Yes
+                                    <span className="checkmark"></span>
+                                    </label>
+                                
+                                <label className="place-form-radio-container">
+                                        <input className="place-form-radio"
+                                            name='gym'
+                                            value={false}
+                                            onChange={handleInputChange}
+                                            type="radio"
+                                            />
+                                    No
+                                    <span className="checkmark"></span>
+                                </label>
+                   </div>
+                   <div style={{"display":"flex", "flexDirection":"column"}}>
+                   <span>Swimming Pool</span>
+                     <label className="place-form-radio-container">
+                         <input className="place-form-radio"
+                            name='pool'
+                            value={true}
+                            onChange={handleInputChange}
+                            type="radio"
+                        /> 
+                        Yes
+                        <span className="checkmark"></span>
+                    </label>
               
-              <label className="place-form-radio-container">
-                    <input className="place-form-radio"
-                        name='gym'
-                        value={false}
-                        onChange={handleInputChange}
-                        type="radio"
-                        />
-                  No
-                  <span className="checkmark"></span>
-              </label>
-
-
-              <label className="place-form-radio-container">
-                    <input className="place-form-radio"
-                    name='pool'
-                    value={true}
-                    onChange={handleInputChange}
-                    type="radio"
-                /> 
-                Yes
-                <span className="checkmark"></span>
-                </label>
-              
-              <label className="place-form-radio-container">
-                    <input className="place-form-radio"
-                        name='pool'
-                        value={false}
-                        onChange={handleInputChange}
-                        type="radio"
-                        />
-                  No
-                  <span className="checkmark"></span>
-              </label>
+                        <label className="place-form-radio-container">
+                            <input className="place-form-radio"
+                                name='pool'
+                                value={false}
+                                onChange={handleInputChange}
+                                type="radio"
+                                />
+                        No
+                        <span className="checkmark"></span>
+                    </label>
                </div>
+                    </div>
+            
+
+
+           
                 
                
 
