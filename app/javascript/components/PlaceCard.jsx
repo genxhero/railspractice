@@ -31,7 +31,7 @@ const PlaceCard = (props) => {
                 <div>{props.place.description}</div>
                 {props.place.fields.map( field => {
                         return (
-                        <div>
+                        <div key={`shutuplint${field.name}`}>
                             <span className="place-card-fieldname">{field.name}:</span> 
                             <span className="place-card-fieldvalue">{parseValue(field.value)}</span>
                         </div>

@@ -15,6 +15,7 @@ const RestaurantCreate = (props) => {
     }
 
     const handleCheckboxClick = (e) => {
+        const {name, value } = e.target
 
     }
 
