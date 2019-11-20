@@ -4,7 +4,7 @@
  */
 
 import React, {useState} from 'react';
-import {CUISINES} from './constants';
+import {LODGING_TYPES} from './constants';
 import axios from 'axios'
 import ErrorModal from './ErrorModal';
 
@@ -15,7 +15,7 @@ const RestaurantCreate = (props) => {
     }
     const handleSubmit = () => {
         axios.post('/lodgings', {
-           restaurant: values
+           lodging: values
           }
         ).then( res => {
             props.update(res.data, "lodging")
@@ -30,7 +30,7 @@ const RestaurantCreate = (props) => {
         setErrors(null)
     }
 
-    const [values, setValues] = useState({name: '', description: '', cuisine: CUISINES[0], shop_type: '', location_id: props.location_id})
+    const [values, setValues] = useState({name: '', description: '', type: LODGING_TYPES[0], location_id: props.location_id})
     const [errors, setErrors] = useState(null)
 
     return (
