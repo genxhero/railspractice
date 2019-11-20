@@ -69,3 +69,20 @@ export const WIFI = [
     "Free For Guests",
     "Extra Charge"
 ]
+
+export const CHANNELS = [
+    "HBO",
+    "Starz",
+    "Cinemax",
+    "Showtime",
+    "Cartoon Network",
+    "History Channel",
+    "ESPN",
+    "Food Network",
+    "Comedy Central",
+    "CNN",
+    "MSNBC",
+    "Fox News",
+    "BBC",
+    "MTV"
+]

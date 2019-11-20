@@ -4,7 +4,7 @@
  */
 
 import React, {useState} from 'react';
-import {LODGING_TYPES, BREAKFAST, WIFI} from './constants';
+import {LODGING_TYPES, BREAKFAST, WIFI, CHANNELS} from './constants';
 import axios from 'axios'
 import ErrorModal from './ErrorModal';
 
@@ -13,6 +13,15 @@ const RestaurantCreate = (props) => {
         const {name, value} = e.target
         setValues({...values, [name]: value})
     }
+
+    const handleCheckboxClick = (e) => {
+
+    }
+
+    const handleCheckboxUnclick = (e) => {
+
+    }
+
     const handleSubmit = () => {
         axios.post('/lodgings', {
            lodging: values
@@ -114,27 +123,23 @@ const RestaurantCreate = (props) => {
                         /> 
                         Yes
                         <span className="checkmark"></span>
-                    </label>
-              
-                        <label className="place-form-radio-container">
-                            <input className="place-form-radio"
-                                name='pool'
-                                value={false}
-                                onChange={handleInputChange}
-                                type="radio"
-                                />
-                        No
-                        <span className="checkmark"></span>
-                    </label>
-               </div>
-                    </div>
-            
-
-
-           
+                        </label>
                 
-               
+                            <label className="place-form-radio-container">
+                                <input className="place-form-radio"
+                                    name='pool'
+                                    value={false}
+                                    onChange={handleInputChange}
+                                    type="radio"
+                                    />
+                            No
+                            <span className="checkmark"></span>
+                         </label>
+                     </div>
+                    </div>
+                    <div className="place-form-checkbox-area">
 
+                    </div>
                <textarea 
                  className="place-form-text"
                  type='text' 
