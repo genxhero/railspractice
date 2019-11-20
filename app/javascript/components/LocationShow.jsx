@@ -12,6 +12,7 @@ import Restaurant from './Restaurant';
 import TravelCenterCreate from './TravelCenterCreate';
 import RestaurantCreate from './RestaurantCreate';
 import CoffeeShopCreate from './CoffeeShopCreate';
+import LodgingCreate from './LodgingCreate';
 import PlaceCard from './PlaceCard';
 import $ from 'jquery';
 
@@ -43,6 +44,9 @@ const LocationShow = (props) => {
             break;
             case "coffeeShop":
                 updatePlaces({restaurants: [...places.restaurants], travelCenters: [...places.travelCenters], coffeeShops: [...places.coffeeShops, newPlace], lodgings: [...places.lodgings]})
+            break;
+            case "lodging": 
+            updatePlaces({restaurants: [...places.restaurants], travelCenters: [...places.travelCenters], coffeeShops: [...places.coffeeShops], lodgings: [...places.lodgings, newPlace]})
             break;
         }
     }
