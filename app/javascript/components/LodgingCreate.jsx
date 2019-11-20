@@ -72,14 +72,14 @@ const RestaurantCreate = (props) => {
                  name='wifi'
                  placeholder="Wifi"
                  onChange={handleInputChange}
-                 value={values.breakfast}>
+                 value={values.wifi}>
                 {WIFI.map( type => {
                     return <option value={type}>{type}</option>
                 })}     
                 </select>
 
                <div style={{"display":"flex"}}>
-                   <div style={{"display":"flex", "flexDirection":"column"}}>
+                   <div style={{"display":"flex", "flexDirection":"column", "margin":".8rem"}}>
                    <span>Gym</span>
                     <label className="place-form-radio-container">
                                         <input className="place-form-radio"
@@ -103,7 +103,7 @@ const RestaurantCreate = (props) => {
                                     <span className="checkmark"></span>
                                 </label>
                    </div>
-                   <div style={{"display":"flex", "flexDirection":"column"}}>
+                   <div style={{"display":"flex", "flexDirection":"column", "margin":".8rem"}}>
                    <span>Swimming Pool</span>
                      <label className="place-form-radio-container">
                          <input className="place-form-radio"
