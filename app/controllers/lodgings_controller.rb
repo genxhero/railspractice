@@ -15,7 +15,7 @@ class LodgingsController < ApplicationController
   
   
     def create
-        @lodging = TravelCenter.new(lodging_params)
+        @lodging = Lodging.new(lodging_params)
         if @lodging.save
           @location = Location.find(lodging_params[:location_id])
           render json: @lodging
