@@ -15,16 +15,13 @@ const RestaurantCreate = (props) => {
     }
 
     const handleCheckboxClick = (e) => {
-        debugger;
         const {name, value } = e.target
-
         if (e.target.checked ) {
             const newArray = [...values[name], value]
             debugger;
             setValues({...values, [name]: newArray})
         } else {
-            const index = values[name].indexOf(value);
-            const newArray = values[name].splice(index, 1);
+            const newArray = values[name].filter(el => el !== value);
             debugger;
             setValues({...values, [name]: newArray})
         }
@@ -149,7 +146,12 @@ const RestaurantCreate = (props) => {
                      </div>
                     </div>
                     <div className="place-form-checkbox-area">
-                     <input type="checkbox" name="channels" value="HBO" onChange={handleCheckboxClick}/>
+                        {CHANNELS.map( channel => {
+                            return <label key={channel}>
+                                {channel}
+                                <input type="checkbox" name="channels" value={channel} onChange={handleCheckboxClick}/>
+                            </label>
+                        })}
                     </div>
                <textarea 
                  className="place-form-text"
