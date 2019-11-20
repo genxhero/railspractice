@@ -79,8 +79,8 @@ const RestaurantCreate = (props) => {
                 </select>
 
                <div style={{"display":"flex"}}>
-                   <span>Gym</span>
                    <div style={{"display":"flex", "flexDirection":"column"}}>
+                   <span>Gym</span>
                     <label className="place-form-radio-container">
                                         <input className="place-form-radio"
                                         name='gym'
