@@ -6,7 +6,11 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 const login = (values) => {
-
+    axios.post('/session', {
+        user_params: values
+    }).then(res => {
+        debugger;
+    })
 }
 
 const Signup = (props) => {
