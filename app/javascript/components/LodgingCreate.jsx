@@ -18,11 +18,9 @@ const RestaurantCreate = (props) => {
         const {name, value } = e.target
         if (e.target.checked ) {
             const newArray = [...values[name], value]
-            debugger;
             setValues({...values, [name]: newArray})
         } else {
             const newArray = values[name].filter(el => el !== value);
-            debugger;
             setValues({...values, [name]: newArray})
         }
        
