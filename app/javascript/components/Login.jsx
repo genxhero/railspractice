@@ -15,7 +15,7 @@ const Signup = (props) => {
     return (
         <div className="session-modal">
             <div className="session-form">
-                <form onSubmit={register(values)}>
+                <form onSubmit={login(values)}>
                     <input type="text" />
                     <input type="text" />
                     <input type="submit" />

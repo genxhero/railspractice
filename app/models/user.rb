@@ -3,7 +3,8 @@
 class User < ApplicationRecord
     attr_reader :password
     
-    after_initialize :ensure_token, :assign_test_group
+    after_initialize :ensure_token
+    before_save :assign_test_group
     
     validates :password, length: {minimum: 6, allow_nil: true  }
     validates :username, :email, :password_digest, :session_token, presence: true, uniqueness: true
