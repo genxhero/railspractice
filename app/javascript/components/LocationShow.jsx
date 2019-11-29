@@ -19,6 +19,7 @@ import $ from 'jquery';
 
 const LocationShow = (props) => {
 
+    const {currentUser, location} = props;
     const [state, openForm] = useState({open: false, placeType: ''})
     const [places, updatePlaces] = useState(props.places)
     

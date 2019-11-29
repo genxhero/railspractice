@@ -1,1 +1,1 @@
-<%= react_component("LocationShow", {location: @location, places: @location.places}) %>
+<%= react_component("LocationShow", {currentUser: session[:current_user], location: @location, places: @location.places}) %>
