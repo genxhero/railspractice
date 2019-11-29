@@ -43,4 +43,7 @@ class User < ApplicationRecord
     def correct_password?(password)
         BCrypt::Password.new(self.password_digest).is_password?(password)
     end
+
+    def self.shuffle_test_groups
+    end
 end

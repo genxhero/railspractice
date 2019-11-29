@@ -1,6 +1,6 @@
 #For the creation of users and show page for users.
 
-class Api::UsersController < ApplicationController
+class UsersController < ApplicationController
 
     def new
       @user = User.new
