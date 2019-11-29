@@ -1,6 +1,6 @@
 #Controls the session, used for logging in and out.
 
-class Api::SessionsController < ApplicationController
+class SessionsController < ApplicationController
 
     def create
         @user = User.find_by_credentials(
