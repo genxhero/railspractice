@@ -3,7 +3,7 @@
 class User < ApplicationRecord
     attr_reader :password
     
-    after_initialize :ensure_token
+    after_initialize :ensure_token, :assign_test_group
     
     validates :password, length: {minimum: 6, allow_nil: true  }
     validates :username, :email, :password_digest, :session_token, presence: true, uniqueness: true
@@ -27,6 +27,10 @@ class User < ApplicationRecord
 
     def ensure_token
         self.session_token ||= SecureRandom::urlsafe_base64
+    end
+
+    def assign_test_group
+        self.test_group ||= ["A", "B", "C"].sample
     end
 
     def reset_token
