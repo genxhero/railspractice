@@ -11,7 +11,11 @@ const Signup = (props) => {
     const register = () => {
 
     }
-    
+
+    const clearErrors = () => {
+        setErrors(null)
+    }
+
     const [values, setValues] = useState({username: "", email: "", password: "", confirm: ""})
     const [errors, setErrors] = useState(null)
     return (
