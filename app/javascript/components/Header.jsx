@@ -5,6 +5,7 @@ import Login from './Login';
 
 
 const Header = props => {
+    console.log(props)
 
     const [form, setForm] = useState({open: false, type: ""})
     const close = () =>{  setForm({open:false, type: ""});    }
