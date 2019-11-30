@@ -21,6 +21,7 @@ const Signup = (props) => {
                     <input type="text"/>
                     <input type="text"/>
                     <input type="submit"/>
+                    <button onClick={props.close}>Cancel</button>
                 </form>
             </div>
         </div>

@@ -1,0 +1,14 @@
+.session-modal {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, .5);
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+}
+
+.session-form {
+    border-radius: 4px;
+    background: orange;
+}

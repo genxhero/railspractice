@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 const login = (values) => {
-    axios.post('/session', {
+    axios.post('/sessions', {
         user_params: values
     }).then(res => {
         debugger;
@@ -23,6 +23,7 @@ const Signup = (props) => {
                     <input type="text" />
                     <input type="text" />
                     <input type="submit" />
+                    <button onClick={props.close}>Cancel</button>
                 </form>
             </div>
         </div>
