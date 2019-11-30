@@ -31,7 +31,7 @@ class User < ApplicationRecord
     end
 
     def assign_test_group
-        self.test_group ||= ["A", "B", "C"].sample
+        self.test_group = ["A", "B", "C"].sample
     end
 
     def reset_token
@@ -50,5 +50,9 @@ class User < ApplicationRecord
     end
 
     def self.shuffle_test_groups
+        User.all.each do |user| 
+            user.assign_test_group
+            user.save!
+        end
     end
 end

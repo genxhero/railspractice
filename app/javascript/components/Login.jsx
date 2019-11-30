@@ -5,6 +5,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+const csrfToken = document.querySelector('[name=csrf-token]').content
+axios.defaults.headers.common['X-CSRF-TOKEN'] = csrfToken
+
 const Login = (props) => {
     const handleInputChange = e => {
         const {name, value} = e.target
@@ -13,10 +16,12 @@ const Login = (props) => {
 
     const login = () => {
         axios.post('/sessions', {
-            user_params: values
+            user: values
         }).then(res => {
             debugger;
-        })
+        }).catch( res => 
+           { debugger;}
+            )
     }
 
     const clearErrors = () => {
@@ -29,8 +34,8 @@ const Login = (props) => {
         <div className="session-modal">
             <div className="session-form">
                 <form onSubmit={login}>
-                    <input type="text" value={values.email} name="email"/>
-                    <input type="text" vakue={values.password} name="password"/>
+                    <input type="text" value={values.email} name="email" onChange={handleInputChange}/>
+                    <input type="text" vakue={values.password} name="password" onChange={handleInputChange}/>
                     <input type="submit" />
                     <button onClick={props.close}>Cancel</button>
                 </form>
