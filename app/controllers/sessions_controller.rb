@@ -9,6 +9,8 @@ class SessionsController < ApplicationController
         )
         if @user
           login(@user)
+          debugger
+          render json: @user
         else
           render json: ["Invalid Credentials"], status: 422
         end
