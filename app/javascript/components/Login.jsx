@@ -5,21 +5,22 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const login = (values) => {
-    axios.post('/sessions', {
-        user_params: values
-    }).then(res => {
-        debugger;
-    })
-}
+const Login = (props) => {
 
-const Signup = (props) => {
+    const login = () => {
+        axios.post('/sessions', {
+            user_params: values
+        }).then(res => {
+            debugger;
+        })
+    }
+
     const [values, setValues] = useState({  email: "", password: ""})
     const [errors, setErrors] = useState(null)
     return (
         <div className="session-modal">
             <div className="session-form">
-                <form onSubmit={login(values)}>
+                <form onSubmit={login}>
                     <input type="text" />
                     <input type="text" />
                     <input type="submit" />
@@ -30,4 +31,4 @@ const Signup = (props) => {
     )
 }
 
-export default Signup;
+export default Login;

@@ -5,17 +5,19 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const register = (values) => {
 
-}
 
 const Signup = (props) => {
+    const register = () => {
+
+    }
+    
     const [values, setValues] = useState({username: "", email: "", password: "", confirm: ""})
     const [errors, setErrors] = useState(null)
     return (
         <div className="session-modal">
             <div className="session-form">
-                <form onSubmit={register(values)}>
+                <form onSubmit={register}>
                     <input type="text"/>
                     <input type="text"/>
                     <input type="text"/>
