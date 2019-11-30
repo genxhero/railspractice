@@ -19,7 +19,9 @@ const Login = (props) => {
             user: values,
             url: window.location.pathname
         }).then(res => {
+            let butt = "butt"
             debugger;
+            butt = "bitter"
         }).catch( res => 
            { debugger;}
             )
