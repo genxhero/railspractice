@@ -51,7 +51,7 @@ class User < ApplicationRecord
 
     def self.shuffle_test_groups
         User.all.each do |user| 
-            user.assign_test_group
+            user.test_group = ["A", "B", "C"].sample
             user.save!
         end
     end

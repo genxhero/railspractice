@@ -16,10 +16,12 @@ import LodgingCreate from './LodgingCreate';
 import PlaceCard from './PlaceCard';
 import $ from 'jquery';
 
+const TEST_CLASSES = {"A": "-a", "B": "-b", "C": ""};
 
 const LocationShow = (props) => {
 
     const {currentUser, location} = props;
+    const testCase = currentUser ? TEST_CLASSES[currentUser.test_group] : "";
     console.log(props);
     const [state, openForm] = useState({open: false, placeType: ''})
     const [places, updatePlaces] = useState(props.places)
@@ -54,7 +56,7 @@ const LocationShow = (props) => {
     }
 
     return (
-        <div className="location-show-page">
+        <div className={`location-show-page${testCase}`}>
             <h1>{props.location.name}, {props.location.state}</h1>
             <img className="location-show-image"src={props.location.image_url} alt={props.location.name}/>
             <div className="location-show-columns">
