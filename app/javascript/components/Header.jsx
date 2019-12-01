@@ -29,7 +29,7 @@ const Header = props => {
                 </div> 
                 ) : (
                 <div>
-                    <h3>currentUser.username</h3>
+                    <h3>{currentUser.username}</h3>
                     <button onClick={logout}>Log Out</button>
                 </div>
                 )
