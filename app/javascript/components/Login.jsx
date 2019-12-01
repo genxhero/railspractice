@@ -21,7 +21,9 @@ const Login = (props) => {
             url: window.location.pathname
         }).then(res => {
           props.update(res.data)
-        }).catch( res => 
+        }).then(
+            props.close()
+        ).catch( res => 
            { 
             let buffer = "buffer"
                debugger;
