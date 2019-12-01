@@ -3,7 +3,6 @@ class ApplicationController < ActionController::Base
 
   def login(user)
     session[:session_token] = user.reset_token
-    debugger
     buffer = "buffer"
   end
 
@@ -14,10 +13,7 @@ class ApplicationController < ActionController::Base
 
   def current_user
     butter = "butter"
-    debugger
     @current_user ||= User.find_by(session_token: session[:session_token])
-    debugger
-    @current_user
   end
 
   def require_login
