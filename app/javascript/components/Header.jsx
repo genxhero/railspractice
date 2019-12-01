@@ -18,12 +18,11 @@ const Header = props => {
     const [currentUser, updateUser] = useState(props.currentUser);
     const [form, setForm] = useState({open: false, type: ""})
     const close = () =>{  setForm({open:false, type: ""});    }
-
     return (
         <div className="header">
             <h1> This is a header</h1>
             {
-                currentUser ? (
+                !currentUser ? (
                 <div>
                     <button onClick={ () => { setForm({open: true, type: "login"})}}>Login</button>
                     <button onClick={ () => { setForm({open: true, type: "register"})}}>Register</button>
