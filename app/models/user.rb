@@ -31,7 +31,7 @@ class User < ApplicationRecord
     end
 
     def assign_test_group
-        self.test_group = ["A", "B", "C"].sample
+        self.test_group ||= ["A", "B", "C"].sample
     end
 
     def reset_token
