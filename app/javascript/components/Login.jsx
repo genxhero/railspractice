@@ -15,7 +15,7 @@ const Login = (props) => {
     }
 
     const login = () => {
-        e.preventDefault();
+        event.preventDefault();
         axios.post('/session', {
             user: values,
             url: window.location.pathname
