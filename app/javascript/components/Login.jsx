@@ -4,6 +4,7 @@
 
 import React, { useState } from 'react';
 import axios from 'axios';
+import $ from 'ajax';
 
 const csrfToken = document.querySelector('[name=csrf-token]').content
 axios.defaults.headers.common['X-CSRF-TOKEN'] = csrfToken
@@ -23,8 +24,11 @@ const Login = (props) => {
             debugger;
             butt = "bitter"
         }).catch( res => 
-           { debugger;}
-            )
+           { 
+            let buffer = "buffer"
+               debugger;
+            let blood  = "copiusly"
+        })
     }
 
     const clearErrors = () => {
