@@ -15,7 +15,7 @@ const Login = (props) => {
     }
 
     const login = () => {
-        axios.post('/sessions', {
+        axios.post('/session', {
             user: values,
             url: window.location.pathname
         }).then(res => {
