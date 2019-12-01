@@ -1,10 +1,19 @@
 import React, {useState} from 'react';
 import Signup from './Signup';
 import Login from './Login';
+import axios from 'axios';
 
 
 
 const Header = props => {
+
+    const logout = () => {
+        event.preventDefault();
+        axios.delete('/session').then( res => {
+            debugger;
+            updateUser(null);
+        })
+    }
     console.log(props)
     const [currentUser, updateUser] = useState(props.currentUser);
     const [form, setForm] = useState({open: false, type: ""})
@@ -20,7 +29,10 @@ const Header = props => {
                     <button onClick={ () => { setForm({open: true, type: "register"})}}>Register</button>
                 </div> 
                 ) : (
+                <div>
                     <h3>currentUser.username</h3>
+                    <button onClick={logout}>Log Out</button>
+                </div>
                 )
             }
       
