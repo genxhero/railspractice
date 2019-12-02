@@ -20,8 +20,8 @@ const Header = props => {
     const close = () =>{  setForm({open:false, type: ""});    }
     const testCase = currentUser ? TEST_CLASSES[currentUser.test_group] : "";
     return (
-        <div className={`header${testCase}`}>
-            <h1> This is a header</h1>
+        <div className={`header header${testCase}`}>
+            <h1 className={`header-title header-title${testCase}`}> Wanderer - Reborn</h1>
             {
                 !currentUser ? (
                 <div>

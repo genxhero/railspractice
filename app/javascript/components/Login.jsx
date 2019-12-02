@@ -20,6 +20,7 @@ const Login = (props) => {
             user: values,
             url: window.location.pathname
         }).then(res => {
+            debugger;
           props.update(res.data)
         }).then(
             props.close()
