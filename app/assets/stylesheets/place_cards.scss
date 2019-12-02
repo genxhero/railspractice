@@ -16,12 +16,14 @@
         align-items: center;
         &-a {
             background: darkgreen;
+            color:white;
         }
     }
     &-expanded {
         background: orange;
-        &-b {
+        &-a {
             background: green;
+            color: white;
         }
     }
   }
