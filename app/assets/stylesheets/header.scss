@@ -1,0 +1,17 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: orange;
+    color: yellow;
+    padding: 1rem;
+    &-a {
+        background: green;
+        color: yellowgreen;
+    }
+
+    &-b {
+        background: blue;
+        color: cyan;
+    }
+}
