@@ -14,9 +14,15 @@
         font-weight: bold;
         background: darkorange;
         align-items: center;
+        &-a {
+            background: darkgreen;
+        }
     }
     &-expanded {
         background: orange;
+        &-b {
+            background: green;
+        }
     }
   }
 
