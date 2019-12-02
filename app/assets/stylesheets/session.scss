@@ -1,14 +1,22 @@
 .session-modal {
     position: absolute;
+    z-index: 9000;
     display: flex;
     align-items: center;
     justify-content: center;
     background: rgba(0, 0, 0, .5);
     width: -webkit-fill-available;
-    height: -webkit-fill-available;
+    height: 100rem;
 }
 
 .session-form {
     border-radius: 4px;
     background: orange;
+    width: 10rem;
+    height: 20rem;
+    padding: 1rem;
+    height: auto;
+    box-sizing: border-box;
+    position: relative;
+    top: 20rem;
 }
