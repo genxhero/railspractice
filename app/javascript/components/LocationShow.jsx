@@ -15,8 +15,7 @@ import CoffeeShopCreate from './CoffeeShopCreate';
 import LodgingCreate from './LodgingCreate';
 import PlaceCard from './PlaceCard';
 import $ from 'jquery';
-
-const TEST_CLASSES = {"A": "-a", "B": "-b", "C": ""};
+import {TEST_CLASSES} from './constants';
 
 const LocationShow = (props) => {
 

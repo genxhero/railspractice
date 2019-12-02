@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Signup from './Signup';
 import Login from './Login';
 import axios from 'axios';
-
+import {TEST_CLASSES} from './constants';
 
 
 const Header = props => {
@@ -18,8 +18,9 @@ const Header = props => {
     const [currentUser, updateUser] = useState(props.currentUser);
     const [form, setForm] = useState({open: false, type: ""})
     const close = () =>{  setForm({open:false, type: ""});    }
+    const testCase = currentUser ? TEST_CLASSES[currentUser.test_group] : "";
     return (
-        <div className="header">
+        <div className={`header${testCase}`}>
             <h1> This is a header</h1>
             {
                 !currentUser ? (

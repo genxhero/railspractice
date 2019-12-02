@@ -86,3 +86,5 @@ export const CHANNELS = [
     "BBC",
     "MTV"
 ]
+
+export const TEST_CLASSES = {"A": "-a", "B": "-b", "C": ""};
