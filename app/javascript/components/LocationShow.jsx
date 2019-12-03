@@ -21,9 +21,13 @@ const LocationShow = (props) => {
 
     const {currentUser, location} = props;
     const testCase = currentUser ? TEST_CLASSES[currentUser.test_group] : "";
-    console.log(props);
+    console.log(currentUser);
     const [state, openForm] = useState({open: false, placeType: ''})
     const [places, updatePlaces] = useState(props.places)
+
+    // useEffect(() => {
+    //     debugger;
+    // });
     
     const openModal = (placeType) => {
         $("html, body").animate({ scrollTop: 0 });
