@@ -11,7 +11,6 @@ const Header = props => {
     const logout = () => {
         event.preventDefault();
         axios.delete('/session').then( res => {
-            debugger;
             updateUser(null);
         })
     }
