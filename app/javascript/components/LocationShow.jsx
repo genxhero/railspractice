@@ -17,29 +17,20 @@ import PlaceCard from './PlaceCard';
 import $ from 'jquery';
 import axios from 'axios';
 import {TEST_CLASSES} from './constants';
+import {withRouter} from 'react-router-dom';
 
- const LocationShow = (props) => {
+ const LocationShow = async (props) => {
 
-    useEffect( async () => {
-        debugger;
-        if (!props.location) {
-            await axios.get(`/${window.location.pathname}`).then(
-                res => {
-                    debugger
-                }
-            )
-        }
-    });
-
-    const {currentUser, location} = props;
-    const testCase = currentUser ? TEST_CLASSES[currentUser.test_group] : "";
+    const locale = await axios.get(`api/${window.location.pathname}`);
+    debugger;
+    // const {currentUser, location} = props;
     console.log(currentUser);
-    const [state, openForm] = useState({open: false, placeType: '', currentUser: currentUser})
+    const [state, openForm] = useState({open: false, placeType: ''})
+    const [currentUser, updateUser]  = useState(props.currentUser)
     const [places, updatePlaces] = useState(props.places)
+    const testCase = currentUser ? TEST_CLASSES[currentUser.test_group] : "";
 
 
-   
-    
     const openModal = (placeType) => {
         $("html, body").animate({ scrollTop: 0 });
         $('body').css('overflow', 'hidden');
@@ -68,7 +59,11 @@ import {TEST_CLASSES} from './constants';
             break;
         }
     }
+debugger
 
+    if (!props.locale) {
+        return <div>Loading</div>
+    }
     return (
         <div className={`location-show-page${testCase}`}>
             <h1>{props.location.name}, {props.location.state}</h1>
@@ -116,4 +111,4 @@ import {TEST_CLASSES} from './constants';
     )
 }
 
-export default LocationShow;
+export default withRouter(LocationShow);

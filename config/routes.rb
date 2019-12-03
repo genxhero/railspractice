@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :welcome, only: [:index]
-  # resources :locations, only: [:index, :show]
+  namespace :api, defaults: { format: :json } do
+      resources :locations, only: [:index, :show]
+  end
   resources :travel_centers
   resources :restaurants
   resources :lodgings

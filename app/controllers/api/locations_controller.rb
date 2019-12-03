@@ -1,7 +1,9 @@
-class LocationsController < ApplicationController
+class Api::LocationsController < ApplicationController
     def show
         @location  = Location.eager_load([:coffee_shops, :restaurants, :travel_centers]).find_by(url_key: params[:id])
         @user = current_user
-        render :show
+        #render :show 
+        #TODO json jbuilder.
+        render json: @location
     end
 end
