@@ -6,7 +6,6 @@ import axios from 'axios';
 
 
 const App = (props) => {
-    console.log(props.currentUser);
     const logout = () => {
         event.preventDefault();
         axios.delete('/session').then( res => {
@@ -19,7 +18,7 @@ const App = (props) => {
         <BrowserRouter>
           <Header updateUser={updateUser} currentUser={currentUser} logout={logout}/>
           <Switch>
-              <Route Route exact path={"/locations/:locationId"}  component={LocationShow}/>
+              <Route exact path={"/locations/:locationId"} render={(props) => <LocationShow {...props} currentUser={currentUser} />} />
           </Switch>
         </BrowserRouter>
     )

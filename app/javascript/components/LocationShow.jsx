@@ -15,19 +15,30 @@ import CoffeeShopCreate from './CoffeeShopCreate';
 import LodgingCreate from './LodgingCreate';
 import PlaceCard from './PlaceCard';
 import $ from 'jquery';
+import axios from 'axios';
 import {TEST_CLASSES} from './constants';
 
-const LocationShow = (props) => {
+ const LocationShow = (props) => {
+
+    useEffect( async () => {
+        debugger;
+        if (!props.location) {
+            await axios.get(`/${window.location.pathname}`).then(
+                res => {
+                    debugger
+                }
+            )
+        }
+    });
 
     const {currentUser, location} = props;
     const testCase = currentUser ? TEST_CLASSES[currentUser.test_group] : "";
     console.log(currentUser);
-    const [state, openForm] = useState({open: false, placeType: ''})
+    const [state, openForm] = useState({open: false, placeType: '', currentUser: currentUser})
     const [places, updatePlaces] = useState(props.places)
 
-    // useEffect(() => {
-    //     debugger;
-    // });
+
+   
     
     const openModal = (placeType) => {
         $("html, body").animate({ scrollTop: 0 });

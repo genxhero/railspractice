@@ -30,8 +30,6 @@ const Header = props => {
     }
 
     useEffect( () => {
-        console.log("Props:", props.currentUser)
-        console.log("State:", currentUser)
         updateUser(props.currentUser);
     })
 
