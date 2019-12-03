@@ -21,7 +21,6 @@ const Login = (props) => {
             url: window.location.pathname
         }).then(res => {
           props.update(res.data)
-          console.log(res.data)
         }).then(
             props.close()
         ).catch( res => 

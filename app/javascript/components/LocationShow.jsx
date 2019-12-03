@@ -28,20 +28,18 @@ import {withRouter} from 'react-router-dom';
             //   debugger;
               updatePlaces(res.data.places);
               updateLocation(res.data.location);
+            //   updateUser(res.data.currentUser);
           });
         }
         // Execute the created function directly
         anyNameFunction();
       }, []);
 
-    debugger;
-    // const {currentUser, location} = props;
-    console.log(currentUser);
     const [state, openForm] = useState({open: false, placeType: ''})
     const [location, updateLocation] = useState(null)
-    const [currentUser, updateUser]  = useState(props.currentUser)
+    // const [currentUser, updateUser]  = useState(props.currentUser)
     const [places, updatePlaces] = useState(props.places)
-    const testCase = currentUser ? TEST_CLASSES[currentUser.test_group] : "";
+    const testCase = props.currentUser ? TEST_CLASSES[props.currentUser.test_group] : "";
 
 
     const openModal = (placeType) => {
@@ -72,15 +70,15 @@ import {withRouter} from 'react-router-dom';
             break;
         }
     }
-debugger
+
 
     if (!location) {
         return <div>Loading</div>
     }
     return (
         <div className={`location-show-page${testCase}`}>
-            <h1>{props.location.name}, {props.location.state}</h1>
-            <img className="location-show-image"src={props.location.image_url} alt={props.location.name}/>
+            <h1>{location.name}, {location.state}</h1>
+            <img className="location-show-image"src={location.image_url} alt={location.name}/>
             <div className="location-show-columns">
                 <div className={`location-show-column${testCase}`}>
                     {places.coffeeShops.length === 0 && <h4>No Coffee Shops Recommended</h4>}
