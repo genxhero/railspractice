@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Signup from './Signup';
 import Login from './Login';
 import axios from 'axios';
@@ -14,7 +14,7 @@ const Header = props => {
             updateUser(null);
         })
     }
-    console.log(props)
+
     const [currentUser, updateUser] = useState(props.currentUser);
     const [form, setForm] = useState({open: false, type: ""})
 
@@ -29,6 +29,12 @@ const Header = props => {
         setForm({open: true, type: formType})
     }
 
+    useEffect( () => {
+        console.log("Props:", props.currentUser)
+        console.log("State:", currentUser)
+        updateUser(props.currentUser);
+    })
+
     const testCase = currentUser ? TEST_CLASSES[currentUser.test_group] : "";
     return (
         <div className={`header header${testCase}`}>
@@ -42,13 +48,13 @@ const Header = props => {
                 ) : (
                 <div>
                     <h3>{currentUser.username}</h3>
-                    <button onClick={logout}>Log Out</button>
+                    <button onClick={props.logout}>Log Out</button>
                 </div>
                 )
             }
       
-            {(form.open && form.type === "login") && <Login close={close} update={updateUser}/>}
-            {(form.open && form.type === "register")  && <Signup close={close} update={updateUser}/>}
+            {(form.open && form.type === "login") && <Login close={close} update={props.updateUser}/>}
+            {(form.open && form.type === "register")  && <Signup close={close} update={props.updateUser}/>}
         </div>
     )
 }

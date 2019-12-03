@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :lodgings
   resources :coffee_shops
   resource :session, only: [:create, :destroy]
+  root :to => 'welcome#index'
 end
