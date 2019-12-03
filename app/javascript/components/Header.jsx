@@ -33,10 +33,10 @@ const Header = props => {
         updateUser(props.currentUser);
     })
 
-    const testCase = currentUser ? TEST_CLASSES[currentUser.test_group] : "";
+    const variation = currentUser ? TEST_CLASSES[currentUser.test_group] : "";
     return (
-        <div className={`header header${testCase}`}>
-            <h1 className={`header-title header-title${testCase}`}> Wanderer - Reborn</h1>
+        <div className={`header header${variation}`}>
+            <h1 className={`header-title header-title${variation}`}> Wanderer - Reborn</h1>
             {
                 !currentUser ? (
                 <div>
