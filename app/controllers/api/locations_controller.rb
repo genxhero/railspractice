@@ -4,6 +4,6 @@ class Api::LocationsController < ApplicationController
         @user = current_user
         #render :show 
         #TODO json jbuilder.
-        render json: @location
+        render json: { location: @location, places: @location.places }
     end
 end

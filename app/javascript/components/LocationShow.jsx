@@ -19,13 +19,26 @@ import axios from 'axios';
 import {TEST_CLASSES} from './constants';
 import {withRouter} from 'react-router-dom';
 
- const LocationShow = async (props) => {
+ const LocationShow = (props) => {
 
-    const locale = await axios.get(`api/${window.location.pathname}`);
+    useEffect(() => {
+        // Create an scoped async function in the hook
+        async function anyNameFunction() {
+          await axios.get(`/api${window.location.pathname}`).then(res => {
+            //   debugger;
+              updatePlaces(res.data.places);
+              updateLocation(res.data.location);
+          });
+        }
+        // Execute the created function directly
+        anyNameFunction();
+      }, []);
+
     debugger;
     // const {currentUser, location} = props;
     console.log(currentUser);
     const [state, openForm] = useState({open: false, placeType: ''})
+    const [location, updateLocation] = useState(null)
     const [currentUser, updateUser]  = useState(props.currentUser)
     const [places, updatePlaces] = useState(props.places)
     const testCase = currentUser ? TEST_CLASSES[currentUser.test_group] : "";
@@ -61,7 +74,7 @@ import {withRouter} from 'react-router-dom';
     }
 debugger
 
-    if (!props.locale) {
+    if (!location) {
         return <div>Loading</div>
     }
     return (
