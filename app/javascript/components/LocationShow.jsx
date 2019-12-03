@@ -22,22 +22,17 @@ import {withRouter} from 'react-router-dom';
  const LocationShow = (props) => {
 
     useEffect(() => {
-        // Create an scoped async function in the hook
         async function anyNameFunction() {
           await axios.get(`/api${window.location.pathname}`).then(res => {
-            //   debugger;
               updatePlaces(res.data.places);
               updateLocation(res.data.location);
-            //   updateUser(res.data.currentUser);
           });
         }
-        // Execute the created function directly
         anyNameFunction();
       }, []);
 
     const [state, openForm] = useState({open: false, placeType: ''})
     const [location, updateLocation] = useState(null)
-    // const [currentUser, updateUser]  = useState(props.currentUser)
     const [places, updatePlaces] = useState(props.places)
     const testCase = props.currentUser ? TEST_CLASSES[props.currentUser.test_group] : "";
 
