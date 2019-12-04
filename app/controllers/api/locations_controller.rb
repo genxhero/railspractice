@@ -7,7 +7,7 @@ class Api::LocationsController < ApplicationController
         if @location 
             render json: { location: @location, places: @location.places, currentUser: @user }
         else
-            render json: @location.errors.full_messages
+            render json: {error: "Location #{params[:id]} didn't turn up any results."}
         end
     end
 end
