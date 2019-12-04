@@ -5,7 +5,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import $ from 'jquery';
-
+import ErrorModal from './ErrorModal';
 const csrfToken = document.querySelector('[name=csrf-token]').content
 axios.defaults.headers.common['X-CSRF-TOKEN'] = csrfToken
 
@@ -42,14 +42,12 @@ const Login = (props) => {
                 authenticity_token: $('[name="csrf-token"]')[0].content
             }
         }).then(res => {
-           props.update(res.data)
+           props.update(res)
          }).then(
              props.close()
          ).catch( res => 
            { 
-             let buffer = "buffer"
-                debugger;
-             let blood  = "copiusly"
+             setErrors(res.responseJSON);
          })
     }
 
@@ -69,6 +67,7 @@ const Login = (props) => {
                     <button onClick={props.close}>Cancel</button>
                 </form>
             </div>
+            {errors && <ErrorModal errors={errors} />}
         </div>
     )
 }
