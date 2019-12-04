@@ -75,6 +75,10 @@ import NotFound from './NotFound';
     if (!location) {
         return <div>Loading</div>
     }
+
+    if (errors) {
+        return <NotFound pageType="location" />
+    }
     return (
         <div className={`location-show-page${testCase}`}>
             <h1>{location.name}, {location.state}</h1>
