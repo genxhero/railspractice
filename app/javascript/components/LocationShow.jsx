@@ -73,7 +73,7 @@ import NotFound from './NotFound';
 
 
     if (!location) {
-        return <div>Loading</div>
+        return <div style={{"position":"relative", "top":"25rem"}}>Loading</div>
     }
 
     if (errors) {
