@@ -40,7 +40,8 @@ import {assignTestingGuid} from './utils';
     const [errors, setErrors] = useState(null);
     const [location, updateLocation] = useState(null)
     const [places, updatePlaces] = useState(props.places)
-    const testCase = props.currentUser ? TEST_CLASSES[props.currentUser.test_group] : assignTestingGuid();
+    const testGuid = localStorage.getItem("testGuid") || assignTestingGuid();
+    const testCase = props.currentUser ? TEST_CLASSES[props.currentUser.test_group] : "";
 
 
     const openModal = (placeType) => {
