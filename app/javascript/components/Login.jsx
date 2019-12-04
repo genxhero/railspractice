@@ -4,6 +4,7 @@
 
 import React, { useState } from 'react';
 import axios from 'axios';
+import $ from 'jquery';
 
 const csrfToken = document.querySelector('[name=csrf-token]').content
 axios.defaults.headers.common['X-CSRF-TOKEN'] = csrfToken
@@ -14,21 +15,42 @@ const Login = (props) => {
         setValues({...values, [name]: value})
     }
 
+    // const login = () => {
+    //     event.preventDefault();
+    //     axios.post('/session', {
+    //         user: values,
+    //         url: window.location.pathname
+    //     }).then(res => {
+    //       props.update(res.data)
+    //     }).then(
+    //         props.close()
+    //     ).catch( res => 
+    //        { 
+    //         let buffer = "buffer"
+    //            debugger;
+    //         let blood  = "copiusly"
+    //     })
+    // }
+
     const login = () => {
         event.preventDefault();
-        axios.post('/session', {
-            user: values,
-            url: window.location.pathname
+        $.ajax({
+            url:'/session',
+            method: 'POST',
+            data: {
+                user: values,
+                authenticity_token: $('[name="csrf-token"]')[0].content
+            }
         }).then(res => {
-          props.update(res.data)
-        }).then(
-            props.close()
-        ).catch( res => 
+           props.update(res.data)
+         }).then(
+             props.close()
+         ).catch( res => 
            { 
-            let buffer = "buffer"
-               debugger;
-            let blood  = "copiusly"
-        })
+             let buffer = "buffer"
+                debugger;
+             let blood  = "copiusly"
+         })
     }
 
     const clearErrors = () => {

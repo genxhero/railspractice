@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
           # debugger
           # redirect_to params[:url]
         else
-          render json: ["Invalid Credentials"], status: 422
+         render json: ["Invalid Credentials"], status: 422
         end
     end
 
