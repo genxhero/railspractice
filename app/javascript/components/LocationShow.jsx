@@ -27,12 +27,16 @@ import NotFound from './NotFound';
           await axios.get(`/api${window.location.pathname}`).then(res => {
               updatePlaces(res.data.places);
               updateLocation(res.data.location);
+          }).catch( res => {
+              debugger;
+            setErrors(res)
           });
         }
         anyNameFunction();
       }, []);
 
     const [state, openForm] = useState({open: false, placeType: ''})
+    const [errors, setErrors] = useState(null);
     const [location, updateLocation] = useState(null)
     const [places, updatePlaces] = useState(props.places)
     const testCase = props.currentUser ? TEST_CLASSES[props.currentUser.test_group] : "";
