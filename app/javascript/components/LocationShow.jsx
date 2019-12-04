@@ -19,6 +19,7 @@ import axios from 'axios';
 import {TEST_CLASSES} from './constants';
 import {withRouter} from 'react-router-dom';
 import NotFound from './NotFound';
+import {assignTestingGuid} from './utils';
 
  const LocationShow = (props) => {
 
@@ -39,7 +40,7 @@ import NotFound from './NotFound';
     const [errors, setErrors] = useState(null);
     const [location, updateLocation] = useState(null)
     const [places, updatePlaces] = useState(props.places)
-    const testCase = props.currentUser ? TEST_CLASSES[props.currentUser.test_group] : "";
+    const testCase = props.currentUser ? TEST_CLASSES[props.currentUser.test_group] : assignTestingGuid();
 
 
     const openModal = (placeType) => {
