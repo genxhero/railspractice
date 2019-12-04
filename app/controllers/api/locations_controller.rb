@@ -4,6 +4,10 @@ class Api::LocationsController < ApplicationController
         @user = current_user
         #render :show 
         #TODO json jbuilder.
-        render json: { location: @location, places: @location.places, currentUser: @user }
+        if @location 
+            render json: { location: @location, places: @location.places, currentUser: @user }
+        else
+            render json: @location.errors.full_messages
+        end
     end
 end
