@@ -18,6 +18,7 @@ import $ from 'jquery';
 import axios from 'axios';
 import {TEST_CLASSES} from './constants';
 import {withRouter} from 'react-router-dom';
+import NotFound from './NotFound';
 
  const LocationShow = (props) => {
 
