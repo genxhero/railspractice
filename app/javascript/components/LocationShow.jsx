@@ -41,6 +41,7 @@ import {assignTestingGuid} from './utils';
     const [location, updateLocation] = useState(null)
     const [places, updatePlaces] = useState(props.places)
     const testGuid = localStorage.getItem("testGuid") || assignTestingGuid();
+    console.log(testGuid)
     const testCase = props.currentUser ? TEST_CLASSES[props.currentUser.test_group] : "";
 
 
