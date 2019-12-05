@@ -4,6 +4,8 @@
  * Right now the three types of place are too different. Might be better to have three
  * different form...the ajax action is going to hit a certain part of the api no matter what.
  * Maybe use a case statment
+ * 
+ *  * TODO: Migrate from Axios to Ajax.
  */
 
 import React, {useState}from 'react';
