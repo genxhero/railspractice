@@ -46,7 +46,6 @@ const Login = (props) => {
            props.close()
          }).catch( res => 
            { 
-               debugger;
              setErrors(res.responseJSON);
          })
     }
