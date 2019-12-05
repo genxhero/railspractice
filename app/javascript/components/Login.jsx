@@ -51,6 +51,7 @@ const Login = (props) => {
          })
     }
 
+    //TODO: move clearErrors to App.js 
     const clearErrors = () => {
         setErrors(null)
     }
@@ -67,7 +68,7 @@ const Login = (props) => {
                     <button onClick={props.close}>Cancel</button>
                 </form>
             </div>
-            {errors && <ErrorModal errors={errors} />}
+            {errors && <ErrorModal errors={errors} clear={clearErrors} />}
         </div>
     )
 }
