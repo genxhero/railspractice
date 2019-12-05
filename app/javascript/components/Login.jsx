@@ -15,23 +15,6 @@ const Login = (props) => {
         setValues({...values, [name]: value})
     }
 
-    // const login = () => {
-    //     event.preventDefault();
-    //     axios.post('/session', {
-    //         user: values,
-    //         url: window.location.pathname
-    //     }).then(res => {
-    //       props.update(res.data)
-    //     }).then(
-    //         props.close()
-    //     ).catch( res => 
-    //        { 
-    //         let buffer = "buffer"
-    //            debugger;
-    //         let blood  = "copiusly"
-    //     })
-    // }
-
     const login = () => {
         event.preventDefault();
         $.ajax({
