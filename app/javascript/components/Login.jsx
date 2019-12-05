@@ -43,10 +43,10 @@ const Login = (props) => {
             }
         }).then(res => {
            props.update(res)
-         }).then(
-             props.close()
-         ).catch( res => 
+           props.close()
+         }).catch( res => 
            { 
+               debugger;
              setErrors(res.responseJSON);
          })
     }
