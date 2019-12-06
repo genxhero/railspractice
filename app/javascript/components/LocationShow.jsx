@@ -71,14 +71,15 @@ import NotFound from './NotFound';
         }
     }
 
+    if (errors) {
+        return <NotFound pageType="location" />
+    }
 
     if (!location) {
         return <div style={{"position":"relative", "top":"25rem"}}>Loading</div>
     }
 
-    if (errors) {
-        return <NotFound pageType="location" />
-    }
+   
     return (
         <div className={`location-show-page${testCase}`}>
             <h1>{location.name}, {location.state}</h1>
