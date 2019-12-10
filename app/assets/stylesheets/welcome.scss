@@ -10,20 +10,6 @@
     background-size: cover;
 }
 
-.welcome-message {
-    width: 20rem;
-    height: 15rem;
-    padding: 1rem;
-    text-align: center;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: orange;
-    border-radius: 4px;
-}
-
 .welcome-subtitle {
     color:orangered;
 }
@@ -31,6 +17,25 @@
     color: orangered;
 }
 .welcome-carousel {
-    display: flex;
     padding: 1rem;
+    width: 20rem;
+    height: 15rem;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: orange;
+    border-radius: 4px;
+}
+
+.welcome-carousel-arrow{
+    font-size: 24px;
+}
+
+.welcome-carousel-arrow:hover{
+    cursor: pointer;
+    font-size: 32px;
+    transition: all .2s;
 }
