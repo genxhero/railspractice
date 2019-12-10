@@ -29,12 +29,15 @@
     background: orange;
     border-radius: 4px;
     position: relative;
+    -moz-user-select: none; 
+    -webkit-user-select: none; 
 }
 
 .welcome-carousel-arrow{
     font-size: 32px;
     padding: .5rem;
     position: absolute;
+    bottom: 0;
     &-left{
         left: 0;
     }
