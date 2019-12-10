@@ -16,10 +16,11 @@ const  Welcome = () =>  {
     return (
       <div className="welcome-page">
         <div className="welcome-carousel-arrow">
-
+          Left
         </div>
         {panes[currentPane]}
-        <div className="welcome-carousel-arrow"> 
+        <div className="welcome-carousel-arrow">
+          Right 
         </div>
         <div className="Welcome search bar"></div> 
       </div>
