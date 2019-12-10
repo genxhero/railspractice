@@ -4,11 +4,14 @@
  * Right now the three types of place are too different. Might be better to have three
  * different form...the ajax action is going to hit a certain part of the api no matter what.
  * Maybe use a case statment
+ * 
+ *  * TODO: Migrate from Axios to Ajax.
  */
 
 import React, {useState}from 'react';
 import ErrorModal from './ErrorModal';
 import axios from 'axios'
+import $ from 'jquery';
 
 const TravelCenterCreate = (props) => {
 
@@ -20,7 +23,7 @@ const TravelCenterCreate = (props) => {
     /**
      * Makes an Axios request to the Rails server and attempts to save to the database.
      * Because the Location show page renders server side, there isn't a need to set state.
-     * Theoretically speaking.
+     * TODO: Deprecate in favor of Ajax
      */
     const handleSubmit = () => {
         axios.post('/travel_centers', {
