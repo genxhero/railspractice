@@ -5,7 +5,7 @@
  * Additionally, a search bar for finding places that match.
  * Actually a dropdown menu for states and highways could be awesome.
  */
-import React from "react"
+import React, {useState} from "react"
 import PropTypes from "prop-types"
 import WelcomeOne from './panes/WelcomeOne'
 
