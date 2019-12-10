@@ -9,14 +9,14 @@ import React from "react"
 import PropTypes from "prop-types"
 import WelcomeOne from './panes/WelcomeOne'
 
-const panes = [<WelcomeOne />]
 
 const  Welcome = () =>  {
-  const [currentPane, shiftPane] = useState()
+  const panes = [<WelcomeOne />]
+  const [currentPane, shiftPane] = useState(0)
     return (
       <div className="welcome-page">
         <div className="welcome-message">
-
+        {panes[currentPane]}
         </div>
         <div className="Welcome search bar"></div> 
       </div>
