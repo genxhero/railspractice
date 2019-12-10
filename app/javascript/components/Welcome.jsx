@@ -15,8 +15,11 @@ const  Welcome = () =>  {
   const [currentPane, shiftPane] = useState(0)
     return (
       <div className="welcome-page">
-        <div className="welcome-message">
+        <div className="welcome-carousel-arrow">
+
+        </div>
         {panes[currentPane]}
+        <div className="welcome-carousel-arrow"> 
         </div>
         <div className="Welcome search bar"></div> 
       </div>
