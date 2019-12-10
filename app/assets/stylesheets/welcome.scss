@@ -28,14 +28,24 @@
     align-items: center;
     background: orange;
     border-radius: 4px;
+    position: relative;
 }
 
 .welcome-carousel-arrow{
-    font-size: 24px;
+    font-size: 32px;
+    padding: .5rem;
+    position: absolute;
+    &-left{
+        left: 0;
+    }
+
+    &right{
+        right: 0;
+    }
 }
 
 .welcome-carousel-arrow:hover{
     cursor: pointer;
-    font-size: 32px;
+    font-size: 48px;
     transition: all .2s;
 }
