@@ -8,12 +8,11 @@
 import React from "react"
 import PropTypes from "prop-types"
 const  Welcome = () =>  {
-  const [shiftPane, currentPane] = useState()
+  const [currentPane, shiftPane] = useState()
     return (
       <div className="welcome-page">
         <div className="welcome-message">
-          <h2 className="welcome-subtitle">Welcome To</h2>
-          <h1 className="welcome-title">Wanderer Reborn</h1>
+
         </div>
         <div className="Welcome search bar"></div> 
       </div>
