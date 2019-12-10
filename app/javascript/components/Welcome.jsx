@@ -7,8 +7,8 @@
  */
 import React from "react"
 import PropTypes from "prop-types"
-class Welcome extends React.Component {
-  render () {
+const  Welcome = () =>  {
+  const [shiftPane, currentPane] = useState()
     return (
       <div className="welcome-page">
         <div className="welcome-message">
@@ -18,7 +18,6 @@ class Welcome extends React.Component {
         <div className="Welcome search bar"></div> 
       </div>
     )
-  }
 }
 
 export default Welcome
