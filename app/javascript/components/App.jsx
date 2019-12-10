@@ -3,6 +3,7 @@ import {Route, Switch, BrowserRouter} from 'react-router-dom';
 import Header from './Header';
 import LocationShow from './LocationShow';
 import axios from 'axios';
+import Welcome from './Welcome';
 
 
 const App = (props) => {
@@ -18,6 +19,7 @@ const App = (props) => {
         <BrowserRouter>
           <Header updateUser={updateUser} currentUser={currentUser} logout={logout}/>
           <Switch>
+              <Route exact path={"/"} component={Welcome} />
               <Route exact path={"/locations/:locationId"} render={(props) => <LocationShow {...props} currentUser={currentUser} />} />
           </Switch>
         </BrowserRouter>
