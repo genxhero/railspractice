@@ -35,13 +35,16 @@ const  Welcome = () =>  {
 
     return (
       <div className="welcome-page">
-        <div className="welcome-carousel-arrow">
-          <FaAngleLeft />
+        <div className="welcome-carousel">
+            <div className="welcome-carousel-arrow">
+            <FaAngleLeft onClick={prevPane}/>
+          </div>
+          {panes[currentPane]}
+          <div className="welcome-carousel-arrow">
+            <FaAngleRight onClick={nextPane}/> 
+          </div>
         </div>
-        {panes[currentPane]}
-        <div className="welcome-carousel-arrow">
-          <FaAngleRight /> 
-        </div>
+       
         <div className="Welcome search bar"></div> 
       </div>
     )
