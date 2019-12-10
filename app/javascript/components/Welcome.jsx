@@ -7,6 +7,10 @@
  */
 import React from "react"
 import PropTypes from "prop-types"
+import WelcomeOne from './panes/WelcomeOne'
+
+const panes = [<WelcomeOne />]
+
 const  Welcome = () =>  {
   const [currentPane, shiftPane] = useState()
     return (
