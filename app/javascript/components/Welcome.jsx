@@ -17,11 +17,11 @@ const  Welcome = () =>  {
     return (
       <div className="welcome-page">
         <div className="welcome-carousel-arrow">
-          Left
+          <FaAngleLeft />
         </div>
         {panes[currentPane]}
         <div className="welcome-carousel-arrow">
-          Right 
+          <FaAngleRight /> 
         </div>
         <div className="Welcome search bar"></div> 
       </div>
