@@ -14,6 +14,19 @@ import {FaAngleLeft, FaAngleRight} from 'react-icons/fa'
 const  Welcome = () =>  {
   const panes = [<WelcomeOne />]
   const [currentPane, shiftPane] = useState(0)
+  
+  const nextPane = () => {
+    if (currentPane === panes.length - 1) {
+      shiftPane(0)
+    } else {
+      shiftPane(currentPane + 1)
+    }
+  }
+
+  const prevPane = () => {
+    
+  }
+
     return (
       <div className="welcome-page">
         <div className="welcome-carousel-arrow">
