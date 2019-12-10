@@ -94,8 +94,7 @@ import {assignTestingGuid} from './utils';
                         return <PlaceCard place={coffeeShop} key={coffeeShop.name} test={testCase}/>
                     })}
                     {(state.open && state.placeType === "coffeeShop") && <CoffeeShopCreate location_id={props.location.id} close={closeModal} update={update}/>}
-                    <button onClick={ () => openModal('coffeeShop')}>Click Me</button>
-                </div>
+                { props.currentUser &&  <button onClick={ () => openModal('coffeeShop')}>Click Me</button> }                </div>
 
                 <div className={`location-show-column${testCase}`}>
                 {places.restaurants.length === 0 && <h4>No Restaurants Recommended</h4>}
