@@ -103,7 +103,7 @@ import {assignTestingGuid} from './utils';
                          return <PlaceCard place={restaurant} key={restaurant.name} test={testCase}/>
                     })}
                     {(state.open && state.placeType === "restaurant") && <RestaurantCreate location_id={props.location.id} close={closeModal} update={update}/>}
-                    <button onClick={ () => openModal('restaurant')}>Click Me</button>
+                    { props.currentUser &&   <button onClick={ () => openModal('restaurant')}>Click Me</button> }
                 </div>
 
                 <div className={`location-show-column${testCase}`}>
@@ -112,7 +112,7 @@ import {assignTestingGuid} from './utils';
                         return <PlaceCard place={travelCenter} key={travelCenter.name} test={testCase}/>
                     })}
                     {(state.open && state.placeType === "travelCenter") && <TravelCenterCreate location_id={props.location.id} close={closeModal} update={update}/>}
-                    <button onClick={ () => openModal('travelCenter')}>Click Me</button>
+                        { props.currentUser &&  <button onClick={ () => openModal('travelCenter')}>Click Me</button>}
                 </div>
 
 
@@ -122,7 +122,7 @@ import {assignTestingGuid} from './utils';
                         return <PlaceCard place={lodging} key={lodging.name} test={testCase}/>
                     })}
                     {(state.open && state.placeType === "lodging") && <LodgingCreate location_id={props.location.id} close={closeModal} update={update}/>}
-                    <button onClick={ () => openModal('lodging')}>Click Me</button>
+                    { props.currentUser &&  <button onClick={ () => openModal('lodging')}>Click Me</button> }
                 </div>
             </div>
         </div>
