@@ -24,7 +24,11 @@ const  Welcome = () =>  {
   }
 
   const prevPane = () => {
-    
+    if (currentPane === 0) {
+      shiftPane(panes.length - 1)
+    } else {
+      shiftPane(currentPane - 1)
+    }
   }
 
     return (
