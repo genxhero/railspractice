@@ -8,11 +8,13 @@
 import React, {useState} from "react"
 import PropTypes from "prop-types"
 import WelcomeOne from './panes/WelcomeOne'
+import WelcomeTwo from './panes/WelcomeTwo';
 import {FaAngleLeft, FaAngleRight} from 'react-icons/fa'
 
 
 const  Welcome = () =>  {
-  const panes = [<WelcomeOne />]
+  //TODO: Move panes to their own file, justhave multiple components in
+  const panes = [<WelcomeOne />, <WelcomeTwo />]
   const [currentPane, shiftPane] = useState(0)
   
   const nextPane = () => {
