@@ -43,10 +43,10 @@ const Signup = (props) => {
         <div className="session-modal">
             <div className="session-form">
                 <form onSubmit={register}>
-                    <input type="text"/>
-                    <input type="text"/>
-                    <input type="text"/>
-                    <input type="text"/>
+                    <input type="text" value={values.email} name="email" onChange={handleInputChange}/>
+                    <input type="text" value={values.username} name="username" onChange={handleInputChange}/>
+                    <input type="text" value={values.password} name="password" onChange={handleInputChange}/>
+                    <input type="text" value={values.passwordConfirm} name="passwordConfirm" onChange={handleInputChange}/>
                     <input type="submit"/>
                     <button onClick={props.close}>Cancel</button>
                 </form>
