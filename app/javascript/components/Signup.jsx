@@ -9,7 +9,21 @@ import $ from 'jquery';
 
 const Signup = (props) => {
     const register = () => {
-
+        event.preventDefault();
+        $.ajax({
+            url:'/session',
+            method: 'POST',
+            data: {
+                user: values,
+                authenticity_token: $('[name="csrf-token"]')[0].content
+            }
+        }).then(res => {
+           props.update(res)
+           props.close()
+         }).catch( res => 
+           { 
+             setErrors(res.responseJSON);
+         })
     }
 
     const clearErrors = () => {
@@ -30,6 +44,7 @@ const Signup = (props) => {
                     <button onClick={props.close}>Cancel</button>
                 </form>
             </div>
+            {errors && <ErrorModal errors={errors} clear={clearErrors} />}
         </div>
     )
 }
