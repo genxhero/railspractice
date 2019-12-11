@@ -4,6 +4,7 @@
 
 import React, { useState } from 'react';
 import $ from 'jquery';
+import ErrorModal from './ErrorModal';
 
 
 
