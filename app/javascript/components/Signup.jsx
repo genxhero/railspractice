@@ -76,8 +76,11 @@ const Signup = (props) => {
                     <input className="session-form-field"  type="text" value={values.username} name="username" onChange={handleInputChange} placeholder="Username"/>
                     <input className="session-form-field" type="text" value={values.password} name="password" onChange={handleInputChange} placeholder="Password"/>
                     <input className="session-form-field"  type="text" value={values.passwordConfirm} name="passwordConfirm" onChange={handleInputChange} placeholder="Confirm Password"/>
-                    <input type="submit"/>
-                    <button onClick={props.close}>Cancel</button>
+                    <div>
+                        <input type="submit"/>
+                        <button onClick={props.close}>Cancel</button>
+                    </div>
+                  
                 </form>
                 <div>
                     {passwordIsPassword && <span>PASSWORD CAN NOT LITERALLY BE "PASSWORD"!</span>}
