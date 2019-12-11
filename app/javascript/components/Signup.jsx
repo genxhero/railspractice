@@ -13,6 +13,10 @@ const Signup = (props) => {
     const validateInput = (name, value) => {
         switch(name) {
             case "password":
+                if (value.toLowerCase() === "password") {
+                    setSpecialHell(true);
+                    setValid({...validated, [name]: false})
+                }
                 break;
             case "username":
                 break;
@@ -24,7 +28,7 @@ const Signup = (props) => {
     const handleInputChange = e => {
         const {name, value} = e.target
         setValues({...values, [name]: value})
-        
+        validateInput(name, value);
     }
 
     const register = () => {
@@ -52,6 +56,7 @@ const Signup = (props) => {
     const [values, setValues] = useState({username: "", email: "", password: "", confirm: ""})
     const [errors, setErrors] = useState(null)
     const [passwordIsPassword, setSpecialHell] = useState(false)
+    const [validated, setValid] =useState({username: null, email: null, password: null, passwordConfirm: null})
     return (
         <div className="session-modal">
             <div className="session-form">
@@ -63,6 +68,9 @@ const Signup = (props) => {
                     <input type="submit"/>
                     <button onClick={props.close}>Cancel</button>
                 </form>
+                <div>
+                    {passwordIsPassword && <span>A SPECIAL HELL</span>}
+                </div>
             </div>
             {errors && <ErrorModal errors={errors} clear={clearErrors} />}
         </div>
