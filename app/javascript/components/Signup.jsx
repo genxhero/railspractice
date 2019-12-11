@@ -30,7 +30,7 @@ const Signup = (props) => {
                 setValid({...validated, [name]: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)})
                 break;
             case "passwordConfirm":
-                setValid({...validated, [name]: name === values.password})
+                setValid({...validated, [name]: value === values.password})
                 break
         }
     }
