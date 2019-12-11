@@ -16,6 +16,11 @@ const Signup = (props) => {
                 if (value.toLowerCase() === "password") {
                     setSpecialHell(true);
                     setValid({...validated, [name]: false})
+                } else if (value.length < 8) {
+                    setValid({...validated, [name]: false})
+                } else {
+                    setValid({...validated, [name]: true})
+                    setSpecialHell(false);
                 }
                 break;
             case "username":
