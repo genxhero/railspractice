@@ -13,6 +13,7 @@ const Signup = (props) => {
     const validateInput = (name, value) => {
         switch(name) {
             case "password":
+                    setSpecialHell(false);
                 if (value.toLowerCase() === "password") {
                     setSpecialHell(true);
                     setValid({...validated, [name]: false})
@@ -20,12 +21,13 @@ const Signup = (props) => {
                     setValid({...validated, [name]: false})
                 } else {
                     setValid({...validated, [name]: true})
-                    setSpecialHell(false);
                 }
                 break;
             case "username":
+                setValid({...validated, [name]: /^[a-zA-Z\d-_]+$/.test(value)})
                 break;
             case "email":
+                setValid({...validated, [name]: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)})
                 break
         }
     }
@@ -62,6 +64,7 @@ const Signup = (props) => {
     const [errors, setErrors] = useState(null)
     const [passwordIsPassword, setSpecialHell] = useState(false)
     const [validated, setValid] =useState({username: null, email: null, password: null, passwordConfirm: null})
+    console.log(validated);
     return (
         <div className="session-modal">
             <div className="session-form">
