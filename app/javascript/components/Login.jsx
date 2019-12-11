@@ -44,8 +44,8 @@ const Login = (props) => {
         <div className="session-modal">
             <div className="session-form-container">
                 <form className="session-form" onSubmit={login}>
-                    <input type="text" value={values.email} name="email" onChange={handleInputChange}/>
-                    <input type="password" vakue={values.password} name="password" onChange={handleInputChange}/>
+                    <input className="session-form-field"  type="text" value={values.email} name="email" onChange={handleInputChange} placeholder="Email"/>
+                    <input className="session-form-field"  type="password" vakue={values.password} name="password" onChange={handleInputChange} placeholder="Password"/>
                     <input type="submit" />
                     <button onClick={props.close}>Cancel</button>
                 </form>

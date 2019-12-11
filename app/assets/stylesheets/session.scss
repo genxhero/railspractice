@@ -12,15 +12,23 @@
 .session-form-container {
     border-radius: 4px;
     background: orange;
-    width: 10rem;
-    height: 20rem;
+    width: 20rem;
     padding: 1rem;
     height: auto;
-    box-sizing: border-box;
+    // box-sizing: border-box;
     position: relative;
     top: 20rem;
 }
 
-.session-form > input {
+.session-form {
+    display: flex;
+    flex-direction: column;
+}
 
+.session-form-field {
+    padding: 1rem;
+    font-size: 14px;
+    color: gray;
+    font-weight: bold;
+    background: transparent;
 }
