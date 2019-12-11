@@ -9,6 +9,12 @@ import ErrorModal from './ErrorModal';
 
 
 const Signup = (props) => {
+
+    const handleInputChange = e => {
+        const {name, value} = e.target
+        setValues({...values, [name]: value})
+    }
+
     const register = () => {
         event.preventDefault();
         $.ajax({
