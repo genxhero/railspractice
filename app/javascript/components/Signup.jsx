@@ -11,7 +11,7 @@ const Signup = (props) => {
     const register = () => {
         event.preventDefault();
         $.ajax({
-            url:'/session',
+            url:'/users',
             method: 'POST',
             data: {
                 user: values,
