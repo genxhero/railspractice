@@ -1,7 +1,7 @@
 .error-modal {
-    width: -webkit-fill-available;
     position: absolute;
-    height: -webkit-fill-available;
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,8 +12,10 @@
     padding: 2rem;
     background:#FFCCCC;
     color: black;
+    height: fit-content;
     border-radius: 4px;
-    position:relative;
+    position: absolute;
+    top: 65%;
 }
 
 .error-message-area > h3 {
