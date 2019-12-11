@@ -8,6 +8,7 @@ class User < ApplicationRecord
     
     validates :password, length: {minimum: 6, allow_nil: true  }
     validates :username, :email, :password_digest, :session_token, presence: true, uniqueness: true
+    validate :password_content
     
     has_many :recommendations,
     primary_key: :id,
@@ -21,6 +22,9 @@ class User < ApplicationRecord
 
     has_many :places, through: :recommendations
 
+    def password_content 
+        self.errors.add(:password, "Password is not a valid password! Go stand in a corner!") if password.downcase == "password"
+    end
     def password=(password)
         @password = password
         self.password_digest = BCrypt::Password.create(password)
