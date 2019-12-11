@@ -23,7 +23,7 @@ class User < ApplicationRecord
     has_many :places, through: :recommendations
 
     def password_content 
-        self.errors.add(:password, "Password is not a valid password! Go stand in a corner!") if password.downcase == "password"
+        self.errors.add(:password, " is not a valid password! Go stand in a corner!") if password.downcase == "password"
     end
     def password=(password)
         @password = password

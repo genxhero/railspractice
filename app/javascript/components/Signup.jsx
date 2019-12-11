@@ -10,9 +10,21 @@ import ErrorModal from './ErrorModal';
 
 const Signup = (props) => {
 
+    const validateInput = (name, value) => {
+        switch(name) {
+            case "password":
+                break;
+            case "username":
+                break;
+            case "email":
+                break
+        }
+    }
+
     const handleInputChange = e => {
         const {name, value} = e.target
         setValues({...values, [name]: value})
+        
     }
 
     const register = () => {
@@ -39,6 +51,7 @@ const Signup = (props) => {
 
     const [values, setValues] = useState({username: "", email: "", password: "", confirm: ""})
     const [errors, setErrors] = useState(null)
+    const [passwordIsPassword, setSpecialHell] = useState(false)
     return (
         <div className="session-modal">
             <div className="session-form">
