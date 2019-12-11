@@ -70,8 +70,8 @@ const Signup = (props) => {
     console.log(validated);
     return (
         <div className="session-modal">
-            <div className="session-form">
-                <form onSubmit={register}>
+            <div className="session-form-container">
+                <form className="session-form" onSubmit={register}>
                     <input type="text" value={values.email} name="email" onChange={handleInputChange} placeholder="Email"/>
                     <input type="text" value={values.username} name="username" onChange={handleInputChange} placeholder="Username"/>
                     <input type="text" value={values.password} name="password" onChange={handleInputChange} placeholder="Password"/>
@@ -80,7 +80,7 @@ const Signup = (props) => {
                     <button onClick={props.close}>Cancel</button>
                 </form>
                 <div>
-                    {passwordIsPassword && <span>A SPECIAL HELL</span>}
+                    {passwordIsPassword && <span>PASSWORD CAN NOT LITERALLY BE "PASSWORD"!</span>}
                 </div>
             </div>
             {errors && <ErrorModal errors={errors} clear={clearErrors} />}

@@ -9,7 +9,7 @@
     height: 100rem;
 }
 
-.session-form {
+.session-form-container {
     border-radius: 4px;
     background: orange;
     width: 10rem;
@@ -19,4 +19,8 @@
     box-sizing: border-box;
     position: relative;
     top: 20rem;
+}
+
+.session-form > input {
+
 }

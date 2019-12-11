@@ -42,8 +42,8 @@ const Login = (props) => {
     const [errors, setErrors] = useState(null)
     return (
         <div className="session-modal">
-            <div className="session-form">
-                <form onSubmit={login}>
+            <div className="session-form-container">
+                <form className="session-form" onSubmit={login}>
                     <input type="text" value={values.email} name="email" onChange={handleInputChange}/>
                     <input type="password" vakue={values.password} name="password" onChange={handleInputChange}/>
                     <input type="submit" />
