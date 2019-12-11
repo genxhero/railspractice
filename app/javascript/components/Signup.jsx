@@ -76,9 +76,9 @@ const Signup = (props) => {
                     <input className="session-form-field"  type="text" value={values.username} name="username" onChange={handleInputChange} placeholder="Username"/>
                     <input className="session-form-field" type="text" value={values.password} name="password" onChange={handleInputChange} placeholder="Password"/>
                     <input className="session-form-field"  type="text" value={values.passwordConfirm} name="passwordConfirm" onChange={handleInputChange} placeholder="Confirm Password"/>
-                    <div>
-                        <input type="submit"/>
-                        <button onClick={props.close}>Cancel</button>
+                    <div className="session-form-buttons">
+                        <input className="session-submit" type="submit"/>
+                        <button className= "session-cancel" onClick={props.close}>Cancel</button>
                     </div>
                   
                 </form>
