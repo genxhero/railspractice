@@ -19,6 +19,10 @@
      overflow-x: hidden;
  }
 
+ input:focus {
+     outline: none;
+ }
+
 
  .cancel-x {
     color: orangered;
