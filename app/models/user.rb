@@ -1,7 +1,7 @@
 #This is a User. It uses things.
 
 class User < ApplicationRecord
-    attr_reader :password, :confirm
+    attr_reader :password
     
     after_initialize :ensure_token
     before_save :assign_test_group

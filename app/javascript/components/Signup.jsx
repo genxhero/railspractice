@@ -47,7 +47,15 @@ const Signup = (props) => {
             url:'/api/users',
             method: 'POST',
             data: {
-                user: values,
+                //I had to destructure here since password confirmation was causing Rails to fail.  s
+                //TODO: refactor so that password confirm uses its own function
+                user: {
+                    username: values.username,
+                    email: values.email,
+                    password: values.password,
+                    first_name: values.first_name,
+                    last_name: values.last_name
+                },
                 authenticity_token: $('[name="csrf-token"]')[0].content
             }
         }).then(res => {
