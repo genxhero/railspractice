@@ -74,8 +74,8 @@ const Signup = (props) => {
                 <form className="session-form" onSubmit={register}>
                     <input className="session-form-field" type="text" value={values.email} name="email" onChange={handleInputChange} placeholder="Email"/>
                     <input className="session-form-field"  type="text" value={values.username} name="username" onChange={handleInputChange} placeholder="Username"/>
-                    <input className="session-form-field"  type="text" value={values.firstName} name="firstName" onChange={handleInputChange} placeholder="First Name (Can be fake)"/>
-                    <input className="session-form-field"  type="text" value={values.lastName} name="lastName" onChange={handleInputChange} placeholder="Last Name (Can be fake)"/>
+                    <input className="session-form-field"  type="text" value={values.first_name} name="first_name" onChange={handleInputChange} placeholder="First Name (Can be fake)"/>
+                    <input className="session-form-field"  type="text" value={values.last_name} name="last_name" onChange={handleInputChange} placeholder="Last Name (Can be fake)"/>
                     <input className="session-form-field" type="text" value={values.password} name="password" onChange={handleInputChange} placeholder="Password"/>
                     <input className="session-form-field"  type="text" value={values.passwordConfirm} name="passwordConfirm" onChange={handleInputChange} placeholder="Confirm Password"/>
                     <div className="session-form-buttons">
