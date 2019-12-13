@@ -59,4 +59,9 @@ class User < ApplicationRecord
             user.save!
         end
     end
+
+    def defaults
+        self.first_name ||= "Anonymous"
+        self.last_name ||= "McSomeguy"
+    end
 end
