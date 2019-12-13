@@ -75,7 +75,6 @@ const Signup = (props) => {
     const [errors, setErrors] = useState(null)
     const [passwordIsPassword, setSpecialHell] = useState(false)
     const [validated, setValid] =useState({username: null, email: null, password: null, confirm: null})
-    console.log(validated);
     return (
         <div className="session-modal">
             <div className="session-form-container">
