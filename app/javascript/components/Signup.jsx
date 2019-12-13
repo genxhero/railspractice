@@ -1,5 +1,7 @@
 /**
- * form for sigining up a new user
+ * form for sigining up a new user. 
+ * 
+ * Uses the useState React Hook to manage inputs.
  */
 
 import React, { useState } from 'react';
