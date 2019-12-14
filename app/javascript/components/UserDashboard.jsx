@@ -6,15 +6,15 @@
 import React, {useState} from 'react'
 
 const UserDashboard = (props) => {
-    const {user, currentUser} = props; 
+    const {currentUser} = props; 
 
-    if (!user) {
+    if (!currentUser) {
         return (<div>Loading...</div>)
     }
     return(
         <div>
-            <h1>Welcome, {user.username}</h1>
-            <h2>Your email: {user.email}</h2>
+            <h1>Welcome, {currentUser.username}</h1>
+            <h2>Your email: {currentUser.email}</h2>
             This is a user page. Deal with it.
         </div>
     )
