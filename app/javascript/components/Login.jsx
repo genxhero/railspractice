@@ -43,6 +43,7 @@ const Login = (props) => {
     return (
         <div className="session-modal">
             <div className="session-form-container">
+                <h2 className="session-form-label">Log In</h2>
                 <form className="session-form" onSubmit={login}>
                     <input className="session-form-field"  type="text" value={values.email} name="email" onChange={handleInputChange} placeholder="Email"/>
                     <input className="session-form-field"  gittype="password" vakue={values.password} name="password" onChange={handleInputChange} placeholder="Password"/>

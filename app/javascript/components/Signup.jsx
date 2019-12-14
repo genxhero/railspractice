@@ -80,6 +80,7 @@ const Signup = (props) => {
     return (
         <div className="session-modal">
             <div className="session-form-container">
+            <h2 className="session-form-label">Sign Up</h2>
                 <form className="session-form" onSubmit={register}>
                     <input className="session-form-field" type="text" value={values.email} name="email" onChange={handleInputChange} placeholder="Email"/>
                     <input className="session-form-field"  type="text" value={values.username} name="username" onChange={handleInputChange} placeholder="Username"/>
