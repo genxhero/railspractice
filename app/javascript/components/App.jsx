@@ -19,11 +19,14 @@ const App = (props) => {
     return (
         <BrowserRouter>
           <Header updateUser={updateUser} currentUser={currentUser} logout={logout}/>
-          <Switch>
+          <div className="app-main-content">
+            <Switch>
               <Route exact path={"/"} component={Welcome} />
               <Route exact path={"/dashboard"} render={(props) => <UserDashboard {...props} currentUser={currentUser} />} />
               <Route exact path={"/locations/:locationId"} render={(props) => <LocationShow {...props} currentUser={currentUser} />} />
-          </Switch>
+            </Switch>
+          </div>
+  
         </BrowserRouter>
     )
 
