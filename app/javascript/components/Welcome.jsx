@@ -9,7 +9,7 @@ import React, {useState} from "react"
 import PropTypes from "prop-types"
 import WelcomeOne from './panes/WelcomeOne'
 import WelcomeTwo from './panes/WelcomeTwo';
-import WeclomeThree from './panes/WelcomeThree';
+import WelcomeThree from './panes/WelcomeThree';
 import {FaAngleLeft, FaAngleRight} from 'react-icons/fa'
 
 
