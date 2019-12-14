@@ -46,10 +46,10 @@ const Login = (props) => {
                 <h2 className="session-form-label">Log In</h2>
                 <form className="session-form" onSubmit={login}>
                     <input className="session-form-field"  type="text" value={values.email} name="email" onChange={handleInputChange} placeholder="Email"/>
-                    <input className="session-form-field"  gittype="password" vakue={values.password} name="password" onChange={handleInputChange} placeholder="Password"/>
+                    <input className="session-form-field"  type="password" value={values.password} name="password" onChange={handleInputChange} placeholder="Password"/>
                     <div className="session-form-buttons">
-                        <input className="session-submit" type="submit" />
-                        <button className="session-cancel" onClick={props.close}>Cancel</button>
+                        <input className="session-submit" type="submit" value/>
+                        <button className="session-cancel" onClick={props.close}>CANCEL</button>
                     </div>
                 </form>
             </div>
