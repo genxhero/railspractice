@@ -7,6 +7,10 @@ import React, {useState} from 'react'
 
 const UserDashboard = (props) => {
     const {user, currentUser} = props; 
+
+    if (!user) {
+        return (<div>Loading...</div>)
+    }
     return(
         <div>
             <h1>Welcome, {user.username}</h1>
