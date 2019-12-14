@@ -15,3 +15,5 @@ const UserDashboard = (props) => {
         </div>
     )
 }
+
+export default UserDashboard;
