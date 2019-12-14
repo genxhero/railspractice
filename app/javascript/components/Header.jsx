@@ -40,13 +40,13 @@ const Header = props => {
             {
                 !currentUser ? (
                 <div>
-                    <button onClick={ () => { open("login")}}>Login</button>
-                    <button onClick={ () => { open("register")}}>Register</button>
+                    <button className="header-login" onClick={ () => { open("login")}}>Login</button>
+                    <button className="header-register" onClick={ () => { open("register")}}>Register</button>
                 </div> 
                 ) : (
                 <div>
                     <h3>{currentUser.username}</h3>
-                    <button onClick={props.logout}>Log Out</button>
+                    <button className="header-login" onClick={props.logout}>Log Out</button>
                 </div>
                 )
             }
