@@ -7,6 +7,7 @@
     background: rgba(0, 0, 0, .5);
     width: -webkit-fill-available;
     max-height: 100vh;
+    height: 100vh;
     top: 0;
     // bottom: 0;
 }
@@ -18,7 +19,7 @@
     padding: 1rem;
     height: auto;
     // box-sizing: border-box;
-    position: relative;
+    // position: relative;
     // top: 20rem;
     top: 25vh;
     //TODO: media queries different top for different height screens
