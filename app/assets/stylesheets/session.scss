@@ -42,10 +42,20 @@
 
 .session-submit {
     margin: .4rem;
+    background: orangered;
+    color: yellow;
+    border: none;
+    padding: .5rem;
+    border-radius: 3px;
 }
 
 .session-cancel {
     margin: .4rem;
+    background: yellow;
+    color: orangered;
+    border: none;
+    padding: .5rem;
+    border-radius: 3px;
 }
 
 .session-form-label {
