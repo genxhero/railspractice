@@ -26,3 +26,33 @@
     font-size: 60px;
     font-weight: 200;
 }
+
+.header-login {
+    margin: .4rem;
+    background: orangered;
+    color: yellow;
+    border: none;
+    padding: .5rem;
+    border-radius: 3px;
+    font-weight: bold;
+    &:hover {
+        background: rgb(226, 88, 9);
+        transition: all .2s;
+        cursor: pointer;
+    }
+}
+
+.header-register {
+    margin: .4rem;
+    background: yellow;
+    color: orangered;
+    border: none;
+    padding: .5rem;
+    border-radius: 3px;
+    font-weight: bold;
+    &:hover {
+        background: rgb(244, 202, 34);
+        transition: all .2s;
+        cursor: pointer;
+    }
+}
