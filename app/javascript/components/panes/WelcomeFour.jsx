@@ -9,7 +9,7 @@ const WelcomeFour = () => {
             </li>
             <li>
                 <p>
-                    
+                    It was built with adventurous people intending to take long road trips across the United States, listing major stops along the interstate system.
                 </p>
             </li>
         </div>
