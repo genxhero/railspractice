@@ -47,6 +47,12 @@
     border: none;
     padding: .5rem;
     border-radius: 3px;
+    font-weight: bold;
+    &:hover {
+        background: rgb(226, 88, 9);
+        transition: all .2s;
+        cursor: pointer;
+    }
 }
 
 .session-cancel {
@@ -56,10 +62,18 @@
     border: none;
     padding: .5rem;
     border-radius: 3px;
+    font-weight: bold;
+    &:hover {
+        background: rgb(244, 202, 34);
+        transition: all .2s;
+        cursor: pointer;
+    }
 }
 
 .session-form-label {
     color: orangered;
     font-weight: 200;
     font-size: 32px;
+    text-align: center;
+    width: 100%;
 }
