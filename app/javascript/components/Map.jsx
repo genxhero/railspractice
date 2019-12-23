@@ -3,9 +3,11 @@ import {Link, withRouter} from 'react-router-dom';
 import GoogleMapReact from 'google-map-react';
 
 const Map = (props) => {
+    const key = "AIzaSyBSY9wBBonJJ00Lp4YSEzx7LHzY66UAzeI"
+    debugger;
 return (
     <GoogleMapReact
-    bootstrapURLKeys={{ key: process.env.MAPS_API_KEY}}
+    bootstrapURLKeys={{ key }}
     defaultCenter={this.props.center}
     defaultZoom={this.props.zoom}
   >
