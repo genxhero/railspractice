@@ -20,6 +20,7 @@ import {TEST_CLASSES} from './constants';
 import {withRouter} from 'react-router-dom';
 import NotFound from './NotFound';
 import {assignTestingGuid} from './utils';
+import Map from './Map';
 
  const LocationShow = (props) => {
 
@@ -87,6 +88,7 @@ import {assignTestingGuid} from './utils';
         <div className={`location-show-page${testCase}`}>
             <h1>{location.name}, {location.state}</h1>
             <img className="location-show-image"src={location.image_url} alt={location.name}/>
+            <Map />
             <div className="location-show-columns">
                 <div className={`location-show-column${testCase}`}>
                     {places.coffeeShops.length === 0 && <h4>No Coffee Shops Recommended</h4>}
