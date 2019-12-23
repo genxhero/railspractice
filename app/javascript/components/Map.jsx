@@ -5,7 +5,7 @@ import GoogleMapReact from 'google-map-react';
 const Map = (props) => {
 return (
     <GoogleMapReact
-    bootstrapURLKeys={{ key:""}}
+    bootstrapURLKeys={{ key: process.env.MAPS_API_KEY}}
     defaultCenter={this.props.center}
     defaultZoom={this.props.zoom}
   >
