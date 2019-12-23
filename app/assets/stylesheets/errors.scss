@@ -2,6 +2,7 @@
     position: absolute;
     height: 100%;
     width: 100%;
+    top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,8 +15,8 @@
     color: black;
     height: fit-content;
     border-radius: 4px;
-    position: absolute;
-    top: 65%;
+    position: relative;
+    // top: 65%;
 }
 
 .error-message-area > h3 {

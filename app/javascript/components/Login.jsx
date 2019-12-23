@@ -48,7 +48,7 @@ const Login = (props) => {
                     <input className="session-form-field"  type="text" value={values.email} name="email" onChange={handleInputChange} placeholder="Email"/>
                     <input className="session-form-field"  type="password" value={values.password} name="password" onChange={handleInputChange} placeholder="Password"/>
                     <div className="session-form-buttons">
-                        <input className="session-submit" type="submit" value/>
+                        <input className="session-submit" type="submit" value="SUBMIT"/>
                         <button className="session-cancel" onClick={props.close}>CANCEL</button>
                     </div>
                 </form>
