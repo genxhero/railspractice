@@ -8,8 +8,8 @@ const Map = (props) => {
 return (
     <GoogleMapReact
     bootstrapURLKeys={{ key }}
-    defaultCenter={this.props.center}
-    defaultZoom={this.props.zoom}
+    defaultCenter={props.center}
+    defaultZoom={props.zoom}
   >
        </GoogleMapReact>
 )
