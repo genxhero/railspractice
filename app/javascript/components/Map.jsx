@@ -3,10 +3,10 @@ import {Link, withRouter} from 'react-router-dom';
 import GoogleMapReact from 'google-map-react';
 
 const Map = (props) => {
-    const key = "AIzaSyBSY9wBBonJJ00Lp4YSEzx7LHzY66UAzeI"
+    const key = process.env.MAPS_API_KEY;
     debugger;
 return (
-    <div>
+    <div className="location-show-map">
         <GoogleMapReact
           bootstrapURLKeys={{ key }}
           defaultCenter={props.center}
