@@ -5,7 +5,6 @@ import secret from '../utils/secret';
 
 const Map = (props) => {
     const key = secret;
-    debugger;
 return (
     <div className="location-show-map">
         <GoogleMapReact
