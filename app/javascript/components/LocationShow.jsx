@@ -19,7 +19,6 @@ import axios from 'axios';
 import {TEST_CLASSES} from './constants';
 import {withRouter} from 'react-router-dom';
 import NotFound from './NotFound';
-import {assignTestingGuid} from './utils';
 import Map from './Map';
 
  const LocationShow = (props) => {
