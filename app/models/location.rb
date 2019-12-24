@@ -63,7 +63,9 @@ class Location < ApplicationRecord
 
                 ],
                 name: lodging.name,
-                description: lodging.description
+                description: lodging.description,
+                lat: lodging.lat,
+                lng: lodging.lng
             }
         }
     end
@@ -77,7 +79,9 @@ class Location < ApplicationRecord
             
                 ],
                 name: restaurant.name,
-                description: restaurant.description
+                description: restaurant.description,
+                lat: restaurant.lat,
+                lng: restaurant.lng
             }
         }
     end
@@ -93,7 +97,9 @@ class Location < ApplicationRecord
                     {name: "Variety", value: shop.shop_type},
                 ], 
                 name: shop.name,
-                description: shop.description
+                description: shop.description,
+                lat: shop.lat,
+                lng: shop.lng
             } 
         }
     end
@@ -106,7 +112,9 @@ class Location < ApplicationRecord
                 {name: "Diesel", value: "$#{tc.diesel}#{(tc.diesel * 100) % 10 == 0 ? "0" : ""}"}
             ],
             name: tc.name,
-            description: tc.description
+            description: tc.description,
+            lat: tc.lat,
+            lng: tc.lng
         }
       }
     end

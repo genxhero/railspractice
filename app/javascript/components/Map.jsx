@@ -6,7 +6,7 @@ import Marker from './Marker';
 
 const Map = (props) => {
     const key = secret;
-    console.log(props.center)
+    console.log(props.places)
 return (
     <div className="location-show-map">
         <GoogleMapReact
