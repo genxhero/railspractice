@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import {Link, withRouter} from 'react-router-dom';
 import GoogleMapReact from 'google-map-react';
 import secret from '../utils/secret';
+import Marker from './Marker';
 
 const Map = (props) => {
     const key = secret;
@@ -11,8 +12,15 @@ return (
         <GoogleMapReact
           bootstrapURLKeys={{ key }}
           defaultCenter={props.center}
-          defaultZoom={props.zoom}
-        />   
+          defaultZoom={props.zoom}>
+             <Marker
+            lat={37.111440}
+            lng={-121.016870}
+            name="Love's"
+            color="blue"
+          />
+          </GoogleMapReact>
+        
     </div>
   
     
