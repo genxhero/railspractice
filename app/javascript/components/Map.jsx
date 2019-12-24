@@ -13,12 +13,12 @@ return (
           bootstrapURLKeys={{ key }}
           defaultCenter={props.center}
           defaultZoom={props.zoom}>
-             <Marker
-            lat={37.111440}
-            lng={-121.016870}
-            name="Love's"
-            color="blue"
-          />
+           { props.places.map( place => {
+             return <Marker lat={place.lat} lng={place.lng} color="blue"/>
+            }
+            
+           )}
+               
           </GoogleMapReact>
         
     </div>

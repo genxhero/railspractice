@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_24_170336) do
+ActiveRecord::Schema.define(version: 2019_12_24_173825) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(version: 2019_12_24_170336) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "shop_type", default: "Unspecified"
+    t.float "lat"
+    t.float "lng"
     t.index ["location_id"], name: "index_coffee_shops_on_location_id"
   end
 
@@ -58,6 +60,8 @@ ActiveRecord::Schema.define(version: 2019_12_24_170336) do
     t.string "wifi", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.float "lat"
+    t.float "lng"
     t.index ["location_id"], name: "index_lodgings_on_location_id"
     t.index ["name"], name: "index_lodgings_on_name"
   end
@@ -81,6 +85,8 @@ ActiveRecord::Schema.define(version: 2019_12_24_170336) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "shop_type", default: "Unspecified"
+    t.float "lat"
+    t.float "lng"
     t.index ["location_id"], name: "index_restaurants_on_location_id"
     t.index ["name"], name: "index_restaurants_on_name"
   end
@@ -93,6 +99,8 @@ ActiveRecord::Schema.define(version: 2019_12_24_170336) do
     t.float "diesel"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.float "lat"
+    t.float "lng"
     t.index ["location_id"], name: "index_travel_centers_on_location_id"
     t.index ["name"], name: "index_travel_centers_on_name"
   end
