@@ -1,9 +1,10 @@
 import React, {useState} from 'react'
 import {Link, withRouter} from 'react-router-dom';
 import GoogleMapReact from 'google-map-react';
+import secret from '../utils/secret';
 
 const Map = (props) => {
-    const key = process.env.MAPS_API_KEY;
+    const key = secret;
     debugger;
 return (
     <div className="location-show-map">
