@@ -85,7 +85,7 @@ import Map from './Map';
         <div className={`location-show-page${testCase}`}>
             <h1>{location.name}, {location.state}</h1>
             <img className="location-show-image"src={location.image_url} alt={location.name}/>
-            <Map center={currentCenter} zoom={11}/>
+            <Map center={currentCenter} zoom={11} places={location.places.coffeeShops}/>
             <div className="location-show-columns">
                 <div className={`location-show-column${testCase}`}>
                     {places.coffeeShops.length === 0 && <h4>No Coffee Shops Recommended</h4>}
