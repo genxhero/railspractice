@@ -15,7 +15,7 @@
 !/log/.keep
 !/tmp/.keep
 /config/webpacker.yml
-
+/app/javascript/utils/secret.js
 # Ignore uploaded files in development.
 /storage/*
 !/storage/.keep
