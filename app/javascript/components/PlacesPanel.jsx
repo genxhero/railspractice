@@ -8,6 +8,7 @@ const PlacesPanel = (props) => {
        let active = e.currentTarget.getAttribute("name");
        setPanel(active);
     }
+    debugger;
 
     return (
         <div className="places-panel">
@@ -40,7 +41,7 @@ const PlacesPanel = (props) => {
 
             </div>
             <div className="places-panel-content">
-
+               <PlacesPanelContent places={props.places[`${activePanel}`]}/>
             </div>
         </div>
     )
