@@ -59,6 +59,7 @@ import PlacesPanel from './PlacesPanel';
     const update = (newPlace, placeType) => {
         switch (placeType){
             case "travelCenter":
+                debugger;
                 updatePlaces({travelCenters: [...places.travelCenters, newPlace], restaurants: [...places.restaurants], coffeeShops: [...places.coffeeShops], lodgings: [...places.lodgings]})
             break;
             case "restaurant":

@@ -47,7 +47,6 @@ const RestaurantCreate = (props) => {
     const [values, setValues] = useState({name: '', description: '', lodging_type: LODGING_TYPES[0], location_id: props.location_id, breakfast: null, wifi: null, channels: [], pool: null})
     const [errors, setErrors] = useState(null)
 
-    console.log(values.channels);
     return (
         <div className="place-form-modal">
             <div className="place-form">
