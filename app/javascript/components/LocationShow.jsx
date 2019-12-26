@@ -20,6 +20,7 @@ import {TEST_CLASSES} from './constants';
 import {withRouter} from 'react-router-dom';
 import NotFound from './NotFound';
 import Map from './Map';
+import PlacesPanel from './PlacesPanel';
 
  const LocationShow = (props) => {
 
@@ -84,6 +85,7 @@ import Map from './Map';
     return (
         <div className={`location-show-page${testCase}`}>
             <h1>{location.name}, {location.state}</h1>
+            <PlacesPanel />
             <Map center={{lat: location.lat, lng: location.lng}} zoom={12} places={places.travelCenters}/>
             <div className="location-show-columns">
                 <div className={`location-show-column${testCase}`}>

@@ -41,3 +41,5 @@ const PlacesPanel = (props) => {
         </div>
     )
 }
+
+export default PlacesPanel;
