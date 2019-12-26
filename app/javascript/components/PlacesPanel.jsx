@@ -37,7 +37,7 @@ const PlacesPanel = (props) => {
 
             </div>
             <div className="places-panel-content">
-
+               
             </div>
         </div>
     )
