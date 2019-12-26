@@ -83,11 +83,20 @@ import PlacesPanel from './PlacesPanel';
     }
    
     return (
-        <div className={`location-show-page${testCase}`}>
+        <div className={`location-show-page`}>
             <h1>{location.name}, {location.state}</h1>
-            <PlacesPanel update={update} places={places} openModal={openModal} closeModal={closeModal} update={update} locationId={location.id} currentUser={props.currentUser} open={open}/>
-            <Map center={{lat: location.lat, lng: location.lng}} zoom={12} places={places.travelCenters}/>
-            <div className="location-show-columns">
+            <div className="location-show-columns ">
+                <PlacesPanel update={update} places={places} openModal={openModal} closeModal={closeModal} update={update} locationId={location.id} currentUser={props.currentUser} open={state.open}/>
+                <Map center={{lat: location.lat, lng: location.lng}} zoom={12} places={places.travelCenters}/>
+            </div>
+        </div>
+    )
+}
+
+export default withRouter(LocationShow);
+
+/**
+ * <div className="location-show-columns">
                 <div className={`location-show-column${testCase}`}>
                     {places.coffeeShops.length === 0 && <h4>No Coffee Shops Recommended</h4>}
                 {places.coffeeShops.map( coffeeShop => {
@@ -125,8 +134,5 @@ import PlacesPanel from './PlacesPanel';
                     { props.currentUser &&  <button onClick={ () => openModal('lodging')}>Click Me</button> }
                 </div>
             </div>
-        </div>
-    )
-}
 
-export default withRouter(LocationShow);
+ */

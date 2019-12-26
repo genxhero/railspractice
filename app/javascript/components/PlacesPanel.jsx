@@ -12,26 +12,26 @@ const PlacesPanel = (props) => {
     return (
         <div className="places-panel">
             <div className="places-nav">
-             <div className={`places-tab${activePanel === 'travelCenters' ? '-active' : 'inactive'}`} 
+             <div className={`places-tab${activePanel === 'travelCenters' ? '-active' : '-inactive'}`} 
                   onClick={selectPane}
                   name="travelCenters"
                   >
                 Travel Centers
              </div>
-             <div className={`places-tab${activePanel === 'coffeeShops' ? '-active' : 'inactive'}`}
+             <div className={`places-tab${activePanel === 'coffeeShops' ? '-active' : '-inactive'}`}
               onClick={selectPane}
               name="coffeeShops"
              >
                 Coffee Shops
              </div>
-             <div className={`places-tab${activePanel === 'restaurants' ? '-active' : 'inactive'}`}
+             <div className={`places-tab${activePanel === 'restaurants' ? '-active' : '-inactive'}`}
               onClick={selectPane}
               name="restaurants"
              >
                 Restaurants
              </div>
 
-             <div className={`places-tab${activePanel === 'lodgings' ? '-active' : 'inactive'}`}
+             <div className={`places-tab${activePanel === 'lodgings' ? '-active' : '-inactive'}`}
               onClick={selectPane}
               name="lodgings"
              >

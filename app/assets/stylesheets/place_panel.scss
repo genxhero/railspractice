@@ -4,14 +4,22 @@
 
 .places-nav {
     display: flex;
+    width: 100%;
+    justify-content: space-between;
+    // padding: .5rem;
 }
 
 .places-tab-active {
     font-weight: bold;
     color: black;
+    background: peachpuff;
+    padding: .5rem;
 }
 
 .places-tab-inactive {
     font-weight: 300;
     color: black;
+    background: gray;
+    border-bottom: 1px solid gray;
+    padding: .5rem;
 }

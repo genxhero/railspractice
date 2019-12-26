@@ -10,8 +10,13 @@ import LodgingCreate from './LodgingCreate';
 const PlacesPanelContent = (props) => {
 
     const Forms = {
-        "travelCenter": <TravelCenterCreate location_id={props.locationId} close={props.closeModal} update={props.update}/>,
+        "travelCenters": <TravelCenterCreate location_id={props.locationId} close={props.closeModal} update={props.update}/>,
+        "restaurants": <RestaurantCreate location_id={props.locationId} close={props.closeModal} update={props.update}/>,
+        "coffeeShops": <CoffeeShopCreate location_id={props.locationId} close={props.closeModal} update={props.update}/>,
+        "lodgings": <LodgingCreate location_id={props.locationId} close={props.closeModal} update={props.update}/>,
+
     }
+    console.log(props.placeType);
 
     return (
         <div className={`location-show-column`}>
