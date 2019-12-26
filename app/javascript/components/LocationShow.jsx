@@ -84,7 +84,6 @@ import Map from './Map';
     return (
         <div className={`location-show-page${testCase}`}>
             <h1>{location.name}, {location.state}</h1>
-            <img className="location-show-image"src={location.image_url} alt={location.name}/>
             <Map center={{lat: location.lat, lng: location.lng}} zoom={12} places={places.travelCenters}/>
             <div className="location-show-columns">
                 <div className={`location-show-column${testCase}`}>
