@@ -8,7 +8,6 @@ const PlacesPanel = (props) => {
        let active = e.currentTarget.getAttribute("name");
        setPanel(active);
     }
-    debugger;
 
     return (
         <div className="places-panel">
@@ -41,7 +40,7 @@ const PlacesPanel = (props) => {
 
             </div>
             <div className="places-panel-content">
-               <PlacesPanelContent places={props.places[`${activePanel}`]}/>
+               <PlacesPanelContent places={props.places[`${activePanel}`]} placeType={activePanel} update={props.update} openModal={props.openModal} closeModal={props.closeModal} locationId={props.locationId} currentUser={props.currentUser} open={props.open}/>
             </div>
         </div>
     )

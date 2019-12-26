@@ -14,25 +14,9 @@
         font-weight: bold;
         background: darkorange;
         align-items: center;
-        &-a {
-            background: darkgreen;
-            color:white;
-        }
-        &-b {
-            background: navy;
-            color: white;
-        }
     }
     &-expanded {
         background: orange;
-        &-a {
-            background: green;
-            color: white;
-        }
-        &-b {
-            background: blue;
-            color: white;
-        }
     }
   }
 
