@@ -85,7 +85,7 @@ import PlacesPanel from './PlacesPanel';
     return (
         <div className={`location-show-page${testCase}`}>
             <h1>{location.name}, {location.state}</h1>
-            <PlacesPanel />
+            <PlacesPanel update={update} places={places}/>
             <Map center={{lat: location.lat, lng: location.lng}} zoom={12} places={places.travelCenters}/>
             <div className="location-show-columns">
                 <div className={`location-show-column${testCase}`}>

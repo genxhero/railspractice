@@ -3,7 +3,8 @@ import React, {useState} from 'react';
 const PlacesPanel = (props) => {
     const [activePanel, setPanel] = useState("travelCenters")
     const selectPane = (e) => {
-
+       let active = e.currentTarget.getAttribute("name");
+       setPanel(active);
     }
     return (
         <div className="places-panel">
