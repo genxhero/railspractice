@@ -14,7 +14,7 @@ return (
           defaultCenter={props.center}
           defaultZoom={props.zoom}>
            { props.places.map( place => {
-             return <Marker lat={place.lat} lng={place.lng} color="blue"/>
+             return <Marker lat={place.lat} lng={place.lng} color="blue" key={place.name}/>
             }
             
            )}
