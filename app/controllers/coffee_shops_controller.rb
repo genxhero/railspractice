@@ -7,7 +7,19 @@ class CoffeeShopsController < ApplicationController
           @coffee_shop = TravelCenter.new(coffee_shop_params)
           if @coffee_shop.save
             @location = Location.find(coffee_shop_params[:location_id])
-            render json: @coffee_shop
+            render json:  {
+              fields: [
+                  {name: "Wifi", value: @coffee_shop.wifi},
+                  {name: "Restrooms", value: @coffee_shop.restrooms},
+                  {name: "Couches", value: @coffee_shop.couches},
+                  {name: "Armchairs", value: @coffee_shop.armchairs},
+                  {name: "Variety", value: @coffee_shop.shop_type},
+              ], 
+              name: @coffee_shop.name,
+              description: @coffee_shop.description,
+              lat: @coffee_shop.lat,
+              lng: @coffee_shop.lng
+          } 
             # render 'locations/show' 
           else
              render json: @coffee_shop.errors.full_messages, status: 422
