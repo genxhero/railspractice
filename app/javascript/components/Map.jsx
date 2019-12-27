@@ -6,6 +6,7 @@ import Marker from './Marker';
 
 const Map = (props) => {
     const key = secret;
+    console.log(props.zoom)
 return (
     <div className="location-show-map">
         <GoogleMapReact

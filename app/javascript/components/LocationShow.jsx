@@ -88,7 +88,7 @@ import PlacesPanel from './PlacesPanel';
             <h1>{location.name}, {location.state}</h1>
             <div className="location-show-columns ">
                 <PlacesPanel update={update} places={places} openModal={openModal} closeModal={closeModal} update={update} locationId={location.id} currentUser={props.currentUser} open={state.open}/>
-                <Map center={{lat: location.lat, lng: location.lng}} zoom={12} places={places.travelCenters}/>
+                <Map center={{lat: location.lat, lng: location.lng}} zoom={14} places={places.travelCenters}/>
             </div>
         </div>
     )
