@@ -3,3 +3,4 @@ class AddDesiredZoomColumnToLocations < ActiveRecord::Migration[6.0]
     add_column :locations, :zoom, :integer
   end
 end
+#TODO add default value of 11

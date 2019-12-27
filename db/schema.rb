@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_24_173825) do
+ActiveRecord::Schema.define(version: 2019_12_27_164739) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 2019_12_24_173825) do
     t.string "image_url"
     t.float "lat"
     t.float "lng"
+    t.integer "zoom"
     t.index ["id"], name: "index_locations_on_id"
     t.index ["name"], name: "index_locations_on_name"
   end
