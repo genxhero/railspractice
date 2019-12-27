@@ -4,7 +4,7 @@ class CoffeeShopsController < ApplicationController
   
   
       def create
-          @coffee_shop = TravelCenter.new(coffee_shop_params)
+          @coffee_shop = CoffeeShop.new(coffee_shop_params)
           if @coffee_shop.save
             @location = Location.find(coffee_shop_params[:location_id])
             render json:  {
