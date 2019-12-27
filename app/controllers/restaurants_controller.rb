@@ -7,7 +7,17 @@ class RestaurantsController < ApplicationController
           @restaurant = Restaurant.new(restaurant_params)
           if @restaurant.save
             @location = Location.find(restaurant_params[:location_id])
-            render json: @restaurant
+            render json:  {     
+              fields: [
+                  {name: "Cuisine", value: @restaurant.cuisine},
+                  {name: "Variety", value: @restaurant.shop_type},
+          
+              ],
+              name: @restaurant.name,
+              description: @restaurant.description,
+              lat: @restaurant.lat,
+              lng: @restaurant.lng
+          }
             # render 'locations/show' 
           else
              render json: @restaurant.errors.full_messages, status: 422
