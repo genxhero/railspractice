@@ -32,7 +32,7 @@ Map.defaultProps = {
       lat: 59.95,
       lng: 30.33
     },
-    zoom: 13
+    zoom: 15
   };
 
 export default withRouter(Map);
