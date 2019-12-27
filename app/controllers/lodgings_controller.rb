@@ -18,7 +18,21 @@ class LodgingsController < ApplicationController
         @lodging = Lodging.new(lodging_params)
         if @lodging.save
           @location = Location.find(lodging_params[:location_id])
-          render json: @lodging
+          render json:   {
+            fields: [
+                {name: "Breakfast", value: @lodging.breakfast},
+                {name: "Pool", value: @lodging.pool},
+                {name: "Gym", value: @lodging.gym},
+                {name: "Wifi", value: @lodging.wifi},
+                {name: "Type", value: @lodging.lodging_type},
+                {name: "Cable Channels", value: @lodging.channels.join(', ')},
+
+            ],
+            name: @lodging.name,
+            description: @lodging.description,
+            lat: @lodging.lat,
+            lng: @lodging.lng
+        }
           # render 'locations/show' 
         else
            render json: @lodging.errors.full_messages, status: 422
