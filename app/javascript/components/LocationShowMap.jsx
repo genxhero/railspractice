@@ -16,7 +16,8 @@ return (
     <div className="location-show-map">
         <GoogleMapReact
           bootstrapURLKeys={{ key }}
-          defaultCenter={center}
+          defaultCenter={props.center}
+          center={center}
           defaultZoom={props.zoom}>
            { props.travelCenters.map( place => {
              return <Marker lat={place.lat} lng={place.lng} color="blue" key={place.name} name={place.name} centerOnMe={updateCenter}/>
