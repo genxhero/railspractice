@@ -28,6 +28,7 @@ const LocationFinder = () => {
     if (!locations) {
         return <div style={{"position":"relative", "top":"25rem"}}>Loading</div>
     }
+    debugger
     return (
         <div className="location-finder">
             <LocationFinderMap locations={locations} />
