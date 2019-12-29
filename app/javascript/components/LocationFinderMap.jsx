@@ -15,7 +15,8 @@ return (
     <div className="location-finder-map">
         <GoogleMapReact
           bootstrapURLKeys={{ key }}
-          defaultCenter={center}
+          defaultCenter={props.center}
+          center={center}
           defaultZoom={props.zoom}>
            { props.locations.map( location => {
              return <Marker lat={location.lat} lng={location.lng} color="blue" key={location.name} name={location.name} centerOnMe={updateCenter}/>
@@ -36,7 +37,7 @@ Map.defaultProps = {
       lat: 38.188128,
       lng: -98.966236
     },
-    zoom: 5
+    zoom: 4
   };
 
 export default withRouter(Map);
