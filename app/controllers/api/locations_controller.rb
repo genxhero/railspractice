@@ -10,4 +10,9 @@ class Api::LocationsController < ApplicationController
             render json: {errors: "Location #{params[:id]} didn't t{}rn up any results."}, status: 420
         end
     end
+
+    def index
+       @locations = Location.all 
+       render json: @locations
+    end
 end
