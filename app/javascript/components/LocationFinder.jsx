@@ -7,6 +7,7 @@ import React, {useState, useEffect} from 'react';
 import {Link, withRouter} from 'react-router-dom';
 import HIGHWAYS from './constants';
 import axios from 'axios';
+import LocationFinderMap from './LocationFinderMap'
 
 const LocationFinder = () => {
 
@@ -16,18 +17,20 @@ const LocationFinder = () => {
         async function anyNameFunction() {
           await axios.get(`/api/locations`).then(res => {
               debugger
-              updateLocations(res.data)
+                  updateLocations(res.data)
           }).catch( res => {
-              debugger;
             setErrors(res)
           });
         }
         anyNameFunction();
       }, []);
 
+    if (!locations) {
+        return <div style={{"position":"relative", "top":"25rem"}}>Loading</div>
+    }
     return (
         <div className="location-finder">
-            
+            <LocationFinderMap locations={locations} />
         </div>
     )
 } 
