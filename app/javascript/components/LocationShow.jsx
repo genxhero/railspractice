@@ -82,7 +82,6 @@ import PlacesPanel from './PlacesPanel';
     if (!location) {
         return <div style={{"position":"relative", "top":"25rem"}}>Loading</div>
     }
-   debugger;
     return (
         <div className={`location-show-page`}>
             <h1>{location.name}, {location.state}</h1>
