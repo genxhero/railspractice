@@ -19,7 +19,7 @@ import axios from 'axios';
 import {TEST_CLASSES} from './constants';
 import {withRouter} from 'react-router-dom';
 import NotFound from './NotFound';
-import Map from './Map';
+import Map from './LocationShowMap';
 import PlacesPanel from './PlacesPanel';
 
  const LocationShow = (props) => {
