@@ -4,6 +4,10 @@ import GoogleMapReact from 'google-map-react';
 import secret from '../utils/secret';
 import Marker from './Marker';
 
+/**
+ * Google Map for a specific location; displays all of the recommended restaurants, lodgings, coffee shops, and travel centers for that location
+ */
+
 const Map = (props) => {
     const key = secret;
     const [center, updateCenter] = useState(props.center)
