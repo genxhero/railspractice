@@ -6,18 +6,26 @@ import Marker from './Marker';
 
 const Map = (props) => {
     const key = secret;
+    const [center, updateCenter] = useState(props.center)
     console.log(props.zoom)
 return (
     <div className="location-show-map">
         <GoogleMapReact
           bootstrapURLKeys={{ key }}
-          defaultCenter={props.center}
+          defaultCenter={center}
           defaultZoom={props.zoom}>
-           { props.places.map( place => {
+           { props.travelCenters.map( place => {
              return <Marker lat={place.lat} lng={place.lng} color="blue" key={place.name} name={place.name}/>
-            }
-            
-           )}
+            })}
+            { props.restaurants.map( place => {
+             return <Marker lat={place.lat} lng={place.lng} color="red" key={place.name} name={place.name}/>
+            })}
+            { props.lodgings.map( place => {
+             return <Marker lat={place.lat} lng={place.lng} color="green" key={place.name} name={place.name}/>
+            })}
+            { props.coffeeShops.map( place => {
+             return <Marker lat={place.lat} lng={place.lng} color="brown" key={place.name} name={place.name}/>
+            })}
                
           </GoogleMapReact>
         
