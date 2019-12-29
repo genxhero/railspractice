@@ -16,7 +16,6 @@ const LocationFinder = () => {
     useEffect(() => {
         async function anyNameFunction() {
           await axios.get(`/api/locations`).then(res => {
-              debugger
                   updateLocations(res.data)
           }).catch( res => {
             setErrors(res)
@@ -28,7 +27,7 @@ const LocationFinder = () => {
     if (!locations) {
         return <div style={{"position":"relative", "top":"25rem"}}>Loading</div>
     }
-    debugger
+    
     return (
         <div className="location-finder">
             <LocationFinderMap locations={locations} />
