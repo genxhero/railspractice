@@ -33,8 +33,8 @@ return (
 
 Map.defaultProps = {
     center: {
-      lat: 59.95,
-      lng: 30.33
+      lat: 38.188128,
+      lng: -98.966236
     },
     zoom: 5
   };
