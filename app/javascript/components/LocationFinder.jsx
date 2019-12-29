@@ -8,6 +8,22 @@ import {Link, withRouter} from 'react-router-dom';
 import HIGHWAYS from './constants';
 
 const LocationFinder = () => {
+
+
+    useEffect(() => {
+        async function anyNameFunction() {
+          await axios.get(`/api/locations/index`).then(res => {
+              debugger
+              updatePlaces(res.data.places);
+              updateLocation(res.data.location);
+          }).catch( res => {
+              debugger;
+            setErrors(res)
+          });
+        }
+        anyNameFunction();
+      }, []);
+
     return (
         <div className="location-finder">
 
