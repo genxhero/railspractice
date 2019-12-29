@@ -11,7 +11,6 @@ import Marker from './Marker';
 const Map = (props) => {
     const key = secret;
     const [center, updateCenter] = useState(props.center)
-    console.log(center)
 return (
     <div className="location-show-map">
         <GoogleMapReact
