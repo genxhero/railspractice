@@ -4,7 +4,6 @@ const Marker = (props) => {
     
     const { color, name, id, key} = props;
     const showName = () => {
-      console.log(props)
       props.centerOnMe({lat: props.lat, lng: props.lng})
     }
     return (
