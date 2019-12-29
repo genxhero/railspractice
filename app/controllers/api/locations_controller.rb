@@ -12,6 +12,7 @@ class Api::LocationsController < ApplicationController
     end
 
     def index
+        debugger;
        @locations = Location.all 
        render json: @locations
     end

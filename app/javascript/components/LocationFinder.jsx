@@ -10,13 +10,13 @@ import axios from 'axios';
 
 const LocationFinder = () => {
 
+    const [locations, updateLocations] = useState(null)
 
     useEffect(() => {
         async function anyNameFunction() {
-          await axios.get(`/api/locations/index`).then(res => {
+          await axios.get(`/api/locations`).then(res => {
               debugger
-              updatePlaces(res.data.places);
-              updateLocation(res.data.location);
+              updateLocations(res.data)
           }).catch( res => {
               debugger;
             setErrors(res)
@@ -27,7 +27,7 @@ const LocationFinder = () => {
 
     return (
         <div className="location-finder">
-
+            
         </div>
     )
 } 
