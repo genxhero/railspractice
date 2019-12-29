@@ -16,3 +16,10 @@ const LocationFinder = () => {
 } 
 
 export default withRouter(LocationFinder);
+
+/**
+ * Select highway, display all Locations on said highway on a map.
+ * Provide links to said locations.
+ * Maybe add a state option.
+ * To or from might be too complicated
+ */
