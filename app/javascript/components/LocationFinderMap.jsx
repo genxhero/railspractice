@@ -3,6 +3,9 @@ import {Link, withRouter} from 'react-router-dom';
 import GoogleMapReact from 'google-map-react';
 import secret from '../utils/secret';
 import Marker from './Marker';
+/**
+ * Map component to be rendered on the Location Finder page, all Locations in the Database will be displayed thereupon
+ */
 
 const Map = (props) => {
     const key = secret;
