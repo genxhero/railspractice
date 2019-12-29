@@ -45,7 +45,11 @@ export const HIGHWAYS = [
 
     {number: 90, 
         states: ["MA"]
-    }
+    },
+
+    {number: 40,
+        states:["CA", "AZ", "TX", "NM"]
+    },
 ]
 
 export const LODGING_TYPES = [
