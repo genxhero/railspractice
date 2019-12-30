@@ -23,4 +23,10 @@ class TravelCenter < ApplicationRecord
 
     has_many :users, through: :recommendations
 
+    def get_coords(address)
+        coords = Geocoder.search(address)
+        debugger
+        buffer = "buffer"
+    end
+
 end
