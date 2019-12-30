@@ -12,6 +12,7 @@ class TravelCentersController < ApplicationController
 
     def create
         @travel_center = TravelCenter.new(travel_center_params)
+        debugger
         if @travel_center.save
           @location = Location.find(travel_center_params[:location_id])
           render json:   {
@@ -32,7 +33,7 @@ class TravelCentersController < ApplicationController
 
     private
     def travel_center_params
-      params.require(:travel_center).permit(:location_id, :name, :description, :unleaded, :diesel)
+      params.require(:travel_center).permit(:location_id, :name, :description, :unleaded, :diesel, :address)
     end
 
   end

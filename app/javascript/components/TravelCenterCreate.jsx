@@ -43,7 +43,7 @@ const TravelCenterCreate = (props) => {
         setErrors(null)
     }
 
-    const [values, setValues] = useState({name: '', description: '', unleaded: 0, diesel: 0, location_id: props.location_id})
+    const [values, setValues] = useState({name: '', description: '', unleaded: 0, diesel: 0, location_id: props.location_id, address: ''})
     const [errors, setErrors] = useState(null)
     return (
         <div className="place-form-modal">
@@ -75,6 +75,12 @@ const TravelCenterCreate = (props) => {
                     placeholder="Diesel Price"
                     onChange={handleInputChange}
                     value={values.diesel} />
+                <input
+                    className="place-form-text"
+                    name="address"
+                    placeholder="Address"
+                    onChange={handleInputChange}
+                    value={values.address} />
                 <div>
                     <button className="place-form-btn" onClick={ handleSubmit}>Create</button>
                     <button className="place-form-btn"onClick={props.close} >Cancel</button>
