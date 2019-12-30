@@ -25,6 +25,8 @@ class TravelCenter < ApplicationRecord
 
     def get_coords(address)
         coords = Geocoder.search(address)
+        self.lat = coords[0].data["lat"].to_f
+        self.lng = coords[0].data["lon"].to_f
         debugger
         buffer = "buffer"
     end
