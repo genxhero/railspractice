@@ -24,6 +24,7 @@ const TravelCenterCreate = (props) => {
      * Makes an Axios request to the Rails server and attempts to save to the database.
      * Because the Location show page renders server side, there isn't a need to set state.
      * TODO: Deprecate in favor of Ajax
+     * TODO: Add way to add lat and lng.
      */
     const handleSubmit = () => {
         axios.post('/travel_centers', {
@@ -78,6 +79,7 @@ const TravelCenterCreate = (props) => {
                     <button className="place-form-btn" onClick={ handleSubmit}>Create</button>
                     <button className="place-form-btn"onClick={props.close} >Cancel</button>
                 </div>
+                <div> <a href="https://www.latlong.net/convert-address-to-lat-long.html">Find Coordinates Here</a> </div>
                 <span className="cancel-x" onClick={props.close}> X</span>
               
             </div>
