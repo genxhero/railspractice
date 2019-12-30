@@ -3,6 +3,7 @@
 #and souvenirs. 
 
 class TravelCenter < ApplicationRecord
+    attr_accessor :address
     validates :name, :description, presence: true
     validates :unleaded, presence:true, numericality: {only_float: true}
     validates :diesel, presence:true, numericality: {only_float: true}
