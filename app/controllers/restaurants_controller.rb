@@ -5,7 +5,9 @@ class RestaurantsController < ApplicationController
   
       def create
           @restaurant = Restaurant.new(restaurant_params)
-          @restaurant.get_coords(params[:address])
+          @address = params[:address]
+          debugger
+          @restaurant.get_coords(@address)
           if @restaurant.save
             @location = Location.find(restaurant_params[:location_id])
             render json:  {     
@@ -27,7 +29,7 @@ class RestaurantsController < ApplicationController
   
       private
       def restaurant_params
-        params.require(:restaurant).permit(:location_id, :name, :description, :cuisine, :shop_type, :address)
+        params.require(:restaurant).permit(:location_id, :name, :description, :cuisine, :shop_type, :addressg)
       end
   
     end

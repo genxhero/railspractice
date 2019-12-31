@@ -12,9 +12,7 @@ class TravelCentersController < ApplicationController
 
     def create
         @buffer = "buffer"
-        debugger
         @travel_center = TravelCenter.new(travel_center_params)
-        debugger
         @address = travel_center_params[:address]
         @travel_center.get_coords(@address)
         if @travel_center.save
