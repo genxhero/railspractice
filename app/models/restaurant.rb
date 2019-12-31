@@ -10,6 +10,7 @@
 
 
 class Restaurant < ApplicationRecord
+    attr_accessor :address
     validates :name, :cuisine, :shop_type, presence: true
     validates :location_id, presence: true
     validates :name, uniqueness: { scope: :location_id,
@@ -26,5 +27,11 @@ class Restaurant < ApplicationRecord
     class_name: "Recommendation"
 
     has_many :users, through: :recommendations
+
+    def get_coords(address)
+        coords = Geocoder.search(address)
+        self.lat = coords.first.coordinates[0]
+        self.lng = coords.first.coordinates[1]
+    end
 
 end
