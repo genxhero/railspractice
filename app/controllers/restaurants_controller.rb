@@ -5,7 +5,7 @@ class RestaurantsController < ApplicationController
   
       def create
           @restaurant = Restaurant.new(restaurant_params)
-          @address = params[:address]
+          @address = restaurant_params[:address]
           debugger
           @restaurant.get_coords(@address)
           if @restaurant.save
