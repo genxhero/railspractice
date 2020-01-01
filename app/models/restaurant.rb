@@ -29,6 +29,7 @@ class Restaurant < ApplicationRecord
     has_many :users, through: :recommendations
 
     def get_coords(address)
+        coords = Geocoder.search(address)
         if coords.length === 0 
             coords = Geocoder.search(self.name)
         end
