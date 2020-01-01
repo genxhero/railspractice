@@ -6,7 +6,6 @@ class RestaurantsController < ApplicationController
       def create
           @restaurant = Restaurant.new(restaurant_params)
           @address = restaurant_params[:address]
-          debugger
           @restaurant.get_coords(@address)
           if @restaurant.save
             @location = Location.find(restaurant_params[:location_id])
@@ -29,7 +28,7 @@ class RestaurantsController < ApplicationController
   
       private
       def restaurant_params
-        params.require(:restaurant).permit(:location_id, :name, :description, :cuisine, :shop_type, :addressg)
+        params.require(:restaurant).permit(:location_id, :name, :description, :cuisine, :shop_type, :address)
       end
   
     end

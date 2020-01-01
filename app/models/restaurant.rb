@@ -30,8 +30,9 @@ class Restaurant < ApplicationRecord
 
     def get_coords(address)
         coords = Geocoder.search(address)
-        self.lat = coords.first.coordinates[0]
-        self.lng = coords.first.coordinates[1]
+        debugger
+        self.lat ||= coords.first.coordinates[0]
+        self.lng ||= coords.first.coordinates[1]
     end
 
 end
