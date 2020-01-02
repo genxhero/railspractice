@@ -46,7 +46,7 @@
     justify-content: center;
 }
 
-.session-submit {
+.session-submit-active {
     margin: .4rem;
     background: orangered;
     color: yellow;
@@ -58,6 +58,21 @@
         background: rgb(226, 88, 9);
         transition: all .2s;
         cursor: pointer;
+    }
+}
+
+.session-submit-inactive {
+    margin: .4rem;
+    background: gray;
+    color: qhite;
+    border: none;
+    padding: .5rem;
+    border-radius: 3px;
+    font-weight: bold;
+    &:hover {
+        background: rgb(226, 88, 9);
+        transition: all .2s;
+        
     }
 }
 
