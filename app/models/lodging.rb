@@ -25,4 +25,15 @@ class Lodging < ApplicationRecord
     class_name: "Recommendation"
 
     has_many :users, through: :recommendations
+
+    def get_coords(address)
+        coords = Geocoder.search(address)
+        location = self.location
+        if coords.length === 0 
+            coords = Geocoder.search(self.name)
+        end
+        debugger
+        self.lat ||= coords.first.coordinates[0]
+        self.lng ||= coords.first.coordinates[1]
+    end
 end
