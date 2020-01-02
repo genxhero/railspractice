@@ -36,4 +36,13 @@ class CoffeeShop < ApplicationRecord
         self.restrooms ||= false
         self.wifi ||= false
     end
+
+    def get_coords(address)
+        coords = Geocoder.search(address)
+        if coords.length === 0 
+            coords = Geocoder.search(self.name)
+        end
+        self.lat ||= coords.first.coordinates[0]
+        self.lng ||= coords.first.coordinates[1]
+    end
 end
