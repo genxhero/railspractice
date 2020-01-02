@@ -97,7 +97,7 @@ const Signup = (props) => {
                     </div>
                   
                 </form>
-                <div>
+                <div className="password-shame-message"> 
                     {passwordIsPassword && <span>PASSWORD CAN NOT LITERALLY BE "PASSWORD"!</span>}
                 </div>
             </div>
