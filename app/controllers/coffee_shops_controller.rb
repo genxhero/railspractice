@@ -5,6 +5,7 @@ class CoffeeShopsController < ApplicationController
   
       def create
           @coffee_shop = CoffeeShop.new(coffee_shop_params)
+          @coffee_shop.get_coords
           if @coffee_shop.save
             @location = Location.find(coffee_shop_params[:location_id])
             render json:  {
@@ -28,7 +29,7 @@ class CoffeeShopsController < ApplicationController
   
       private
       def coffee_shop_params
-        params.require(:coffee_shop).permit(:location_id, :name, :description, :couches, :armchairs, :restrooms, :wifi, :shop_type)
+        params.require(:coffee_shop).permit(:location_id, :name, :description, :couches, :armchairs, :restrooms, :wifi, :shop_type, :address)
       end
   
     end
