@@ -11,6 +11,7 @@
 #A Coffee shop is defined as an establishment that largely serves coffee and pastries and not enough 
 # Food options to qualify as a diner
 class CoffeeShop < ApplicationRecord
+    attr_accessor :address
     after_initialize :defaults
 
     validates :name, presence: true
