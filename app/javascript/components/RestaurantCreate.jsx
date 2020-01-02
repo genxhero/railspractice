@@ -93,10 +93,12 @@ const RestaurantCreate = (props) => {
                     placeholder="Address"
                     onChange={handleInputChange}
                     value={values.address} />
-                <div></div>
+                <div>
+                    
+                </div>
                 <div>
                     <button className="place-form-btn" onClick={ handleSubmit}>Create</button>
-                    <button className="place-form-btn"onClick={props.close} >Cancel</button>
+                    <button className="place-form-btn" onClick={props.close} >Cancel</button>
                 </div>
                 <div> <a href="https://www.latlong.net/convert-address-to-lat-long.html">Find Coordinates Here</a> </div>
                 <span className="cancel-x" onClick={props.close}> X</span>

@@ -36,7 +36,7 @@ const CoffeeShopCreate = (props) => {
         setErrors(null)
     }
 
-    const [values, setValues] = useState({name: '', description: '', shop_type: '', couches: false, armchairs: false, wifi: false})
+    const [values, setValues] = useState({name: '', description: '', shop_type: '', couches: false, armchairs: false, wifi: false, address: ''})
     const [errors, setErrors] = useState(null)
 
     return (
@@ -90,7 +90,13 @@ const CoffeeShopCreate = (props) => {
                 Kiosk
                 <span className="checkmark"></span>
                 </label>
-
+                    
+                <input
+                    className="place-form-text"
+                    name="address"
+                    placeholder="Address"
+                    onChange={handleInputChange}
+                    value={values.address} />
                 <div>
                     <button className="place-form-btn"onClick={props.close} >Cancel</button>
                 </div>
