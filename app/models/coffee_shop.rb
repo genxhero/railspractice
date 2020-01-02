@@ -44,6 +44,7 @@ class CoffeeShop < ApplicationRecord
         if coords.length === 0 
             coords = Geocoder.search(self.name)
         end
+        debugger
         self.lat ||= coords.first.coordinates[0]
         self.lng ||= coords.first.coordinates[1]
     end
