@@ -31,7 +31,7 @@ const Signup = (props) => {
             case "email":
                 setValid({...validated, [name]: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)})
                 break;
-            case "passwordConfirm":
+            case "confirm":
                 setValid({...validated, [name]: value === values.password})
                 break
         }
@@ -79,6 +79,7 @@ const Signup = (props) => {
     const [validated, setValid] = useState({username: null, email: null, password: null, confirm: null})
     const notAllValidated = !validated.username || !validated.email || !validated.password || !validated.confirm
     console.log(notAllValidated)
+    console.log(validated)
     return (
         <div className="session-modal">
             <div className="session-form-container">

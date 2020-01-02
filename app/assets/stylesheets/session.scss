@@ -64,16 +64,11 @@
 .session-submit-inactive {
     margin: .4rem;
     background: gray;
-    color: qhite;
+    color: white;
     border: none;
     padding: .5rem;
     border-radius: 3px;
     font-weight: bold;
-    &:hover {
-        background: rgb(226, 88, 9);
-        transition: all .2s;
-        
-    }
 }
 
 .session-cancel {
