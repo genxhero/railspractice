@@ -98,6 +98,7 @@ const CoffeeShopCreate = (props) => {
                     onChange={handleInputChange}
                     value={values.address} />
                 <div>
+                    <button className="place-form-btn" onClick={ handleSubmit}>Create</button>
                     <button className="place-form-btn"onClick={props.close} >Cancel</button>
                 </div>
                 <div> <a href="https://www.latlong.net/convert-address-to-lat-long.html">Find Coordinates Here</a> </div>
