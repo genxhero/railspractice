@@ -1,6 +1,7 @@
 /**
  * This component displays all information for a gven coffee shop.
  * It expects a JSON object as a prop.
+ * DEPRECATED - Delete soon
  */
 
 import React, {useState} from 'react'
