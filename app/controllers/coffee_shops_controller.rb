@@ -5,6 +5,7 @@ class CoffeeShopsController < ApplicationController
   
       def create
           @coffee_shop = CoffeeShop.new(coffee_shop_params)
+          debugger
           @coffee_shop.get_coords(coffee_shop_params[:address])
           if @coffee_shop.save
             @location = Location.find(coffee_shop_params[:location_id])
@@ -23,6 +24,7 @@ class CoffeeShopsController < ApplicationController
           } 
             # render 'locations/show' 
           else
+            debugger
              render json: @coffee_shop.errors.full_messages, status: 422
           end
       end
