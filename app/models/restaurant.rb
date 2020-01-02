@@ -28,8 +28,10 @@ class Restaurant < ApplicationRecord
 
     has_many :users, through: :recommendations
 
+    #TODO: Make this function available to all models somehow. Maybe add it to ApplicationRecord?
     def get_coords(address)
         coords = Geocoder.search(address)
+        location = self.location
         if coords.length === 0 
             coords = Geocoder.search(self.name)
         end

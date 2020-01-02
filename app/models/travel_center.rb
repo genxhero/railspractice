@@ -22,7 +22,8 @@ class TravelCenter < ApplicationRecord
     class_name: "Recommendation"
 
     has_many :users, through: :recommendations
-
+    
+    #TODO: Make this function available to all models somehow. Maybe add it to ApplicationRecord?
     def get_coords(address)
         coords = Geocoder.search(address)
         if coords.length === 0 

@@ -37,6 +37,7 @@ class CoffeeShop < ApplicationRecord
         self.wifi ||= false
     end
 
+        #TODO: Make this function available to all models somehow. Maybe add it to ApplicationRecord?
     def get_coords(address)
         coords = Geocoder.search(address)
         if coords.length === 0 
