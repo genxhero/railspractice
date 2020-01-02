@@ -76,7 +76,9 @@ const Signup = (props) => {
     const [values, setValues] = useState({username: "", email: "", password: "", confirm: ""})
     const [errors, setErrors] = useState(null)
     const [passwordIsPassword, setSpecialHell] = useState(false)
-    const [validated, setValid] =useState({username: null, email: null, password: null, confirm: null})
+    const [validated, setValid] = useState({username: null, email: null, password: null, confirm: null})
+    const notAllValidated = !validated.username || !validated.email || !validated.password || !validated.confirm
+    debugger;
     return (
         <div className="session-modal">
             <div className="session-form-container">
@@ -89,7 +91,7 @@ const Signup = (props) => {
                     <input className="session-form-field" type="text" value={values.password} name="password" onChange={handleInputChange} placeholder="Password"/>
                     <input className="session-form-field"  type="text" value={values.confirm} name="confirm" onChange={handleInputChange} placeholder="Confirm Password"/>
                     <div className="session-form-buttons">
-                        <input className="session-submit" type="submit"/>
+                        <input className="session-submit" type="submit" disabled={notAllValidated}/>
                         <button className= "session-cancel" onClick={props.close}>Cancel</button>
                     </div>
                   
