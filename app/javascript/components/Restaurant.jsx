@@ -1,6 +1,7 @@
 /**
  * This component displays all information for a restaurant
  * It expects a JSON object as a prop.
+ * DEPRECATED - DELETE SOON
  */
 
 import React from 'react'
