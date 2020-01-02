@@ -21,7 +21,7 @@ const CoffeeShopCreate = (props) => {
      */
     const handleSubmit = () => {
         axios.post('/coffee_shops', {
-           restaurant: values
+           coffee_shop: values
           }
         ).then( res => {
             props.update(res.data, "coffeeShop")
