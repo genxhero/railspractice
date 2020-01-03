@@ -7,7 +7,11 @@ import UserDashboard from './UserDashboard';
 import axios from 'axios';
 import Welcome from './Welcome';
 
-
+/**
+ * The main app component.
+ * 
+ * Should receive current user as a prop from the Rails backend.
+ */
 const App = (props) => {
     const logout = () => {
         event.preventDefault();
