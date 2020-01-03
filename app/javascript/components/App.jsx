@@ -22,7 +22,7 @@ const App = (props) => {
           <Header updateUser={updateUser} currentUser={currentUser} logout={logout}/>
           <div className="app-main-content">
             <Switch>
-              <Route exact path={"/"} component={Welcome} />
+              <Route exact path={"/"} render={(props) => <Welcome {...props} currentUser={currentUser} />} />
               <Route exact path={"/dashboard"} render={(props) => <UserDashboard {...props} currentUser={currentUser} />} />
               <Route exact path={"/locations/:locationId"} render={(props) => <LocationShow {...props} currentUser={currentUser} />} />
               <Route exact path={"/locations"} render={(props) => <LocationFinder {...props} currentUser={currentUser} />} />
