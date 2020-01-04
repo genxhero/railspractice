@@ -35,11 +35,12 @@ const  Welcome = (props) =>  {
       shiftPane(currentPane - 1)
     }
   }
+  console.log(props.currentUser)
 
     return (
       <div className="welcome-page">
         <div className="welcome-carousel">
-          {props.currentUser && <span>Hello, {props.curentUser.username}</span>}
+          {props.currentUser && <span>Hello, {props.currentUser.username}</span>}
             <div className="welcome-carousel-arrow welcome-carousel-arrow-left">
             <FaAngleLeft onClick={prevPane}/>
           </div>
