@@ -10,6 +10,7 @@ const WelcomeFour = () => {
             <li>
                 <p>
                     It was built with adventurous people intending to take long road trips across the United States, listing major stops along the interstate system.
+                    The main App component is loaded directly in the root Rails view using the React-Rails gem.
                 </p>
             </li>
         </div>
