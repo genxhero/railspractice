@@ -14,7 +14,7 @@ import WelcomeFour from './panes/WelcomeFour'
 import {FaAngleLeft, FaAngleRight} from 'react-icons/fa'
 
 
-const  Welcome = () =>  {
+const  Welcome = (props) =>  {
   //TODO: Move panes to their own file, justhave multiple components in
   const panes = [<WelcomeOne />, <WelcomeTwo />, <WelcomeThree />, <WelcomeFour />]
   const [currentPane, shiftPane] = useState(0)
