@@ -19,6 +19,7 @@ const  Welcome = () =>  {
   const panes = [<WelcomeOne />, <WelcomeTwo />, <WelcomeThree />, <WelcomeFour />]
   const [currentPane, shiftPane] = useState(0)
   
+  
   const nextPane = () => {
     if (currentPane === panes.length - 1) {
       shiftPane(0)
@@ -38,6 +39,7 @@ const  Welcome = () =>  {
     return (
       <div className="welcome-page">
         <div className="welcome-carousel">
+          {props.currentUser && <span>Hello, {props.curentUser.username}</span>}
             <div className="welcome-carousel-arrow welcome-carousel-arrow-left">
             <FaAngleLeft onClick={prevPane}/>
           </div>
