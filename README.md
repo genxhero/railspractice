@@ -15,3 +15,5 @@ A travel center is a large gasoline station with an attached store carrying a wi
 **Coffee Shops
 
 Coffee shops are classified by type; walk in, kisok, or drive thru. The database also keeps track of whether a given coffee shop has comfortable seating, restrooms, and wireless internet.
+
+Leverage is the Google Maps API to display markers on a map color coded for your convenience
